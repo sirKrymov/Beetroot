@@ -1,0 +1,186 @@
+*{
+    transition: all .1s ease-in;
+    }
+body{
+    border: 0px solid white;
+    background-color: white;
+    margin: 0;
+}
+header{
+    background-color: #42444e;
+    text-align: center;
+    padding: 10px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    border-radius: 5px;
+    margin: 20px;
+    }
+.resume{
+    font-size: 16px;
+    font-weight: 200;
+    color: #9799a7;
+    letter-spacing: 3px;
+}
+.myname{
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+}
+header p{
+    margin: 5px;
+}
+.discription{
+    font-size: 20px;
+    font-weight: 200;
+    color: #9799a7;
+    padding-left: 80px;
+    margin: 10px;
+    letter-spacing: 1px;
+}
+.target{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.target-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.contact{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.contact-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.number{
+    font-size: 20px;
+    font-weight: 600;
+    color: #5da7db;
+    letter-spacing: 0px;
+}
+.age{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.age-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.marital{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.marital-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.education{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.education-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.experience{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.experience-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.skills{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.skills-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.qualities{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.qualities-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+.interests{
+    background-color: white;
+    border: 1px solid #cecfd5;
+    margin: 20px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+}
+.interests-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #36b652;
+    padding-left: 80px;
+    margin: 10px;
+}
+footer{
+    background-color: #42444e;
+    text-align: center;
+    padding: 10px;
+    font-family: "Whitney SSm A", "Whitney SSm B", "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    border-radius: 5px;
+    margin: 20px;
+    }
+.myphoto{
+    padding:2px;
+    background:#eeeeee;
+    border:1px solid #cccccc
+}
