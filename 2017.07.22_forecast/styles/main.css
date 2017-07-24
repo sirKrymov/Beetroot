@@ -1,0 +1,141 @@
+body {
+    background-color: #2b81ac;
+    margin: 0;
+    padding: 25px;
+    height: 100vh;
+    font-size: 20px;
+    font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
+    color: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.main_container {
+    min-height: calc(100vh - 50px);
+    max-width: calc(100vw - 50px);
+    background-color: #3399cc;
+}
+
+.header {
+    margin: 0 auto;
+    padding: 14px 0;
+    width: 60%;
+    font-size: 24px;
+}
+
+.main {
+    background-color: white;
+    margin: 0 auto;
+    padding: 1px;
+    min-height: 300px;
+    min-width: 380px;
+    height: 70vh;
+    width: 60%;    
+}
+
+.list {
+    padding: 1px;
+    min-height: 300px;
+    height: 100%;
+    text-align: center;
+    list-style-type: none;
+    font-size: 0;
+    }
+
+.item {   
+    display: inline-block;
+    margin-right: 0;
+    border: 2px solid #fff;
+    background-color: #36b652;
+    height: 25%;
+}
+
+.item_city-text {
+    height: 50%;
+    padding-top: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+.item_city-weather {
+    height: 50%;
+    padding-top: 2px;
+    font-size: 20px;
+    color: #fff;
+}
+
+i {
+    padding-left: 6px;
+    font-size: 30px;
+}
+
+.title_icon {
+    padding-left: 6px;
+    font-size: 30px;
+}
+
+.lisbon {
+    width: 50%;
+    background-color: #3399CC;
+}
+.paris {
+    width: 25%;
+    background-color: #33CCCC;
+}
+.belgrad {
+    width: 25%;
+    background-color: #996699;
+}
+.moscow {
+    width: 25%;
+    background-color: #C24747;
+}
+.telaviv {
+    width: 25%;
+    background-color: #E2674A;
+}
+.cair {
+    width: 25%;
+    background-color: #FFCC66;
+}
+.newyork {
+    width: 25%;
+    background-color: #99CC99;
+}
+.newdelhi {
+    width: 25%;
+    background-color: #669999;
+}
+.sanfrancisco {
+    width: 50%;
+    background-color: #CC6699;
+}
+.tokyo {
+    width: 25%;
+    background-color: #339966;
+}
+.sydney {
+    width: 100%;
+    background-color: #666699;
+}
+
+.list:hover {
+    cursor: pointer;
+}
+
+.list:hover .item:not(:hover) {
+    opacity: 0.5;
+}
+
+.footer {
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 60%;
+    font-size: 16px; 
+}
