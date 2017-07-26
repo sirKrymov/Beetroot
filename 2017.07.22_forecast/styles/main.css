@@ -1,7 +1,7 @@
 body {
     background-color: #2b81ac;
     margin: 0;
-    padding: 25px;
+    padding: 20px;
     height: 100vh;
     font-size: 20px;
     font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
@@ -18,8 +18,8 @@ body {
 }
 
 .main_container {
-    min-height: calc(100vh - 50px);
-    max-width: calc(100vw - 50px);
+    min-height: calc(100vh - 20px);
+    max-width: calc(100vw - 20px);
     background-color: #3399cc;
 }
 
