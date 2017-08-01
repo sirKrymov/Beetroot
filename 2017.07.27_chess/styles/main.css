@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/fon.jpg);
+    font-family: Arial, sans-serif;
+}
+
+.header-title {
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #b0b0b0;
+    text-transform: uppercase;
+}
+
+.main {
+    padding-top: 20px;
+}
+
+.board {
+    background-color: #ffb651;
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    padding: 23px;
+}
+
+.checkers_field {
+    width: 404px;
+    height: 404px;
+    margin: auto;
+    background-color: #ffb651;
+    background-image: linear-gradient( 45deg, #3e2e2f 25%, transparent 25%, transparent 74%, #3e2e2f 75%, #3e2e2f), linear-gradient( 45deg, #3e2e2f 25%, transparent 25%, transparent 74%, #3e2e2f 75%, #3e2e2f);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    border: 2px solid #3e2e2f;
+    position: relative;
+}
+
+.col {
+    position: absolute;
+    width: 12.5%;
+    height: 12.5%;
+    border-radius: 50%;
+}
+
+.col-black {
+    background-color: #664A3E;
+}
+
+.col-red {
+    background-color: #ffce96;
+}
+
+.row1 {
+    top: 0;
+}
+
+.row2 {
+    top: 50px;
+}
+
+.row3 {
+    top: 100px;
+}
+
+.row6 {
+    top: 250px;
+}
+
+.row7 {
+    top: 300px;
+}
+
+.row8 {
+    top: 350px;
+}
+
+.col2 {
+    left: 50px;
+}
+
+.col4 {
+    left: 150px;
+}
+
+.col6 {
+    left: 250px;
+}
+
+.col8 {
+    left: 350px;
+}
+
+.col1 {
+    left: 0;
+}
+
+.col3 {
+    left: 100px;
+}
+
+.col5 {
+    left: 200px;
+}
+
+.col7 {
+    left: 300px;
+}
