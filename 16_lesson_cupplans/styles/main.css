@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'misobold';
+    src: url('../fonts/miso-bold-webfont.woff2') format('woff2'), url('../fonts/miso-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'misoregular';
+    src: url('../fonts/miso-webfont.woff2') format('woff2'), url('../fonts/miso-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('../lato-light-webfont.woff2') format('woff2'), url('../lato-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+    background-color: #fff;
+}
+
+.cupplans-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    min-height: 600px;
+    background-color: #fdde7e;
+}
+
+.cupplans-box__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    min-height: 440px;
+    background-color: #fff;
+}
+
+.cupplans-box__item--gold {
+    min-height: 500px;
+}
+
+.cupplans-box__item--price {
+    font: 70px misobold;
+    color: #02995b;
+}
+
+.cupplans-box__item--image {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.smoke {
+    position: absolute;
+    transform: translateY(-130%) translateX(65%);
+}
+
+.cup {
+    background: transparent;
+}
+
+.bean {
+    position: absolute;
+    transform: translateY(-145%) translateX(110%);
+}
+
+.cupplans-box__item--title {
+    font: 40px misoregular;
+    padding: 20px 0;
+}
+
+.cupplans-box__item--description {
+    font: 20px misoregular;
+    padding: 2px 0;
+    letter-spacing: 0.1em;
+}
