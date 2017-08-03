@@ -12,133 +12,136 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header__logo__navbar">
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__nav">
                 <div class="header__logo">
-                    <img src="./img/foliac-logo.png">
+                    <img src="./img/foliac-logo.png" alt="logo">
                 </div>
-                <div class="header__navbar">
-                    <a href="accueil" class="navbar__item">Accueil</a>
-                    <a href="#portfolio" class="navbar__item">Portfolio</a>
-                    <a href="#about" class="navbar__item">About</a>
-                    <a href="#contact" class="navbar__item">Contact</a>
+                <div class="header__nav-list">
+                    <a href="#" class="header__nav-item">Accueil</a>
+                    <a href="#portfolio" class="header__nav-item">Portfolio</a>
+                    <a href="#" class="header__nav-item">About</a>
+                    <a href="#" class="header__nav-item">Contact</a>
                 </div>
             </div>
             <div class="header__content">
-                <p class="header__content--title">voici votre prochain portfolio</p>
-                <p class="header__content--subtitle">un template psd simple et gratui</p>
-                <button class="header__content--button">mes travaux</button>
-            </div>
-        </header>
-
-        <seaction class="seaction__portfolio">
-            <div class="portfolio__button">
-                <button class="portfolio__button--item portfolio__button--1">
-                    <p class="button__text">Tous les projets</p>
-                </button>
-                <button class="portfolio__button--item portfolio__button--2">
-                    <p class="button__text">Webdesign</p>
-                </button>
-                <button class="portfolio__button--item portfolio__button--3">
-                    <p class="button__text">TUI/UX design</p>
-                </button>
-                <button class="portfolio__button--item portfolio__button--4">
-                    <p class="button__text">Illustration</p>
-                </button>
-                <button class="portfolio__button--item portfolio__button--5">
-                    <p class="button__text">Motion design</p>
+                <p class="header__title">voici votre prochain portfolio</p>
+                <p class="header__subtitle">un template psd simple et gratuit</p>
+                <button class="header__btn">
+                    <p>mes travaux</p>
                 </button>
             </div>
-            <div class="portfolio__content">
-                <div class="portfolio__content--item">
-                    <div class="portfolio__content--item--image">
-                        <img src="./img/multipleitems.png" alt="image1" />
-                    </div>
-                    <div class="portfolio__overlay">
-                        <p>Graphic Dising</p>
-                        <p>Exclusive skill</p>
-                    </div>
-                </div>
-                <div class="portfolio__content--item">
-                    <div class="portfolio__content--item--image">
-                        <img src="./img/prototype.png" alt="image2" />
-                    </div>
-                    <div class="portfolio__overlay">
-                        <p>Professional Landing</p>
-                        <p>Great Optimization</p>
-                    </div>
-                </div>
-                <div class="portfolio__content--item">
-                    <div class="portfolio__content--item--image">
-                        <img src="./img/visuelle.png" alt="image3" />
-                    </div>
-                    <div class="portfolio__overlay">
-                        <p>Perfect Logo</p>
-                        <p>Creative style</p>
-                    </div>
-                </div>
-                <div class="portfolio__content--item">
-                    <div class="portfolio__content--item--image">
-                        <img src="./img/app.png" alt="image4" />
-                    </div>
-                    <div class="portfolio__overlay">
-                        <p>Mobile Apps</p>
-                        <p>They are awesome</p>
-                    </div>
+        </div>
+    </header>
+    <section id="portfolio" class="container portfolio">
+        <div class="portfolio__btn">
+            <button class="portfolio__btn--item portfolio__btn--1">
+                    <p class="btn__text">Tous les projets</p>
+                </button>
+            <button class="portfolio__btn--item portfolio__btn--2">
+                    <p class="btn__text">Webdesign</p>
+                </button>
+            <button class="portfolio__btn--item portfolio__btn--3">
+                    <p class="btn__text">TUI/UX design</p>
+                </button>
+            <button class="portfolio__btn--item portfolio__btn--4">
+                    <p class="btn__text">Illustration</p>
+                </button>
+            <button class="portfolio__btn--item portfolio__btn--5">
+                    <p class="btn__text">Motion design</p>
+                </button>
+        </div>
+        <div class="portfolio__content">
+            <div class="portfolio__content--item item1">
+                <img src="./img/multipleitems.png" alt="image1" />
+                <div class="portfolio__overlay">
+                    <p class="portfolio_overlay-title">Graphic Dising</p>
+                    <p class="portfolio__overlay-subtitle">Exclusive skill</p>
                 </div>
             </div>
-        </seaction>
-
-        <seaction class="aboutme">
-            <div class="aboutme__container">
-                <div class="aboutme__data">
-                    <p class="aboutme__title">Michel Dupont</p>
-                    <p class="aboutme__subtitle">Webdesigner, illustrateur, auteur</p>
-                    <p class="aboutme__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <button class="aboutme__button">me contacter</button>
+            <div class="portfolio__content--item item2">
+                <img src="./img/prototype.png" alt="image2" />
+                <div class="portfolio__overlay">
+                    <p class="portfolio_overlay-title">Professional Landing</p>
+                    <p class="portfolio__overlay-subtitle">Great Optimization</p>
                 </div>
             </div>
-        </seaction>
-
-        <seaction class="form">
-            <div class="form__block">
-                <p class="form__title">me contacter</p>
-                <div class="form__block--input">
-                    <input type="text" class="form__input--user form__input" placeholder="Votre nom" />
-                    <img src="./img/usericon.svg" alt="usericon">
-                    <input type="text" class="form__input--mail form__input" placeholder="Votre email" />
-                    <img src="./img/mailicon.svg" alt="mailicon">
-                </div>
-                <textarea class="form__input--message form__input" placeholder="Votre message"></textarea>
-                <img src="./img/bg-icon.svg" alt="bg-icon">
-                <button class="form__button">envoyer</button>
-            </div>
-        </seaction>
-
-        <footer class="footer">
-            <div class="container footer__container">
-                <p class="footer__text">Copyright © 2015 by beneggen - www.beneggen.fr</p>
-                <div class="footer__social">
-                    <div class="footer__social--item footer__social--twitter">
-                        <img src="./img/Twitter.png" alt="Twitter" class="footer__image--twitter">
-                    </div>
-                    <div class="footer__social--item footer__social--linkedin">
-                        <img src="./img/LinkedIn.png" alt="LinkedIn" class="footer__image--linkedin">
-                    </div>
-                    <div class="footer__social--item footer__social--dribbble">
-                        <img src="./img/Dribbble.png" alt="Dribbble" class="footer__image--dribbble">
-                    </div>
-                    <div class="footer__social--item footer__social--behance">
-                        <img src="./img/Behance.png" alt="Behance" class="footer__image--behance">
-                    </div>
-
-
+            <div class="portfolio__content--item item3">
+                <img src="./img/visuelle.png" alt="image3" />
+                <div class="portfolio__overlay">
+                    <p class="portfolio_overlay-title">Perfect Logo</p>
+                    <p class="portfolio__overlay-subtitle">Creative style</p>
                 </div>
             </div>
-        </footer>
-    </div>
+            <div class="portfolio__content--item item4">
+                <img src="./img/app.jpg" alt="image4" />
+                <div class="portfolio__overlay">
+                    <p class="portfolio_overlay-title">Mobile Apps</p>
+                    <p class="portfolio__overlay-subtitle">They are awesome</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="aboutme" class="aboutme">
+        <div class="container container__aboutme">
+            <div class="aboutme__data">
+                <p class="aboutme__title">Michel Dupont</p>
+                <p class="aboutme__subtitle">Webdesigner, illustrateur, auteur</p>
+                <p class="aboutme__text--text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="aboutme__text--text2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <button class="aboutme__btn">me contacter</button>
+            </div>
+        </div>
+    </section>
+    <section id="contacts" class="container contacts">
+        <p class="contacts__title">Me contacter</p>
+        <form class="contacts__form">
+            <label class="contacts__form--name">
+                    <span class="contacts__form--icon"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                    <div class="corner"></div>
+                    <input type="text" placeholder="Votre nom">
+                </label>
+            <label class="contacts__form--email">
+                    <span class="contacts__form--icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                    <div class="corner"></div>
+                    <input type="email" placeholder="Votre email">
+                </label>
+            <label class="contacts__form--text">
+                    <span class="contacts__form--icon contacts__form--icon-text"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                    <div class="corner corner_textarea"></div>
+                    <textarea name="text" placeholder="Votre message"></textarea>
+                </label>
+            <button type="button" name="button" class="contacts__form--btn">Envoyer</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="container footer__container">
+            <p class="footer__text">Copyright &copy; 2015 by beneggen - <span class="text__site"><a href="#">www.beneggen.fr</a><span>
+            </p>
+            <div class="footer__social">
+                <div class="hexagon hexagon__social--twitter">
+                     <a href="#" class="social__item-link">
+                        <img src="img/twitter.png" alt="twitter">
+                    </a> 
+                </div>
+                <div class="hexagon hexagon__social--linkedin">
+                     <a href="#" class="social__item-link">
+                        <img src="img/linkedin.png" alt="linkedin">
+                    </a> 
+                </div>
+                <div class="hexagon hexagon__social--dribbble">
+                     <a href="#" class="social__item-link">
+                        <img src="img/dribbble.png" alt="dribbble">
+                    </a> 
+                </div>
+                <div class="hexagon hexagon__social--behance">
+                     <a href="#" class="social__item-link">
+                        <img src="img/behance.png" alt="behance">
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
