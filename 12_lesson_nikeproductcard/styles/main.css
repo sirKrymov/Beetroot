@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'museo100';
+    src: url('../fonts/museo_100-webfont.woff2') format('woff2'), url('../fonts/museo_100-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.main {
+    background-color: #fff;
+}
+
+.cardcontainer {
+    background: url("./../img/main-bg.png") center no-repeat;
+    width: 100%;
+    height: 100%;
+    min-height: 603px;
+    min-width: 803px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.nikeproductcard {
+    background-color: #111a28;
+    width: 688px;
+    height: 394px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nikeproductcard__logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.nikeproductcard__imageblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 59%;
+    height: 100%;
+}
+
+.nikeproductcard__imageblock--image {
+    margin-bottom: 60px;
+}
+
+.nikeproductcard__imageblock--bullet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.bullet__item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    margin: auto 6px;
+    cursor: pointer;
+}
+
+.bullet__item--gray {
+    background-color: #1f273f;
+}
+
+.bullet__item--white {
+    background-color: #fff;
+}
+
+.bullet__item--red {
+    background-color: #ed3333;
+}
+
+.bullet__item--turquoise {
+    background-color: #29e3ea;
+}
+
+.bullet__item--gray:hover {
+    width: 14px;
+    height: 14px;
+}
+
+.bullet__item--white:hover {
+    width: 14px;
+    height: 14px;
+}
+
+.bullet__item--red:hover {
+    width: 14px;
+    height: 14px;
+}
+
+.bullet__item--turquoise:hover {
+    width: 14px;
+    height: 14px;
+}
+
+.nikeproductcard__purchaseblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 41%;
+    height: 100%;
+    padding-left: 35px;
+}
+
+.nikeproductcard__purchaseblock--title {
+    margin-bottom: 24px;
+}
+
+.brand__title {
+    font: 24px museo100;
+    letter-spacing: 0.02;
+    color: #9da1a6;
+}
+
+.brand__title--down {
+    padding-bottom: 10px;
+}
+
+.brand__description {
+    font: 14px museo100;
+    letter-spacing: 0.02;
+    color: #9da1a6;
+}
+
+.nikeproductcard__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dropdownblock {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 170px;
+}
+
+.dropsize1 select {
+    border-radius: 0;
+    background: transparent;
+    height: 32px;
+    padding: 5px;
+    border: 0;
+    font: 14px museo100;
+    color: #9da1a6;
+    line-height: 1;
+    -webkit-appearance: none;
+    width: 72px;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropsize1 {
+    border: 1px solid #9da1a6;
+    overflow: hidden;
+    height: 32px;
+    width: 72px;
+}
+
+.dropsize1-qty {
+    margin-left: 2px;
+}
+
+.buttonpay {
+    width: 186px;
+    height: 42px;
+    border: 1px solid #4f5560;
+    background-color: #202835;
+    font: 14px museo100;
+    color: #9da1a6;
+    margin-bottom: 75px;
+    cursor: pointer;
+}
