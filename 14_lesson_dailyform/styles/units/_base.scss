@@ -1,0 +1,15 @@
+body {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 830px;
+    height: 100vh;
+    background: linear-gradient(45deg, #FF512F, #DD2476);
+    background-repeat: no-repeat;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+}
