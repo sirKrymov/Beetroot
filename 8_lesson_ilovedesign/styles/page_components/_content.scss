@@ -1,0 +1,51 @@
+.container__content {
+    background-image: url(../img/bgb.png);
+    width: 100%;
+    max-width: 1920px;
+    padding: 120px 0;
+    &--text {
+        width: 100%;
+        max-width: 867px;
+        height: 168px;
+        margin: 0 auto 40px;
+        font-size: 30px;
+        text-align: center;
+        color: $contentText;
+        line-height: 42px
+    }
+    &--title {
+        font-size: 80px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: $contentText;
+        margin: 0 auto;
+        padding: 75px 0 90px 0;
+    }
+}
+
+.content {
+    width: 100%;
+    max-width: 940px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__box {
+        width: 100%;
+        max-width: 300px;
+        height: 160px;
+        &--title {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            color: $contentText;
+            padding-bottom: 20px;
+        }
+        &--text {
+            line-height: 30px;
+            color: $contentText2;
+        }
+    }
+}

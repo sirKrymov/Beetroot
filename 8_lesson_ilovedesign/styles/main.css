@@ -1,0 +1,109 @@
+body {
+  font-family: "Arial", 'SegoeUIRegular', 'SegoeUIBold', sans-serif;
+  font-size: 18px; }
+
+.container {
+  width: 100%;
+  min-width: 660px;
+  height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container__header {
+  background-image: url(../img/bg.png);
+  width: 100%;
+  max-width: 1920px;
+  padding: 77px 0 50px 0; }
+  .container__header--title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 80px;
+    text-align: center;
+    color: #fff;
+    padding: 175px 0 60px 0; }
+  .container__header--text {
+    line-height: 30px;
+    text-align: center;
+    color: #d4d4d5; }
+    .container__header--text--bottom {
+      padding-bottom: 177px; }
+
+.header__logo {
+  width: 144px;
+  height: 144px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .header__logo--img {
+    width: 100%;
+    height: 100%; }
+
+.header__icon {
+  background-color: #23232e;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out; }
+  .header__icon:hover {
+    opacity: 0.5; }
+
+.lnr-chevron-down {
+  font-size: 18px;
+  text-align: center;
+  color: #fff; }
+
+.container__content {
+  background-image: url(../img/bgb.png);
+  width: 100%;
+  max-width: 1920px;
+  padding: 120px 0; }
+  .container__content--text {
+    width: 100%;
+    max-width: 867px;
+    height: 168px;
+    margin: 0 auto 40px;
+    font-size: 30px;
+    text-align: center;
+    color: #464b4f;
+    line-height: 42px; }
+  .container__content--title {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #464b4f;
+    margin: 0 auto;
+    padding: 75px 0 90px 0; }
+
+.content {
+  width: 100%;
+  max-width: 940px;
+  height: 160px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .content__box {
+    width: 100%;
+    max-width: 300px;
+    height: 160px; }
+    .content__box--title {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+      color: #464b4f;
+      padding-bottom: 20px; }
+    .content__box--text {
+      line-height: 30px;
+      color: #888a8b; }
+
+/*# sourceMappingURL=main.css.map */
