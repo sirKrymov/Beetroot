@@ -1,0 +1,92 @@
+@import './units/_reset.scss';
+@import './units/_fonts.scss';
+@import './units/_colors.scss';
+@import './units/_mixins.scss';
+@import './units/_base.scss';
+
+/* section ARTBOX  */
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    padding: 0 100px;
+}
+
+.artbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    background-color: $background;
+    padding: 140px 120px 125px 120px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    @media (max-width: 767px) {
+        padding: 140px 130px 125px 130px;
+    }
+    &__title {
+        font: 42px 'playfair_displayregular';
+        letter-spacing: -0.05em;
+        color: $artboxTitle;
+        margin-bottom: 26px;
+    }
+    &__content {
+        position: relative;
+        &--paragraph {
+            font-size: 18px;
+            font-family: 'latoregular';
+            letter-spacing: -0.05em;
+            line-height: 1.88;
+            margin-bottom: 36px;
+            &--largeletter {
+                font-size: 110px;
+                font-family: serif;
+                color: $artboxTitle;
+                margin: 0 30px 0 0;
+                line-height: 34px;
+                text-transform: uppercase;
+                float: left;
+                padding-top: 28px;
+                padding-bottom: 30px;
+            }
+            &--second--part1 {
+                margin-bottom: 0px;
+            }
+            &--third {
+                margin-bottom: 14px;
+            }
+        }
+    }
+    &__phrase {
+        font-size: 24px;
+        font-family: 'latolight', san-serif;
+        font-style: italic;
+        margin-bottom: 35px;
+        letter-spacing: 0.05em;
+        &--quotes {
+            font-size: 50px;
+            padding-right: 19px;
+        }
+    }
+    &__link--btn {
+        width: 265px;
+        height: 70px;
+        border: 2px solid $buttoncolor;
+        background-color: $background;
+        color: $buttoncolor;
+        text-transform: uppercase;
+        font-family: 'latobold', sans-serif;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+        @include transition;
+        cursor: pointer;
+        &:hover {
+            background-color: $buttoncolor;
+            color: $background;
+        }
+    }
+}
