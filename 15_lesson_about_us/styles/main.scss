@@ -1,0 +1,462 @@
+@import './units/_reset.scss';
+@import './units/_fonts.scss';
+@import './units/_colors.scss';
+@import './units/_mixins.scss';
+@import './units/_base.scss';
+.header {
+    background: url('./../img/header.png') center no-repeat;
+    width: 100%;
+    max-width: 1300px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.header__container {
+    width: 100%;
+    max-width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    &--navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        position: relative;
+        &--logo {
+            display: inline-block;
+            position: absolute;
+            font-family: 'montserratbold', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: $logoColor;
+            left: 0;
+        }
+        &--nav {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &--content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80%;
+        &--title {
+            font-family: 'montserratbold', sans-serif;
+            font-size: 36px;
+            line-height: 1.33;
+            text-transform: uppercase;
+            color: $linkColor;
+        }
+        &--linkbox {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 116px;
+            font-family: 'montserratbold', sans-serif;
+            font-size: 14px;
+            line-height: 3.43;
+            text-transform: uppercase;
+            color: $logoColor;
+            text-decoration: none;
+            &--linktext {
+                color: $linkColor;
+                cursor: pointer;
+            }
+            &--separator {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 18px;
+                background-color: $linkColor;
+                margin-right: 6px;
+                opacity: 1;
+                top: 50%;
+                right: 50%;
+                transform: rotate(20deg) translateY(-50%);
+            }
+        }
+    }
+}
+
+.aboutusbox {
+    display: flex;
+    justify-content: center;
+    background-color: $backgroundColor;
+    width: 100%;
+    max-width: 1300px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 150px;
+    &__content {
+        display: flex;
+        flex-direction: row;
+        width: 1170px;
+        height: 100%;
+        align-items: flex-start;
+        &--column {
+            width: 50%;
+            padding: 0 15px;
+            &--titlebox {
+                position: relative;
+                &--title {
+                    display: flex;
+                    position: relative;
+                    font-family: 'montserratbold', sans-serif;
+                    font-size: 30px;
+                    line-height: 1.6;
+                    text-transform: uppercase;
+                    color: $maintextColor;
+                    padding-bottom: 14px;
+                    z-index: 2;
+                }
+                &--shadow {
+                    content: "";
+                    position: absolute;
+                    width: 68px;
+                    height: 22px;
+                    top: 0;
+                    left: 0;
+                    background-color: $shadow;
+                    z-index: 1;
+                    transform: translateY(100%);
+                }
+            }
+            &--subtitle {
+                font-family: 'open_sansextrabold', sans-serif;
+                font-size: 14px;
+                line-height: 1.7142857;
+                text-transform: uppercase;
+                color: $maintextColor;
+                padding-bottom: 14px;
+            }
+            &--text {
+                font-family: 'open_sansregular', sans-serif;
+                font-size: 14px;
+                line-height: 2.14285;
+                color: $maintextColor;
+            }
+        }
+    }
+}
+
+.somebenefits {
+    display: flex;
+    justify-content: center;
+    background-color: $backgroundColor;
+    width: 100%;
+    max-width: 1300px;
+    height: 660px;
+    margin: 0 auto;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 1170px;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        &--titlebox {
+            position: relative;
+            height: 62px;
+            text-align: center;
+            &--title {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                font-family: 'montserratbold', sans-serif;
+                font-size: 30px;
+                line-height: 1.6;
+                text-transform: uppercase;
+                color: $maintextColor;
+                padding-bottom: 14px;
+                z-index: 2;
+            }
+            &--shadow {
+                content: "";
+                position: absolute;
+                width: 68px;
+                height: 22px;
+                top: 0;
+                left: 0;
+                background-color: $shadow;
+                z-index: 1;
+                transform: translateY(100%);
+            }
+        }
+        &--text {
+            text-align: center;
+            width: 726px;
+            font-family: 'open_sansregular', sans-serif;
+            font-size: 14px;
+            line-height: 2.14285;
+            color: $maintextColor;
+            height: 128px;
+        }
+        &--box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            width: 1170px;
+            height: 470px;
+            &--list {
+                width: 33.33333%;
+                height: 186px;
+                padding: 0 15px;
+                &--item {
+                    position: relative;
+                    height: 60px;
+                    &--title {
+                        padding-left: 60px;
+                        font-family: 'montserratbold', sans-serif;
+                        font-size: 18px;
+                        line-height: 2.66666666;
+                        text-transform: uppercase;
+                        color: $maintextColor;
+                    }
+                }
+            }
+            &--text {
+                font-family: 'open_sansregular', sans-serif;
+                font-size: 14px;
+                line-height: 2.14285;
+                color: $maintextColor;
+            }
+        }
+    }
+}
+
+.title__benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $shadow;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 30px;
+    &--icon {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+.dreamteam {
+    display: flex;
+    justify-content: center;
+    background-color: $backgroundColor;
+    width: 100%;
+    max-width: 1300px;
+    height: 920px;
+    margin: 0 auto;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 1170px;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        &--titlebox {
+            position: relative;
+            height: 62px;
+            text-align: center;
+            &--title {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                font-family: 'montserratbold', sans-serif;
+                font-size: 30px;
+                line-height: 1.6;
+                text-transform: uppercase;
+                color: $maintextColor;
+                padding-bottom: 14px;
+                z-index: 2;
+            }
+            &--shadow {
+                content: "";
+                position: absolute;
+                width: 68px;
+                height: 22px;
+                top: 0;
+                left: 0;
+                background-color: $shadow;
+                z-index: 1;
+                transform: translateY(100%);
+            }
+        }
+        &--text {
+            text-align: center;
+            width: 726px;
+            font-family: 'open_sansregular', sans-serif;
+            font-size: 14px;
+            line-height: 2.14285;
+            color: $maintextColor;
+            height: 128px;
+        }
+        &--photobox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            width: 1170px;
+            height: 730px;
+            &--item {
+                width: 292.5px;
+                height: 365px;
+                overflow: hidden;
+                padding: 0 15px 30px 15px;
+                &--image {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $footerbackgroundColor;
+    width: 100%;
+    max-width: 1300px;
+    height: 329px;
+    margin: 0 auto;
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &--feedback {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+        height: 232px;
+        padding: 0 15px;
+        &--text {
+            font-family: 'montserratbold', sans-serif;
+            font-size: 30px;
+            line-height: 1.6;
+            text-transform: uppercase;
+            color: $textColor;
+            padding-bottom: 14px;
+        }
+        &--btn {
+            width: 166px;
+            height: 48px;
+            right: 28px;
+            border: none;
+            background-color: $backgroundColor;
+            text-transform: uppercase;
+            font-family: 'montserratbold', sans-serif;
+            font-size: 14px;
+            color: $footerbackgroundColor;
+            cursor: pointer;
+            @include transition(0.4s);
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &--form {
+        width: 50%;
+        height: 232px;
+        padding: 0 15px;
+        &--box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            padding: 20px 26px 0 20px;
+            background-color: $backgroundColor;
+            &--title {
+                font-family: 'montserratbold', sans-serif;
+                font-size: 24px;
+                line-height: 1.5;
+                text-transform: uppercase;
+                color: $maintextColor;
+                padding-left: 4px;
+            }
+            &--text {
+                font-family: 'open_sansregular', sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                color: $maintextColor;
+                padding-left: 4px;
+            }
+            &--email {
+                position: relative;
+                width: 100%;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.input {
+    position: absolute;
+    border: 1px solid $inputborder;
+    width: 509px;
+    height: 50px;
+    font-size: 18px;
+    color: $inputColor;
+    &:focus {
+        border-color: $inputborder;
+    }
+}
+
+ ::-webkit-input-placeholder {
+    padding-left: 20px;
+    font-family: 'montserratbold', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $inputColor;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.btn {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: $footerbackgroundColor;
+    width: 136px;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: 'montserratbold', sans-serif;
+    font-size: 18px;
+    color: $textColor;
+    cursor: pointer;
+    @include transition(0.4s);
+    &:hover {
+        opacity: 1;
+    }
+}
