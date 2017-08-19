@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: $bodyBackgroundText;
+    width: 100vw;
+    min-width: 320px;
+    overflow-x: hidden;
+    background-color: $bodyBackground;
+}
+
+a {
+    color: $bodyBackgroundText;
+}
