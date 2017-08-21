@@ -1,58 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PSD TO HTML</title>
-  <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Working With Design Lab</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-  <section class="main-section">
-    <img src="./img/logo.svg" alt="logo">
-    <p>WORKING</p>
-    <p>WITH design LAB</p>
-    <p>We’ve been helping startups launch and grow their businesses.</p>
-    <p>We help you to fill the gap between development,</p>
-    <p>design and product management.</p>
-    <a class="main-section__btn" href="#about"><span class="main-section__btn-animate"></span></a>
-  </section>
-  <section id="about" class="about">
-    <div class="about__container">
-      <p class="about__title">About Us</p>
-      <p class="about__text">
-         When you work with us, you are part of a team of committed collaborators. All aspects of our software development process
-        are integrated, iterative and agile. Our approach unifies design, development and product management to create exceptional
-        products. We start each project by understanding your business goals, the user’s needs and the product requirements.
-        Then we help translate them into effective and elegant solutions.
-      </p>
-    </div>
-  </section>
-  <section class="portfolio">
-    <div class="portfolio__item">
-      <img class="portfolio__img" src="./img/1.jpg" alt="">
-      <p class="portfolio__label">topworkz</p>
-    </div>
-    <div class="portfolio__item portfolio__item--large">
-      <img class="portfolio__img" src="./img/2.jpg" alt="">
-      <p class="portfolio__label">topworkz</p>
-    </div>
-    <div class="portfolio__item">
-      <img class="portfolio__img" src="./img/3.jpg" alt="">
-      <p class="portfolio__label">topworkz</p>
-    </div>
-    <div class="portfolio__item">
-      <img class="portfolio__img" src="./img/1.jpg" alt="">
-      <p class="portfolio__label">topworkz</p>
-    </div>
-    <div class="portfolio__item portfolio__item--large">
-      <img class="portfolio__img" src="./img/2.jpg" alt="">
-      <p class="portfolio__label">topworkz</p>
-    </div>
-    <div class="portfolio__item">
-      <img class="portfolio__img" src="./img/3.jpg" alt="">
-      <p class="portfolio__label">topworkz</p>
-    </div>
-  </section>
+    <section class="main-section">
+        <div class="main-section__logo">
+            <img src="./img/logo.svg" alt="logo">
+        </div>
+        <p class="main-section__title">Working</p>
+        <p class="main-section__title main-section__title--bottom">with design lab</p>
+        <p class="main-section__subtitle">We’ve been helping startups launch and grow their businesses.</p>
+        <p class="main-section__subtitle">We help you to fill the gap between development,</p>
+        <p class="main-section__subtitle main-section__subtitle--bottom">design and product management.</p>
+        <a class="main-section__btn" href="#about"><span class="main-section__btn-animate"></span></a>
+    </section>
+    <section id="about" class="about">
+        <div class="about__container">
+            <p class="about__title">About Us</p>
+            <div class="about__text-block">
+                <p class="about__text">
+                    When you work with us, you are part of a team of committed collaborators. All aspects of our software development process are integrated, iterative and agile.
+                </p>
+                <p class="about__text about__text--thin">Our approach unifies design, development and product management to create exceptional products.</p>
+                <p class="about__text about__text--thin2">We start each project by understanding your business goals, the user’s needs and the product requirements. Then we help translate them into effective and elegant solutions.</p>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="services">
+        <div class="services__container">
+            <p class="services__title">Services</p>
+            <div class="services__text-block">
+                <p class="services__text">
+                    Before we sign a contract or write a line of code our team will spend the necessary time needed to understand your production vision.
+                </p>
+                <p class="services__text services__text--thin">The outcome of this scoping session is a proposal or high-level statement of work.</p>
+                <p class="services__text services__text--thin2">Based on your requirements, we can provide a complete offering or just the poeces you need.</p>
+            </div>
+        </div>
+    </section>
+    <section id="whatwedo" class="whatwedo">
+        <div class="whatwedo__container">
+            <p class="whatwedo__title">what we do</p>
+            <div class="whatwedo__text-block">
+                <div class="whatwedo__icon">
+                    <img class="whatwedo__img" src="img/shape2.png" alt="img">
+                </div>
+                <p class="whatwedo__subtitle">design</p>
+                <p class="whatwedo__text whatwedo__text--thin1">
+                    Our design practice offers a full range of services including branding strategy, interaction and visual design and user experience testing.
+                </p>
+                <p class="whatwedo__text whatwedo__text--thin2">Throughout your project, our designers create and implement visual designs and workflows, solicit user feedback, and work with you to make sure what gets built is what is needed.</p>
+
+                <div class="whatwedo__icon">
+                    <img class="whatwedo__img" src="img/shape3.png" alt="img">
+                </div>
+                <p class="whatwedo__subtitle">development</p>
+                <p class="whatwedo__text whatwedo__text--thin2">All engineers are fluent in the latest enterprise, mobile and web development technologies. they collaborate with your team to write, test, and improve code on a daily basis, using proven practices such as test-driven development and pair
+                    programing.
+                </p>
+                <div class="whatwedo__icon">
+                    <img class="whatwedo__img" src="img/shape4.png" alt="img">
+                </div>
+                <p class="whatwedo__subtitle">product management</p>
+                <p class="whatwedo__text whatwedo__text--thin2">Planning and development is iterative. because we are constantly coding and testing, the products we build are always ready to go live. this iterative process allows for changes as business requirements evolve.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio">
+        <div class="portfolio__item">
+            <img class="portfolio__img" src="./img/1.jpg" alt="">
+            <p class="portfolio__label">topworkz</p>
+        </div>
+        <div class="portfolio__item portfolio__item--large">
+            <img class="portfolio__img" src="./img/2.jpg" alt="">
+            <p class="portfolio__label">joint</p>
+        </div>
+        <div class="portfolio__item">
+            <img class="portfolio__img" src="./img/3.jpg" alt="">
+            <p class="portfolio__label">market</p>
+        </div>
+        <div class="portfolio__item">
+            <img class="portfolio__img" src="./img/4.jpg" alt="">
+            <p class="portfolio__label">worktop</p>
+        </div>
+        <div class="portfolio__item portfolio__item--large">
+            <img class="portfolio__img" src="./img/5.jpg" alt="">
+            <p class="portfolio__label">label</p>
+        </div>
+        <div class="portfolio__item">
+            <img class="portfolio__img" src="./img/6.jpg" alt="">
+            <p class="portfolio__label">kyiv</p>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="contact__container">
+            <p class="contact__title">Contact Us</p>
+            <div class="contact__text-block">
+                <p class="contact__text">
+                    Planning and development is iterative. because we are constantly coding and testing, the products we build are always ready to go live. this iterative process allows for changes as business requirements evolve.
+                </p>
+                <button class="contact__btn" type="button" name="button">contact us</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__icon">
+                <img class="footer__img" src="./img/logoblack.svg" alt="logo">
+            </div>
+            <p class="footer__text">&copy; 2014. all rights reserved ellipsis.com</p>
+        </div>
+    </footer>
 </body>
+
 </html>
