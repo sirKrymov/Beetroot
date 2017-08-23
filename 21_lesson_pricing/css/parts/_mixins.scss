@@ -1,0 +1,15 @@
+@mixin transition($time: 0.4s) {
+    transition: all $time ease-in-out;
+}
+
+@mixin font($font-family, $font-size, $font-weight, $color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin custom-animation($animation) {
+    animation: $animation 2s infinite;
+    transition: all 0.3s ease-in-out;
+}

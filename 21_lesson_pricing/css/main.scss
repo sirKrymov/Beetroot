@@ -1,0 +1,272 @@
+@import './parts/_reset.scss';
+@import './parts/_fonts.scss';
+@import './parts/_colors.scss';
+@import './parts/_mixins.scss';
+@import './parts/_base.scss';
+@import './parts/_animations.scss';
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    color: $backgroundText;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 998px;
+    width: calc(1414px + 30px);
+    background-color: $containerbackColor;
+    margin: auto;
+    position: relative;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-container {
+    min-height: 691px;
+    width: calc(1414px - 172px - 172px);
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-card {
+    &__container {
+        min-height: 691px;
+        height: 100%;
+        width: 370px;
+        position: relative;
+        background-color: $price-cardColor;
+        // overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        &--left {
+            min-height: calc(691px - 80px);
+            height: calc(100% - 80px);
+            width: 328px;
+            margin-right: 22px;
+        }
+        &--right {
+            min-height: calc(691px - 80px);
+            height: calc(100% - 80px);
+            width: 328px;
+            margin-left: 22px;
+        }
+    }
+    &__curvshape {
+        position: absolute;
+        // width: 556px;
+        // height: 424px;
+        // border-top-right-radius: 50%;
+        // border-top-left-radius: 50%;
+        bottom: 91px;
+        left: 50%;
+        transform: translateX(-50%);
+        // background-color: $curvshapeColor;
+        z-index: 1;
+        &--small {
+            // width: 468px;
+            // height: 395px;
+            bottom: 60px;
+        }
+    }
+    &__price-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 70px;
+        &--small {
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+    }
+    &__title {
+        font-family: 'bebas_neueregular', sans-serif;
+        font-size: 24px;
+        letter-spacing: 0.08em;
+        color: $price-cardtextColor;
+        text-transform: uppercase;
+        margin-left: 2px;
+    }
+    &__price-block {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 86px;
+        height: 46px;
+        margin-bottom: 22px;
+    }
+    &__logo {
+        z-index: 2;
+    }
+    &__list-block {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 26px;
+        &--small {
+            margin-top: 16px;
+        }
+    }
+    &__list-item {
+        font-family: 'robotolight', sans-serif;
+        font-size: 16px;
+        line-height: 53px;
+        color: $price-cardtextColor;
+    }
+    &__btn {
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+        bottom: 91px;
+        transform: translateX(-50%) translateY(50%);
+        width: 204px;
+        height: 55px;
+        border-radius: 35px;
+        border: none;
+        color: $curvshapeColor;
+        font-family: 'bebas_neuebold', sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background-color: $btnColor;
+        &--small {
+            bottom: 0;
+            transform: translateX(-50%) translateY(40%);
+            background-color: $btnsmallColor;
+        }
+    }
+    &__discount {
+        z-index: 2;
+        font-family: 'robotolight', sans-serif;
+        font-size: 11px;
+        color: $discountColor;
+        background: transparent;
+        margin-top: 100px;
+    }
+    &__popular-block {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // border: 1px solid black;
+    }
+}
+
+.popular-block {
+    &__circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: none;
+        background-color: $circlepopilarColor;
+        color: $price-cardColor;
+        font-family: 'bebas_neueregular', sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        text-align: center;
+        line-height: 48px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 1px;
+        &:before {
+            content: '';
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: $circlepopilarColor;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+        }
+        &:after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $circlepopilarColor;
+            position: absolute;
+            top: -12px;
+            right: -12px;
+        }
+    }
+    &__nameplate {
+        z-index: 3;
+        width: 102px;
+        height: 31px;
+        border-radius: 20px;
+        border: none;
+        background-color: $popularmarkColor;
+        color: $price-cardColor;
+        font-family: 'bebas_neueregular', sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        bottom: 8px;
+        left: 60px;
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 11px solid transparent;
+            border-right: 10px solid $popularmarkColor;
+            border-bottom: 11px solid transparent;
+            position: absolute;
+            top: 50%;
+            left: -5px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.price-block {
+    &__currency {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'bebas_neuebook', sans-serif;
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        color: $price-cardtextColor;
+        padding-left: 4px;
+    }
+    &__value {
+        font-family: 'bebas_neuelight', sans-serif;
+        font-size: 60px;
+        letter-spacing: 0.08em;
+        color: $price-cardtextColor;
+        padding-right: 4px;
+    }
+    &__unit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-family: 'bebas_neuebook', sans-serif;
+        font-size: 16px;
+        line-height: 14px;
+        letter-spacing: 0.08em;
+        color: $price-cardtextColor;
+    }
+}
