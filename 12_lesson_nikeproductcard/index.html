@@ -6,65 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="./styles/normalize.css"> -->
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./css/ionicons.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/main.css">
+
 </head>
 
 <body>
-    <div class="main">
-        <div class="cardcontainer">
-            <div class="nikeproductcard">
-                <div class="nikeproductcard__logo">
-                    <img src="./img/logo.png" alt="logo" />
+    <div class="container">
+        <div class="card-container">
+            <div class="nav-panel">
+                <div class="nav-panel__logo">
+                    <img src="./img/logo.png" alt="logo/png">
                 </div>
-                <div class="nikeproductcard__imageblock">
-                    <div class="nikeproductcard__imageblock--image">
-                        <img src="./img/Nike-SB-Stefan-Janoski-Max.png" alt="Nike-SB-Stefan-Janoski-Max" />
-                    </div>
-                    <div class="nikeproductcard__imageblock--bullet">
-                        <button class="bullet__item bullet__item--gray"></button>
-                        <button class="bullet__item bullet__item--white"></button>
-                        <button class="bullet__item bullet__item--red"></button>
-                        <button class="bullet__item bullet__item--turquoise"></button>
-                    </div>
+                <div class="nav-panel__navbar">
+                    <a class="nav-panel__nav-link" href="#">lifestyle</a>
+                    <a class="nav-panel__nav-link nav-panel__nav-link--active" href="#">running</a>
+                    <a class="nav-panel__nav-link" href="#">football</a>
+                    <a class="nav-panel__nav-link" href="#">skateboarding</a>
+                    <a class="nav-panel__nav-link" href="#">
+                        <!-- <i class="fa fa-bars fa-2x" aria-hidden="true"></i> -->
+                        <span class="nav-panel__nav-link--icon ion-drag"></span>
+                    </a>
                 </div>
-                <div class="nikeproductcard__purchaseblock">
-                    <div class="nikeproductcard__purchaseblock--title">
-                        <p class="brand__title brand__title--up">Nike SB Stefan</p>
-                        <p class="brand__title brand__title--down">Janoski Max</p>
-                        <p class="brand__description">Unisex Skateboarding Shoe</p>
-                    </div>
-                    <div class="nikeproductcard__stars">
-                        <img class="star1" src="./img/star.png" alt="star" />
-                        <img class="star1" src="./img/star.png" alt="star" />
-                        <img class="star1" src="./img/star.png" alt="star" />
-                        <img class="star2" src="./img/star.png" alt="star" />
-                        <img class="star2" src="./img/star.png" alt="star" />
-                    </div>
-                    <div class="dropdownblock">
-                        <div class="dropsize1 dropsize1-size">
-                            <select>
-                                <option>Size</option>
-                                <option>41</option>
-                                <option>42</option>
-                                <option>43</option>
-                            </select>
+            </div>
+            <div class="data-block">
+                <div class="data-block__image-block">
+                    <div class="data-block__image-preview">
+                        <div class="data-block__preview-item">
+                            <img src="./img/img1.png" alt="img1/png">
                         </div>
-                        <div class="dropsize1 dropsize1-qty">
-                            <select>
-                                <option>Qty</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
+                        <div class="data-block__preview-item">
+                            <img src="./img/img2.png" alt="img2/png">
+                        </div>
+                        <div class="data-block__preview-item">
+                            <img src="./img/img3.png" alt="img3/png">
                         </div>
                     </div>
-                    <div>
-                        <button class="buttonpay">Add to card</button>
+                    <a class="data-block__preview-link" href="#">
+                        <span class="data-block__preview-link--icon ion-ios-plus-empty"></span>
+                    </a>
+                </div>
+                <div class="data-block__purchase-block">
+                    <a class="data-block__purchase-link" href="#">
+                        <span class="data-block__purchase-link--icon ion-ios-close-empty"></span>
+                    </a>
+                    <p class="data-block__purchase-condition">new</p>
+                    <p class="data-block__purchase-title">the <span class="data-block__purchase-title--blue">running</span></p>
+                    <p class="data-block__purchase-title data-block__purchase-title--bottom ">has just begun</p>
+                    <div class="data-block__rating-block">
+                        <p class="data-block__rating-name">Huarache</p>
+                        <div class="data-block__rating-star">
+                            <p class="data-block__star ion-ios-star"></p>
+                            <p class="data-block__star ion-ios-star"></p>
+                            <p class="data-block__star ion-ios-star"></p>
+                            <p class="data-block__star ion-ios-star"></p>
+                            <p class="data-block__star ion-ios-star-outline"></p>
+                        </div>
                     </div>
+                    <p class="data-block__price"> $ 200</p>
+                    <p class="data-block__size-name">Size</p>
+                    <div class="data-block__size-block">
+                        <p class="data-block__size">7</p>
+                        <p class="data-block__size">8</p>
+                        <p class="data-block__size">9</p>
+                        <p class="data-block__size">10</p>
+                        <p class="data-block__size">11</p>
+                    </div>
+                    <button class="data-block__btn-pay">add to card</button>
+                    <button class="data-block__btn-pay data-block__btn-pay--wishlist">wishlist</button>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
