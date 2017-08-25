@@ -1,0 +1,56 @@
+// Colors
+$gray: #757575;
+$darkGray: #444444;
+$darkGray2: #2a2a2a;
+$white: #fff;
+$black: #000;
+$yellow: #ffe400;
+$darkWhite: #fcfcfc;
+$lightGray: #e3e3e3;
+$base-text-color: $gray;
+
+.padding-left-none {
+    padding-left: 0;
+}
+
+.padding-right-none {
+    padding-right: 0;
+}
+
+.padding-right-left-none {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear:both;
+    }
+}
+
+.img-cover {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    @supports (object-fit: cover) {
+        width: 100%;
+        height: 100%;  
+        object-fit: cover;
+    }
+}
+
+ .img-contain {
+     max-width: 100%;
+     height: auto;
+     display: block;
+     @supports (object-fit: contain) {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+     }
+ }

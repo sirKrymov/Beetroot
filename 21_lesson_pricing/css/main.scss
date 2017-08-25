@@ -3,7 +3,6 @@
 @import './parts/_colors.scss';
 @import './parts/_mixins.scss';
 @import './parts/_base.scss';
-@import './parts/_animations.scss';
 .main-container {
     height: 100vh;
     width: 100vw;
@@ -157,7 +156,7 @@
         font-size: 11px;
         color: $discountColor;
         background: transparent;
-        margin-top: 100px;
+        margin-top: 105px;
     }
     &__popular-block {
         width: 70px;
