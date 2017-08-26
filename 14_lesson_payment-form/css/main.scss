@@ -1,0 +1,248 @@
+@import './parts/_reset.scss';
+@import './parts/_fonts.scss';
+@import './parts/_colors.scss';
+@import './parts/_mixins.scss';
+@import './parts/_base.scss';
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-container {
+    max-height: 600px;
+    max-width: 830px;
+    height: 100%;
+    width: 100%;
+    background: url('../img/unsplash.png') no-repeat center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-form {
+    height: 533px;
+    width: 337px;
+    position: relative;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__account-status {
+        width: 100%;
+        height: 72px;
+        position: relative;
+        background-color: #eee4a9;
+        padding: 0 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__block-name {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__name {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        color: #6c7c79;
+    }
+    &__type {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+        color: #a39f8b;
+    }
+    &__amount-block {
+        display: block;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__currency {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        letter-spacing: -0.050em;
+        text-transform: uppercase;
+        color: #6c7c79;
+    }
+    &__amount {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        letter-spacing: -0.050em;
+        text-transform: uppercase;
+        color: #6c7c79;
+    }
+    &__card-data {
+        min-height: 326px;
+        width: calc(337px - 48px);
+        border-bottom: 1px solid #e4e7e8;
+    }
+    &__card-description {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        color: #99a6a8;
+        margin-top: 44px;
+    }
+    &__expiry-description {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        color: #99a6a8;
+    }
+    &__card-number {
+        outline: none;
+        box-shadow: none;
+        width: 100%;
+        height: 44px;
+        border: 2px solid #b4c1c4;
+        background-color: #f5f6f6;
+        padding: 0 10px;
+        margin: 8px 0 28px 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: #707c7f;
+        @include transition(0.4s);
+        &:hover {
+            border: 2px solid #6c7c79;
+            color: #25b167;
+        }
+        &:focus {
+            border: 2px solid #7fcddf;
+            color: #707c7f;
+        }
+    }
+    &__expiry-block {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8px;
+    }
+    &__expire {
+        height: 44px;
+        position: relative;
+        z-index: 1;
+        &--mm {
+            width: calc(70% - 16px);
+            margin-right: 16px;
+        }
+        &--yy {
+            width: 30%;
+        }
+    }
+    &__select-icon {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #94a5a8;
+        cursor: pointer;
+        z-index: 2;
+        background: transparent;
+        pointer-events: none;
+    }
+    &__exp-item {
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        border: 2px solid #b4c1c4;
+        background-color: #f5f6f6;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: #707c7f;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            border: 2px solid #6c7c79;
+            color: #25b167;
+        }
+        &:focus {
+            border: 2px solid #7fcddf;
+            color: #707c7f;
+        }
+    }
+    &__btn-pay {
+        height: 48px;
+        width: calc(337px - 48px);
+        background-color: #25b167;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #f5f5f5;
+        margin-top: 31px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            background-color: #f5f5f5;
+            color: #25b167;
+            border: 1px solid #6c7c79;
+        }
+    }
+    &__link-cancelorder {
+        text-decoration: none;
+        color: #98a5a7;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+        &:after {
+            position: absolute;
+            content: '';
+            left: 50%;
+            bottom: -2px;
+            transform: translateX(-50%);
+            height: 1px;
+            width: 78px;
+            color: #98a5a7;
+            z-index: 2;
+        }
+        &:hover {
+            color: #6c7c79;
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.ion-arrow-down-b {
+    padding-top: 1px;
+}
