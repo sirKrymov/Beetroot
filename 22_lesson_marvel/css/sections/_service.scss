@@ -1,0 +1,99 @@
+.service {
+    min-height: 952px;
+    background: $white1 url('./../img/service-bg.png') left bottom no-repeat;
+    // background-attachment: fixed;
+    &__container {
+        min-height: 952px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    &__title {
+        text-transform: uppercase;
+        color: $darkGray;
+        font-size: 30px;
+        font-family: 'Open Sans';
+        font-weight: 700;
+        margin-bottom: 140px;
+        margin-top: 190px;
+        position: relative;
+        z-index: 2;
+        margin-right: 60px;
+        &:before {
+            content: 'service';
+            position: absolute;
+            font-size: 91px;
+            font-family: 'Montserrat';
+            font-weight: 900;
+            top: -51px;
+            left: 0;
+            color: $shadowColor;
+            z-index: -1;
+        }
+    }
+    &__list {
+        width: 554px;
+        height: 456px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 50%;
+        height: 50%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 37px;
+        border: 1px solid $white1;
+        background-color: $white1;
+        &--down {
+            justify-content: flex-end;
+        }
+        &--right-bottom {
+            border-right: 1px solid $gray1;
+            border-bottom: 1px solid $gray1;
+        }
+        &--left-bottom {
+            border-bottom: 1px solid $gray1;
+        }
+        &--left-top {}
+        &--right-top {
+            border-right: 1px solid $gray1;
+        }
+    }
+    &__icon-wrapper {
+        width: 45px;
+        height: 45px;
+        background-color: transparent;
+        color: $black;
+        position: relative;
+        margin-bottom: 34px;
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+    }
+    &__icon-title {
+        text-transform: uppercase;
+        color: $darkGray;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    &__icon-description {
+        color: $gray;
+        font-size: 13px;
+        font-family: 'Muli';
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 1.7;
+        text-align: center;
+    }
+}
