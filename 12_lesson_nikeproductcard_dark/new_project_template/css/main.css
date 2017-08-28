@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+input {
+  outline: none; }
+
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0; }
+
+@font-face {
+  font-family: 'latobold';
+  src: url("../fonts/lato-bold-webfont.woff2") format("woff2"), url("../fonts/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'latoregular';
+  src: url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'latolight';
+  src: url("../lato-light-webfont.woff2") format("woff2"), url("../lato-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #aeaeae;
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #ffffff; }
+
+@keyframes animate-top {
+  0% {
+    opacity: 0; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-top-right {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 0; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-right {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 0; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-bottom-right {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 0; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-bottom {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 0; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-bottom-left {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 0; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-left {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes animate-top-left {
+  0% {
+    opacity: 1; }
+  14.3% {
+    opacity: 1; }
+  28.6% {
+    opacity: 1; }
+  42.9% {
+    opacity: 1; }
+  57.2% {
+    opacity: 1; }
+  71.5% {
+    opacity: 1; }
+  85.8% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.container {
+  height: 100vh;
+  width: 100vw; }
+
+/*# sourceMappingURL=main.css.map */
