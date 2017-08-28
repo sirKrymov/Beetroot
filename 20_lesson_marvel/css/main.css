@@ -1461,4 +1461,58 @@ textarea::-webkit-input-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease; }
 
+.locate {
+  min-height: 165;
+  background: url("./../img/locate-bg.png") center/cover no-repeat;
+  overflow: auto; }
+  .locate__container {
+    min-height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .locate__btn {
+    width: 270px;
+    height: 60px;
+    margin-right: 40px;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    position: relative; }
+    .locate__btn:hover {
+      border: none;
+      color: #ffffff; }
+      .locate__btn:hover .locate__icon {
+        color: #ffffff;
+        transition-property: all;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-in-out; }
+  .locate__icon-wrapper {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    top: 54%;
+    right: -40px;
+    transform: translateY(-50%);
+    overflow: hidden; }
+  .locate__icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #000;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out; }
+    .locate__icon:hover {
+      color: #ffffff; }
+
 /*# sourceMappingURL=main.css.map */
