@@ -1,6 +1,7 @@
 .pricing {
     min-height: 1200px;
     background: url('./../img/prising-bg.png') center / cover no-repeat;
+    overflow: auto;
     &__container {
         min-height: 1200px;
         display: flex;
@@ -37,10 +38,11 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-bottom: 156px;
     }
     &__item {
         width: 360px;
-        height: 693px;
+        height: 690px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -48,16 +50,30 @@
         margin-right: 30px;
         background-color: $white1;
         position: relative;
-        margin-bottom: 70px;
+        margin-bottom: 78px;
         &:last-of-type {
             margin-right: 0;
         }
     }
-    &__image-wrapper {
+    &__item-header {
         max-width: 100%;
-        height: auto;
+        height: 212px;
         display: block;
         overflow: hidden;
+        position: relative;
+        object-fit: cover;
+    }
+    &__tariff-plan {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     &__btn {
         width: 100%;
@@ -68,7 +84,7 @@
         transform: translateX(-50%);
         font-size: 14px;
         font-family: 'Montserrat';
-        font-weight: 400;
+        font-weight: 600;
         color: $darkGray;
         border: 1px solid transparent;
         background-color: $white1;
@@ -81,4 +97,104 @@
             font-size: 18px;
         }
     }
+    &__advantages-list {
+        width: 100%;
+        height: calc(100% - 212px);
+        border: 1px solid $shadowColor;
+        display: flex;
+        flex-direction: column;
+    }
+    &__advantages-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-grow: 1;
+        border-bottom: 1px solid $shadowColor;
+        font-family: 'Muli';
+        font-weight: 400;
+        font-size: 13px;
+        &--first {
+            border-bottom: none;
+        }
+    }
+}
+
+.tariff {
+    &__name {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: $white1;
+        margin-bottom: 34px;
+    }
+    &__price-block {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 186px;
+        height: 46px;
+        &--premium {
+            width: 200px;
+        }
+        &--ultimate {
+            width: 224px;
+        }
+    }
+    &__currency {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'Muli', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        color: $white1;
+        padding-right: 6px;
+        &--premium {
+            padding-right: 0;
+        }
+        &--ultimate {
+            padding-right: 4px;
+        }
+    }
+    &__value {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 60px;
+        color: $white1;
+        padding-right: 36px;
+        &--premium {
+            padding-right: 42px;
+        }
+        &--ultimate {
+            padding-right: 40px;
+        }
+    }
+    &__unit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-family: 'Muli', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $white1;
+        letter-spacing: 0.04em;
+    }
+    &__description {
+        font-family: 'Muli', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: $gray1;
+        margin-top: 28px;
+        letter-spacing: 0.04em;
+    }
+}
+
+.fa-angle-right {
+    padding-right: 10px;
 }

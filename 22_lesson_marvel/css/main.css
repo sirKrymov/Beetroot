@@ -787,7 +787,8 @@ main {
   .work__image {
     width: 25%;
     flex-grow: 1;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .work__image:hover .work__image-overlay {
       opacity: 1;
       pointer-events: auto;
@@ -958,7 +959,8 @@ main {
 
 .pricing {
   min-height: 1200px;
-  background: url("./../img/prising-bg.png") center/cover no-repeat; }
+  background: url("./../img/prising-bg.png") center/cover no-repeat;
+  overflow: auto; }
   .pricing__container {
     min-height: 1200px;
     display: flex;
@@ -991,10 +993,11 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 156px; }
   .pricing__item {
     width: 360px;
-    height: 693px;
+    height: 690px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1002,14 +1005,27 @@ main {
     margin-right: 30px;
     background-color: #ffffff;
     position: relative;
-    margin-bottom: 70px; }
+    margin-bottom: 78px; }
     .pricing__item:last-of-type {
       margin-right: 0; }
-  .pricing__image-wrapper {
+  .pricing__item-header {
     max-width: 100%;
-    height: auto;
+    height: 212px;
     display: block;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative;
+    object-fit: cover; }
+  .pricing__tariff-plan {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .pricing__btn {
     width: 100%;
     height: 64px;
@@ -1019,7 +1035,7 @@ main {
     transform: translateX(-50%);
     font-size: 14px;
     font-family: 'Montserrat';
-    font-weight: 400;
+    font-weight: 600;
     color: #444444;
     border: 1px solid transparent;
     background-color: #ffffff;
@@ -1032,5 +1048,87 @@ main {
       background-color: #000;
       border: 1px solid #000;
       font-size: 18px; }
+  .pricing__advantages-list {
+    width: 100%;
+    height: calc(100% - 212px);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column; }
+  .pricing__advantages-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Muli';
+    font-weight: 400;
+    font-size: 13px; }
+    .pricing__advantages-item--first {
+      border-bottom: none; }
+
+.tariff__name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 34px; }
+.tariff__price-block {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 186px;
+  height: 46px; }
+  .tariff__price-block--premium {
+    width: 200px; }
+  .tariff__price-block--ultimate {
+    width: 224px; }
+.tariff__currency {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #ffffff;
+  padding-right: 6px; }
+  .tariff__currency--premium {
+    padding-right: 0; }
+  .tariff__currency--ultimate {
+    padding-right: 4px; }
+.tariff__value {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 60px;
+  color: #ffffff;
+  padding-right: 36px; }
+  .tariff__value--premium {
+    padding-right: 42px; }
+  .tariff__value--ultimate {
+    padding-right: 40px; }
+.tariff__unit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 0.04em; }
+.tariff__description {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #e6e6e6;
+  margin-top: 28px;
+  letter-spacing: 0.04em; }
+
+.fa-angle-right {
+  padding-right: 10px; }
 
 /*# sourceMappingURL=main.css.map */
