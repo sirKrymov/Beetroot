@@ -1128,7 +1128,7 @@ main {
   margin-top: 28px;
   letter-spacing: 0.04em; }
 
-.fa-angle-right {
+.pricing__advantages-item .fa-angle-right {
   padding-right: 10px; }
 
 .expert {
@@ -1388,7 +1388,8 @@ main {
   .news__image-wrapper {
     width: 100%;
     height: 190px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
   .news__data-wrapper {
     width: 100%;
     height: calc(430px - 190px);
@@ -1425,6 +1426,7 @@ main {
     font-family: 'Montserrat';
     font-weight: 600;
     text-transform: uppercase;
+    text-align: center;
     color: #444444;
     margin-bottom: 10px; }
   .news__data-subtitle {
@@ -1432,6 +1434,7 @@ main {
     font-family: 'Montserrat';
     font-weight: 500;
     text-transform: uppercase;
+    text-align: center;
     color: #5a5a5a;
     margin-bottom: 30px; }
   .news__description {
@@ -1459,8 +1462,77 @@ main {
     cursor: pointer; }
     .news__btn:hover {
       color: #000;
-      background-color: #e6cf00;
+      background-color: #ffe400;
       border: 1px solid #000; }
+
+.news-slider__controls {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+.news-slider__btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  font-size: 14px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out; }
+  .news-slider__btn--left {
+    position: absolute;
+    bottom: 36px;
+    left: 18px;
+    padding: 1px 2px 0 0; }
+    .news-slider__btn--left:hover {
+      border: 1px solid #000;
+      background-color: #000;
+      color: #ffffff; }
+  .news-slider__btn--right {
+    position: absolute;
+    bottom: 36px;
+    right: 18px;
+    padding: 1px 0 0 2px; }
+    .news-slider__btn--right:hover {
+      border: 1px solid #000;
+      background-color: #000;
+      color: #ffffff; }
+
+.news-video__control {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+.news-video__btn {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #000;
+  font-size: 28px;
+  padding: 1px 0 0 5px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out; }
+  .news-video__btn:hover {
+    border: 1px solid #ffe400;
+    background-color: #ffe400;
+    color: #000; }
 
 .contact {
   min-height: 1236px;

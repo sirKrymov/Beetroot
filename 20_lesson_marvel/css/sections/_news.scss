@@ -56,6 +56,7 @@
         width: 100%;
         height: 190px;
         overflow: hidden;
+        position: relative;
         // border: 1px solid black;
     }
     &__data-wrapper {
@@ -98,6 +99,7 @@
         font-family: 'Montserrat';
         font-weight: 600;
         text-transform: uppercase;
+        text-align: center;
         color: $darkGray;
         margin-bottom: 10px;
     }
@@ -106,6 +108,7 @@
         font-family: 'Montserrat';
         font-weight: 500;
         text-transform: uppercase;
+        text-align: center;
         color: $darkGray6;
         margin-bottom: 30px;
     }
@@ -133,8 +136,86 @@
         cursor: pointer;
         &:hover {
             color: $black;
-            background-color: $yellow1;
+            background-color: $yellow;
             border: 1px solid $black;
+        }
+    }
+}
+
+.news-slider {
+    &__controls {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__btn {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        font-size: 14px;
+        color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include transition(0.4s);
+        &--left {
+            position: absolute;
+            bottom: 36px;
+            left: 18px;
+            padding: 1px 2px 0 0;
+            &:hover {
+                border: 1px solid $black;
+                background-color: $black;
+                color: $white1;
+            }
+        }
+        &--right {
+            position: absolute;
+            bottom: 36px;
+            right: 18px;
+            padding: 1px 0 0 2px;
+            &:hover {
+                border: 1px solid $black;
+                background-color: $black;
+                color: $white1;
+            }
+        }
+    }
+}
+
+.news-video {
+    &__control {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__btn {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 1px solid $black;
+        font-size: 28px;
+        padding: 1px 0 0 5px;
+        color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            border: 1px solid $yellow;
+            background-color: $yellow;
+            color: $black;
         }
     }
 }
