@@ -158,9 +158,11 @@
         justify-content: center;
         align-items: center;
     }
-}
-
-.social-item {
-    color: $black;
-    padding: 0 10px;
+    &__social-item {
+        color: $black;
+        padding: 0 10px;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
