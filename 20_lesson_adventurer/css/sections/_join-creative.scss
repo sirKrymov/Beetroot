@@ -1,0 +1,37 @@
+.join-creative {
+    min-height: 515px;
+    background: url('./../img/join-creative-bg.png') center / cover no-repeat;
+    &__container {
+        min-height: 515px;
+        @include display-flex(column,
+        center,
+        center);
+    }
+    &__title {
+        margin-top: 25px;
+        margin-bottom: 60px;
+        font: 700 40px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__description {
+        max-width: 710px;
+        margin-bottom: 30px;
+        text-align: center;
+        font: 300 18px/1.66666 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        color: $white;
+        text-align: center;
+    }
+    &__btn {
+        width: 150px;
+        height: 50px;
+        border: none;
+        font: 700 16px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        @include button-bg-2($red,
+        $white);
+    }
+}

@@ -1,0 +1,83 @@
+.main-screen {
+    min-height: calc(100vh - 80px);
+    background: url('./../img/main-screen-bg-1.png') center / cover no-repeat;
+    background-attachment: fixed;
+    &__container {
+        min-height: calc(100vh - 80px);
+        position: relative;
+        @include display-flex(column,
+        center,
+        center);
+        padding: 0 15px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        font: 800 90px/1 Open Sans, sans-serif;
+        letter-spacing: 0.140em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__subtitle {
+        margin-bottom: 100px;
+        font: 600 14px/1 Open Sans, sans-serif;
+        letter-spacing: 0.460em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__btn {
+        width: 150px;
+        height: 50px;
+        border: none;
+        font: 700 16px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        @include button-bg-2($red,
+        $white);
+    }
+}
+
+.main-screen-slider {
+    &__controls {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__btn {
+        width: 60px;
+        height: 60px;
+        @include display-flex(row,
+        center,
+        center);
+        border-radius: 50%;
+        border: 1px solid transparent;
+        margin: 0 80px;
+        font-size: 30px;
+        color: $main-screen-sliderGray;
+        cursor: pointer;
+        @include transition(0.4s);
+        &--left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 1px 3px 0 0;
+            &:hover {
+                background-color: $lightgray;
+                color: $gray1;
+            }
+        }
+        &--right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 1px 0 0 3px;
+            &:hover {
+                background-color: $lightgray;
+                color: $gray1;
+            }
+        }
+    }
+}

@@ -36,6 +36,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        // border: 1px solid black;
     }
     &__item {
         width: calc((100% - 28px*3)/4);
