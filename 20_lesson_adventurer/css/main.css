@@ -321,6 +321,7 @@ main {
     .who-we-are__item-heading--red {
       background-color: #ec4848; }
   .who-we-are__item-title {
+    display: block;
     font: 600 16px/1 Open Sans, sans-serif;
     letter-spacing: -0.05em;
     color: #ffffff; }
@@ -994,6 +995,73 @@ main {
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
   text-overflow: ellipsis; }
+
+.social {
+  min-height: 350px;
+  background-color: #151515;
+  border-bottom: 1px solid #ebebeb; }
+  .social__container {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .social__company {
+    border: 1px solid #ebebeb;
+    width: calc((100% - 84px)/4);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+  .social__some-features {
+    border: 1px solid #ebebeb;
+    width: calc((100% - 84px)/4);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .social__tags {
+    border: 1px solid #ebebeb;
+    width: calc((100% - 84px)/4);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .social__post {
+    border: 1px solid #ebebeb;
+    width: calc((100% - 84px)/4);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.company__title-block {
+  border: 1px solid #ebebeb;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px; }
+.company__logo {
+  font: 700 34px/1 PT Sans, sans-serif;
+  text-transform: uppercase;
+  color: #ec4848; }
+.company__description {
+  margin-bottom: 40px;
+  font: 400 14px/1.4285 Open Sans, sans-serif;
+  letter-spacing: 0.04em;
+  color: #676767; }
+.company__link-block {
+  border: 1px solid #ebebeb;
+  width: 100%; }
 
 .footer {
   min-height: 70px;
