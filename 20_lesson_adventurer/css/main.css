@@ -995,4 +995,39 @@ main {
   transition-timing-function: ease-in-out;
   text-overflow: ellipsis; }
 
+.footer {
+  min-height: 70px;
+  background-color: #151515;
+  border-bottom: 1px solid #ebebeb; }
+  .footer__container {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__copyright {
+    display: inline-block;
+    font: 400 14px/1 Open Sans, sans-serif;
+    color: #676767; }
+  .footer__link {
+    font: 400 14px/1 Open Sans, sans-serif;
+    text-decoration: none;
+    color: #ec4848;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out; }
+  .footer__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px; }
+  .footer__social-item {
+    color: #737373;
+    padding-left: 26px; }
+    .footer__social-item:hover {
+      color: #ec4848; }
+
 /*# sourceMappingURL=main.css.map */

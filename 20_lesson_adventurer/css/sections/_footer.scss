@@ -1,0 +1,33 @@
+.footer {
+    min-height: 70px;
+    background-color: $black1;
+    border-bottom: 1px solid $section-borderLightgray;
+    &__container {
+        width: 100%;
+        min-height: 70px;
+        @include display-flex(row, space-between, center);
+    }
+    &__copyright {
+        display: inline-block;
+        font: 400 14px/1 Open Sans, sans-serif;
+        color: $gray7;
+    }
+    &__link {
+        font: 400 14px/1 Open Sans, sans-serif;
+        text-decoration: none;
+        color: $red;
+        cursor: pointer;
+        @include transition(0.4s);
+    }
+    &__social {
+        @include display-flex(row, center, center);
+        margin-bottom: 6px;
+    }
+    &__social-item {
+        color: $gray6;
+        padding-left: 26px;
+        &:hover {
+            color: $red;
+        }
+    }
+}
