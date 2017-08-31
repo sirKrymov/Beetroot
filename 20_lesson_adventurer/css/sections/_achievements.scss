@@ -1,0 +1,52 @@
+.achievements {
+    min-height: 474px;
+    @include display-flex(column, center, center);
+    background-color: $white;
+    border-bottom: 1px solid $section-borderLightgray;
+    &__container {
+        width: 100%;
+        min-height: 374px;
+        @include display-flex(column, center, center);
+        padding: 0 15px;
+        background: url('./../img/number-block-bg.png') center / cover no-repeat;
+        background-attachment: fixed;
+    }
+    &__data {
+        width: 100%;
+        max-width: 1140px;
+        @include display-flex(row,
+        space-between,
+        center);
+        margin: 0 auto;
+    }
+    &__data-item {
+        width: calc((100% - 60px)/4);
+        min-height: 250px;
+        @include display-flex(column,
+        flex-end,
+        center);
+        background-color: rgba(236, 72, 72, 0.3);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            background-color: rgba(236, 72, 72, 0.7);
+        }
+    }
+    &__icon-wrapper {
+        margin-bottom: 25px;
+    }
+    &__data-number {
+        margin-bottom: 20px;
+        font: 700 40px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__data-title {
+        margin-bottom: 52px;
+        font: 400 14px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.46em;
+        text-transform: uppercase;
+        color: $white;
+    }
+}

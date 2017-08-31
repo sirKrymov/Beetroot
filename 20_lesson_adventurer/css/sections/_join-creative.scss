@@ -1,11 +1,15 @@
 .join-creative {
-    min-height: 515px;
-    background: url('./../img/join-creative-bg.png') center / cover no-repeat;
+    min-height: 615px;
+    @include display-flex(column, center, center);
+    background-color: $white;
+    border-bottom: 1px solid $section-borderLightgray;
     &__container {
+        width: 100%;
         min-height: 515px;
-        @include display-flex(column,
-        center,
-        center);
+        @include display-flex(column, center, center);
+        padding: 0 15px;
+        background: url('./../img/join-creative-bg.png') center / cover no-repeat;
+        background-attachment: fixed;
     }
     &__title {
         margin-top: 25px;

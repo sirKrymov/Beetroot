@@ -1,0 +1,88 @@
+.reviews {
+    min-height: 550px;
+    background-color: $white;
+    border-bottom: 1px solid $section-borderLightgray;
+    &__container {
+        min-height: 550px;
+        @include display-flex(column, center, center);
+    }
+    &__title {
+        margin-bottom: 55px;
+        font: 700 40px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: $gray1;
+    }
+    &__list {
+        max-width: 800px;
+        @include display-flex(column, center, center);
+    }
+    &__item {
+        width: 100%;
+        min-height: 180px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
+        &:nth-of-type(n+1) {
+            margin-bottom: 0;
+        }
+    }
+    &__icon-block {
+        width: 20%;
+        @include display-flex(column, flex-start, flex-start);
+    }
+    &__icon-wrapper {
+        width: 130px;
+        height: 130px;
+        @include display-flex(row, center, flex-start);
+    }
+    &__icon-data {
+        width: 80%;
+        @include display-flex(column, flex-start, flex-start);
+        flex-grow: 1;
+        padding: 10px 15px 15px 25px;
+    }
+    &__icon-title {
+        font: 600 25px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01;
+        text-transform: uppercase;
+        color: $gray1;
+        margin-bottom: 12px;
+    }
+    &__icon-subtitle {
+        font: 600 14px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01;
+        text-transform: uppercase;
+        color: $red;
+        margin-bottom: 24px;
+    }
+    &__icon-description {
+        font: 300 18px/1.66666 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        color: $gray;
+    }
+}
+
+.reviews-slider {
+    &__dots-block {
+        min-width: 60px;
+        @include display-flex(row, space-between, center);
+        margin: 2px auto;
+    }
+    &__dot {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $gray1;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            width: 12px;
+            height: 12px;
+            border: 1px solid transparent;
+            background-color: $red;
+        }
+    }
+}
