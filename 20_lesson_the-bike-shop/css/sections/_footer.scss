@@ -1,0 +1,24 @@
+.footer {
+    background-color: $yellow;
+    &__container {
+        min-height: 70px;
+        @include display-flex(row, space-between, center);
+    }
+    &__nav {
+        @include display-flex(row, flex-end, center);
+    }
+    &__nav-item {
+        margin-left: 35px;
+        padding: 2px;
+        border: 1px solid transparent;
+        font: 700 15px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $black;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            border: 1px solid $black;
+        }
+    }
+}

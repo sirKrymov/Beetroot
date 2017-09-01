@@ -1,0 +1,31 @@
+.popular {
+    min-height: 630px;
+    background-color: $white;
+    &__container {
+        width: 100%;
+        min-height: 630px;
+        @include display-flex(column, space-between, center);
+        padding: 0 15px;
+    }
+    &__title {
+        margin-top: 70px;
+        font: 700 28px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $black;
+    }
+    &__list {
+        width: 100%;
+        @include display-flex(row, space-between, center);
+        margin-bottom: 35px;
+    }
+    &__item {
+        border: 1px solid black;
+        width: calc((100% - 400px)/3);
+        height: 400px;
+        @include display-flex(column, center, center);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {}
+    }
+}

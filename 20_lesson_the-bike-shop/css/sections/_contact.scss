@@ -1,0 +1,19 @@
+.contact {
+    min-height: 630px;
+    background: $white url('./../img/contact-bg.png') center / cover no-repeat;
+    background-attachment: fixed;
+    &__container {
+        min-height: 630px;
+        @include display-flex(column,
+        flex-start,
+        center);
+    }
+    &__title {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        font: 700 28px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $black;
+    }
+}

@@ -1,0 +1,15 @@
+/* Basis */
+
+@import './base/_reset.scss';
+@import './base/_colors.scss';
+@import './base/_fonts.scss';
+@import './base/_mixins.scss';
+@import './base/_base.scss';
+
+/* Sections */
+
+@import './sections/_main-screen.scss';
+@import './sections/_categories.scss';
+@import './sections/_popular.scss';
+@import './sections/_contact.scss';
+@import './sections/_footer.scss';

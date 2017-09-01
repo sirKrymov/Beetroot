@@ -1,0 +1,13 @@
+.main-screen {
+    min-height: 100vh;
+    background: url('./../img/main-screen-bg.png') center / cover no-repeat;
+    background-attachment: fixed;
+    &__container {
+        min-height: 100vh;
+        position: relative;
+        @include display-flex(column,
+        center,
+        center);
+        padding: 0 15px;
+    }
+}
