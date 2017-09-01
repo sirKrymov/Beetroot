@@ -46,6 +46,7 @@
         @include display-flex(column, space-between, center);
     }
     &__item {
+        width: 100%;
         @include display-flex(column, flex-start, center);
         margin-bottom: 10px;
         &:last-of-type {

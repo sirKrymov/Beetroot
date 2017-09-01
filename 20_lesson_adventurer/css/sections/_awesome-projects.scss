@@ -1,0 +1,66 @@
+.awesome-projects {
+    min-height: 232px;
+    background-color: $white;
+    border-bottom: 1px solid $section-borderLightgray;
+    &__container {
+        min-height: 232px;
+        @include display-flex(column, center, center);
+    }
+    &__title {
+        margin-bottom: 50px;
+        font: 700 40px/1 Roboto Condensed, sans-serif;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: $gray1;
+    }
+    &__list {
+        width: 100%;
+        @include display-flex(row, space-between, center);
+    }
+    &__item {
+        @include display-flex(row, center, center);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            .awesome-projects__item-title {
+                color: $red;
+            }
+        }
+    }
+    &__logo {
+        border: 1px solid $black;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        margin: 0 12px;
+        border-radius: 3px;
+        background-color: $gray1;
+        border: 1px solid $black;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        &--themeforest {
+            left: 5px;
+        }
+        &--audiojungle {
+            left: 0;
+        }
+        &--codecanyon {
+            top: -4px;
+            left: -2px;
+        }
+        &--activeden {
+            top: 2px;
+            left: -1px;
+        }
+    }
+    &__item-title {
+        font: 400 25px/1 Raleway, sans-serif;
+        color: $gray1;
+        &:hover {
+            color: $red;
+        }
+    }
+}

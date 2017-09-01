@@ -5,47 +5,45 @@
     &__container {
         width: 100%;
         min-height: 350px;
-        @include display-flex(row, space-between, center);
+        @include display-flex(row, space-between, flex-start);
     }
     &__company {
-        border: 1px solid $section-borderLightgray;
+        margin-top: 45px;
         width: calc((100% - 84px)/4);
-        min-height: 350px;
         @include display-flex(column, flex-start, center);
     }
     &__some-features {
-        border: 1px solid $section-borderLightgray;
+        margin-top: 45px;
         width: calc((100% - 84px)/4);
-        min-height: 350px;
-        @include display-flex(column, center, center);
+        @include display-flex(column, flex-start, center);
     }
     &__tags {
-        border: 1px solid $section-borderLightgray;
+        margin-top: 45px;
         width: calc((100% - 84px)/4);
-        min-height: 350px;
-        @include display-flex(column, center, center);
+        @include display-flex(column, flex-start, center);
     }
     &__post {
-        border: 1px solid $section-borderLightgray;
+        margin-top: 45px;
         width: calc((100% - 84px)/4);
-        min-height: 350px;
-        @include display-flex(column, center, center);
+        @include display-flex(column, flex-start, center);
     }
 }
 
-.company {
+.data {
     &__title-block {
-        border: 1px solid $section-borderLightgray;
         width: 100%;
         height: 40px;
-        @include display-flex(row, flex-start, center);
-        margin-top: 30px;
+        @include display-flex(row, flex-start, flex-start);
         margin-bottom: 20px;
     }
     &__logo {
         font: 700 34px/1 PT Sans, sans-serif;
         text-transform: uppercase;
         color: $red;
+    }
+    &__title {
+        font: 400 21px/1 Roboto, sans-serif;
+        color: $white;
     }
     &__description {
         margin-bottom: 40px;
@@ -54,7 +52,95 @@
         color: $gray7;
     }
     &__link-block {
-        border: 1px solid $section-borderLightgray;
         width: 100%;
+        @include display-flex(row, space-between, center);
+    }
+    &__link-item {
+        @include display-flex(row, center, center);
+        width: 45px;
+        height: 45px;
+        border: 1px solid $section-borderLightgray;
+        background-color: $white;
+        color: $gray1;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:hover {
+            color: $red;
+        }
+    }
+    &__somefeatures-block {
+        width: 100%;
+        @include display-flex(column, flex-start, center);
+    }
+    &__somefeatures-item {
+        width: 100%;
+        @include display-flex(row, flex-start, center);
+        margin-bottom: 16px;
+    }
+    &__somefeatures-icon {
+        color: $red;
+        font-size: 20px;
+    }
+    &__somefeatures-text {
+        margin-left: 15px;
+        font: 400 15px/1.7 Roboto, sans-serif;
+        color: $gray7;
+    }
+    &__tags-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__tag-item {
+        display: block;
+        flex-grow: 1;
+        padding: 8px 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        font: 400 14px/1 Roboto, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $red;
+        color: $white;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:last-of-type {
+            flex-grow: 0;
+        }
+        &:nth-of-type(3n+3) {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $black;
+        }
+    }
+    &__flicker-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__flicker-icon-wrapper {
+        width: 59px;
+        height: 59px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        border: 1px solid $black1;
+        background-color: $red;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:nth-of-type(4n+4) {
+            margin-right: 0;
+        }
+        &:hover {
+            border: 1px solid $white;
+        }
+    }
+    &__flicker-img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
