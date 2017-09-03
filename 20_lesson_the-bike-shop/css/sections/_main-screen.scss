@@ -2,6 +2,7 @@
     min-height: 100vh;
     background: url('./../img/main-screen-bg.png') center / cover no-repeat;
     background-attachment: fixed;
+    position: relative;
     &__container {
         min-height: 100vh;
         position: relative;
@@ -9,5 +10,154 @@
         center,
         center);
         padding: 0 15px;
+    }
+    &__title {
+        margin-bottom: 24px;
+        font: 700 50px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__subtitle {
+        margin-bottom: 40px;
+        font: 300 28px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        color: $gray4;
+        span {
+            color: $yellow;
+        }
+    }
+    &__btn {
+        width: 123px;
+        height: 43px;
+        border: none;
+        border-radius: 8px;
+        background-color: $white;
+        font: 700 12px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $black;
+        &:hover {
+            background-color: $black;
+            color: $yellow;
+        }
+    }
+}
+
+.main-screen-slider {
+    &__controls {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__btn {
+        width: 60px;
+        height: 60px;
+        @include display-flex(row,
+        center,
+        center);
+        border-radius: 6px;
+        border: 1px solid $gray2;
+        margin: 0 30px;
+        font-size: 30px;
+        color: $gray2;
+        cursor: pointer;
+        @include transition(0.4s);
+        &--left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 1px 3px 0 0;
+            &:hover {
+                border: 1px solid $white;
+                color: $white;
+            }
+        }
+        &--right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 1px 0 0 3px;
+            &:hover {
+                border: 1px solid $white;
+                color: $white;
+            }
+        }
+    }
+}
+
+.header {
+    &__container {
+        min-height: 70px;
+        @include display-flex(row,
+        space-between,
+        center);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 10px;
+        z-index: 2;
+    }
+    &__nav {
+        @include display-flex(row,
+        flex-end,
+        center);
+    }
+    &__nav-item {
+        position: relative;
+        padding: 10px 10px 16px 10px;
+        border: 1px solid transparent;
+        border-radius: 10px 10px 0 0;
+        font: 700 15px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $white;
+        cursor: pointer;
+        @include transition(0.4s);
+        z-index: 1;
+        &:hover {
+            border: 1px solid $yellow;
+            background-color: $yellow;
+            color: $black;
+            .header__item-overlay {
+                opacity: 1;
+                pointer-events: auto;
+                cursor: pointer;
+                @include transition(0.4s);
+            }
+        }
+    }
+    &__item-wrapper {
+        position: relative;
+        margin-left: 35px;
+    }
+    &__item-overlay {
+        position: absolute;
+        width: 220px;
+        min-height: 110px;
+        bottom: -128px;
+        left: 0;
+        @include display-flex(column,
+        center,
+        flex-start);
+        padding: 0 10px;
+        border: 1px solid $yellow;
+        border-radius: 0 10px 10px 10px;
+        background-color: $yellow;
+        opacity: 0;
+        pointer-events: none;
+        @include transition(0.4s);
+        z-index: 2;
+    }
+    &__overlay-link {
+        font: 700 15px/2.1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $black;
     }
 }
