@@ -3,6 +3,7 @@
     background: url('./../img/main-screen-bg.png') center / cover no-repeat;
     background-attachment: fixed;
     position: relative;
+    z-index: 2;
     &__container {
         min-height: 100vh;
         position: relative;
@@ -42,6 +43,12 @@
             color: $yellow;
         }
     }
+    &__scroll-link {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .main-screen-slider {
@@ -59,10 +66,10 @@
         center,
         center);
         border-radius: 6px;
-        border: 1px solid $gray2;
+        border: 1px solid $white;
         margin: 0 30px;
         font-size: 30px;
-        color: $gray2;
+        color: $white;
         cursor: pointer;
         @include transition(0.4s);
         &--left {
@@ -72,8 +79,8 @@
             transform: translateY(-50%);
             padding: 1px 3px 0 0;
             &:hover {
-                border: 1px solid $white;
-                color: $white;
+                border: 1px solid $yellow;
+                color: $yellow;
             }
         }
         &--right {
@@ -83,8 +90,8 @@
             transform: translateY(-50%);
             padding: 1px 0 0 3px;
             &:hover {
-                border: 1px solid $white;
-                color: $white;
+                border: 1px solid $yellow;
+                color: $yellow;
             }
         }
     }
@@ -101,29 +108,19 @@
         left: 50%;
         transform: translateX(-50%);
         margin-top: 10px;
-        z-index: 2;
+        z-index: 3;
     }
     &__nav {
         @include display-flex(row,
         flex-end,
         center);
+        z-index: 4;
     }
-    &__nav-item {
+    &__item-wrapper {
         position: relative;
-        padding: 10px 10px 16px 10px;
-        border: 1px solid transparent;
-        border-radius: 10px 10px 0 0;
-        font: 700 15px/1 Roboto, sans-serif;
-        letter-spacing: 0.005em;
-        text-transform: uppercase;
-        color: $white;
-        cursor: pointer;
-        @include transition(0.4s);
-        z-index: 1;
+        margin-left: 35px;
+        z-index: 5;
         &:hover {
-            border: 1px solid $yellow;
-            background-color: $yellow;
-            color: $black;
             .header__item-overlay {
                 opacity: 1;
                 pointer-events: auto;
@@ -132,13 +129,25 @@
             }
         }
     }
-    &__item-wrapper {
+    &__nav-item {
         position: relative;
-        margin-left: 35px;
+        padding: 10px 10px 16px 10px;
+        border-radius: 10px 10px 0 0;
+        font: 700 15px/1 Roboto, sans-serif;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        color: $white;
+        cursor: pointer;
+        z-index: 6;
+        &:hover {
+            background-color: $yellow;
+            color: $black;
+            @include transition(0.4s);
+        }
     }
     &__item-overlay {
         position: absolute;
-        width: 220px;
+        width: 190px;
         min-height: 110px;
         bottom: -128px;
         left: 0;
@@ -146,13 +155,11 @@
         center,
         flex-start);
         padding: 0 10px;
-        border: 1px solid $yellow;
         border-radius: 0 10px 10px 10px;
         background-color: $yellow;
         opacity: 0;
         pointer-events: none;
-        @include transition(0.4s);
-        z-index: 2;
+        z-index: 7;
     }
     &__overlay-link {
         font: 700 15px/2.1 Roboto, sans-serif;
