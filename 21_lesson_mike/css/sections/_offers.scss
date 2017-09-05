@@ -1,0 +1,9 @@
+.offers {
+    min-height: 785px;
+    background-color: $lightGray1;
+    &__container {
+        min-height: 785px;
+        position: relative;
+        @include display-flex (column, center, center);
+    }
+}

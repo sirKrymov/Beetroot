@@ -1,0 +1,21 @@
+/* BASE */
+
+@import './base/_reset.scss';
+@import './base/_colors.scss';
+@import './base/_fonts.scss';
+@import './base/_mixins.scss';
+@import './base/_base.scss';
+
+/* SECTIONS */
+
+@import './sections/_main-screen.scss';
+@import './sections/_header.scss';
+@import './sections/_hello.scss';
+@import './sections/_build.scss';
+@import './sections/_about.scss';
+@import './sections/_introduction.scss';
+@import './sections/_achievements.scss';
+@import './sections/_offers.scss';
+@import './sections/_reviews.scss';
+@import './sections/_team.scss';
+@import './sections/_onepage.scss';

@@ -1,0 +1,159 @@
+.team {
+    min-height: 640px;
+    background-color: $white;
+    &__container {
+        min-height: 640px;
+        position: relative;
+        @include display-flex (column, center, center);
+    }
+    &__title {
+        margin-bottom: 15px;
+        font: 400 32px/1 Varela, sans-serif;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: $blue;
+    }
+    &__subtitle {
+        position: relative;
+        margin-bottom: 50px;
+        font: 400 16px/1 Varela, sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $gray;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+    }
+    &__list {
+        width: 100%;
+        min-height: 335px;
+        @include display-flex (row, space-between, center);
+    }
+    &__item {
+        width: calc((100% - 90px)/4);
+        min-height: 335px;
+        position: relative;
+        @include display-flex (column, flex-start, center);
+        margin-right: 30px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            .team__item-overlay {
+                opacity: 1;
+                pointer-events: auto;
+                cursor: pointer;
+                @include transition(0.4s);
+            }
+        }
+    }
+    &__image-wrapper {
+        width: 100%;
+        height: 270px;
+        border: 3px solid $lightGray2;
+    }
+    &__img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__name-wrapper {
+        width: 100%;
+        min-height: 65px;
+        @include display-flex (column, center, center);
+        border: none;
+        border-right: 1px solid $lightGray2;
+        border-bottom: 1px solid $lightGray2;
+        border-left: 1px solid $lightGray2;
+    }
+    &__name {
+        font: 600 15px/1 Open Sans, sans-serif;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: $black;
+    }
+    &__item-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $blue;
+        top: 0;
+        left: 0;
+        @include display-flex (column, center, center);
+        opacity: 0;
+        padding: 0 25px;
+        pointer-events: none;
+        @include transition(0.4s);
+    }
+    &__overlay-title {
+        margin-bottom: 8px;
+        font: 400 16px/1 Open Sans, sans-serif;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+    }
+    &__overlay-subtitle {
+        font: 400 12px/1 Varela, sans-serif;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+    }
+    &__overlay-devider {
+        content: '';
+        width: 50px;
+        height: 1px;
+        margin: 30px 0 30px 0;
+        background-color: $white;
+    }
+    &__overlay-description {
+        margin-bottom: 40px;
+        font: 300 13px/1.385 Open Sans, sans-serif;
+        color: $white;
+        text-align: center;
+    }
+    &__overlay-social {
+        @include display-flex (row, center, center);
+    }
+    &__social-item {
+        width: 35px;
+        height: 35px;
+        @include display-flex (row, center, center);
+    }
+    &__social-item-wrapper {
+        width: 24px;
+        height: 24px;
+        @include display-flex (row, center, center);
+        border: 1px solid $white;
+        background-color: transparent;
+        color: $white;
+        transform: rotateZ(45deg);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            background-color: $white;
+            color: $blue;
+        }
+    }
+    &__social-icon {
+        transform: rotateZ(-45deg);
+    }
+}

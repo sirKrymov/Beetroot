@@ -1,0 +1,165 @@
+.reviews {
+    min-height: 630px;
+    background-color: $white;
+    &__title-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        min-height: 200px;
+        position: relative;
+        padding: 0 15px;
+        margin: 0 auto;
+        @include display-flex (column, flex-end, center);
+    }
+    &__title {
+        margin-bottom: 15px;
+        font: 400 32px/1 Varela, sans-serif;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: $blue;
+    }
+    &__subtitle {
+        position: relative;
+        margin-bottom: 50px;
+        font: 400 16px/1 Varela, sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $gray;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+    }
+    &__container {
+        width: 100%;
+        min-height: 430px;
+        position: relative;
+        @include display-flex (row, center, center);
+        padding: 0 15px;
+        margin: 0 auto;
+        background-color: $blue;
+    }
+    &__slider-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        min-height: 380px;
+        position: relative;
+        @include display-flex (column, center, center);
+    }
+    &__slide {
+        @include display-flex (column, center, center);
+        margin: 0 50px;
+    }
+    &__item-img {
+        width: 122px;
+        height: 122px;
+        position: relative;
+        @include display-flex (row, center, center);
+        margin-bottom: 40px;
+    }
+    &__img-wrapper {
+        width: 85px;
+        height: 85px;
+        position: absolute;
+        @include display-flex (column, center, center);
+        background-color: $white;
+        transform: rotateZ(45deg);
+    }
+    &__img {
+        object-fit: cover;
+        transform: rotateZ(-45deg);
+    }
+    &__slide-description {
+        max-width: 924px;
+        margin-bottom: 15px;
+        font: 400 14px/1.714 Open Sans, sans-serif;
+        letter-spacing: -0.02em;
+        color: $white;
+        text-align: center;
+    }
+    &__slide-devider {
+        content: '';
+        width: 50px;
+        height: 1px;
+        margin: 20px 0 35px 0;
+        background-color: $white;
+    }
+    &__slide-title {
+        margin-bottom: 8px;
+        font: 400 14px/1 Varela, sans-serif;
+        letter-spacing: -0.02em;
+        color: $white;
+        text-align: center;
+    }
+    &__slide-subtitle {
+        font: 400 10px/1 Varela, sans-serif;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+    }
+    &__slider-controls {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__slider-btn {
+        width: 35px;
+        height: 35px;
+        position: relative;
+        @include display-flex (row, center, center);
+        &--left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        &--right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+    &__slider-btnwrapper {
+        width: 24px;
+        height: 24px;
+        @include display-flex (row, center, center);
+        border: 1px solid $white;
+        background-color: transparent;
+        color: $white;
+        transform: rotateZ(45deg);
+        cursor: pointer;
+        @include transition(0.4s);
+        &--left {
+            padding: 3px 3px 0 0;
+        }
+        &--right {
+            padding: 0 0 3px 3px;
+        }
+        &:hover {
+            background-color: $white;
+            color: $blue;
+        }
+    }
+    &__icon {
+        transform: rotateZ(-45deg);
+    }
+}

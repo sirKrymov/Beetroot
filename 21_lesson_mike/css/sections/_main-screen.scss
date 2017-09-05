@@ -1,0 +1,49 @@
+.main-screen {
+    min-height: calc(100vh - 65px);
+    background: fixed $black url('./../img/main-screen-bg.png') 0 140% / cover no-repeat;
+    &__container {
+        min-height: calc(100vh - 65px);
+        position: relative;
+        @include display-flex (column,
+        center,
+        center);
+    }
+    &__small-logo {
+        position: absolute;
+        top: 7%;
+        left: 0;
+        padding-left: 15px;
+    }
+    &__title {
+        margin-bottom: 25px;
+        font: 700 40px/1 Open Sans, sans-serif;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__spec {
+        margin-bottom: 40px;
+        padding: 0 4px 10px 4px;
+        border: none;
+        border-bottom: 1px solid $white;
+        font: 300 18px/1 Open Sans, sans-serif;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__subtitle {
+        margin-top: 22px;
+        margin-bottom: 45px;
+        font: 400 30px/1 Varela, sans-serif;
+        letter-spacing: -0.05em;
+        color: $white;
+    }
+    &__description {
+        max-width: 655px;
+        text-align: center;
+        font: 400 14px/1.4285 Varela, sans-serif;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: $white;
+    }
+}

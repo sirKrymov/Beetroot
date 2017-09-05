@@ -1,0 +1,120 @@
+.about {
+    min-height: 640px;
+    background-color: $white;
+    &__container {
+        min-height: 640px;
+        position: relative;
+        @include display-flex (column, center, center);
+    }
+    &__title {
+        margin-bottom: 15px;
+        font: 400 32px/1 Varela, sans-serif;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: $blue;
+    }
+    &__subtitle {
+        position: relative;
+        margin-bottom: 60px;
+        font: 400 16px/1 Varela, sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $gray;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+    }
+    &__list {
+        min-height: 340px;
+        width: 100%;
+        @include display-flex (row, space-between, center);
+    }
+    &__item {
+        width: calc((100% - 90px)/4);
+        min-height: 340px;
+        @include display-flex (column, flex-start, center);
+        padding: 0 10px;
+        cursor: pointer;
+        &:hover {
+            .about__item-title {
+                @include transition(0.4s);
+                color: $blue;
+            }
+            .about__item-link {
+                @include transition(0.4s);
+                color: $blue;
+            }
+            .about__icon-wrapper {
+                @include transition(0.4s);
+                border: 1px solid $blue;
+                background-color: $blue;
+                box-shadow: 0 0 0 4px $blue inset, 0 0 0 6px $white inset;
+            }
+            .about__icon {
+                @include transition(0.4s);
+                color: $white;
+            }
+        }
+    }
+    &__item-icon {
+        width: 110px;
+        height: 110px;
+        position: relative;
+        @include display-flex (row, center, center);
+        margin-bottom: 45px;
+    }
+    &__icon-wrapper {
+        width: 78px;
+        height: 78px;
+        position: absolute;
+        @include display-flex (row, center, center);
+        background-color: $white;
+        border: 1px solid $lightGray;
+        transform: rotateZ(45deg);
+        box-shadow: 2px 2px 0 2px $lightGray;
+    }
+    &__icon {
+        transform: rotateZ(-45deg);
+    }
+    &__item-title {
+        margin-bottom: 20px;
+        font: 600 16px/1 Open Sans, sans-serif;
+        text-transform: uppercase;
+        color: $black;
+    }
+    &__item-description {
+        font: 300 12px/1.5 Open Sans, sans-serif;
+        color: $black;
+        text-align: center;
+    }
+    &__item-devider {
+        content: '';
+        width: 50px;
+        height: 1px;
+        margin: 35px 0;
+        background-color: $gray2;
+    }
+    &__item-link {
+        font: 400 12px/1 Varela, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: $gray2;
+    }
+}

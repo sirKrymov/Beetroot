@@ -1,0 +1,81 @@
+.onepage {
+    min-height: 580px;
+    background-color: $white;
+    &__title-wrapper {
+        width: 100%;
+        min-height: 370px;
+        position: relative;
+        @include display-flex (column, center, center);
+        padding: 0 15px;
+        margin: 0 auto;
+        background: $blue url('./../img/onepage-bg.png') center center / cover no-repeat;
+        z-index: 1;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: 20px solid #1f85e6;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            z-index: 2;
+        }
+    }
+    &__title {
+        max-width: 640px;
+        margin-bottom: 40px;
+        font: 700 54px/1 Open Sans, sans-serif;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+    }
+    &__subtitle {
+        position: relative;
+        font: 600 30px/1 Open Sans, sans-serif;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__container {
+        width: 100%;
+        max-width: 1200px;
+        min-height: 210px;
+        position: relative;
+        @include display-flex (column,
+        center,
+        center);
+        padding: 0 15px;
+        margin: 0 auto;
+        background-color: $white;
+    }
+    &__btns-wrapper {
+        @include display-flex (row,
+        center,
+        center);
+    }
+    &__btn {
+        width: 170px;
+        height: 50px;
+        margin-right: 30px;
+        border: 1px solid $lightGray2;
+        background-color: transparent;
+        font: 400 13px/1 Varela, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: $black;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            border: 1px solid $blue;
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}

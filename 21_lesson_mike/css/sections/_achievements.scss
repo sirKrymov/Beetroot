@@ -1,0 +1,136 @@
+.achievements {
+    min-height: 486px;
+    background-color: $white;
+    &__container {
+        min-height: 486px;
+        position: relative;
+        @include display-flex (column, center, center);
+    }
+    &__title {
+        margin-bottom: 15px;
+        font: 400 32px/1 Varela, sans-serif;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        color: $blue;
+    }
+    &__subtitle {
+        position: relative;
+        font: 400 16px/1 Varela, sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $gray;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 1px;
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+            background-color: $gray;
+        }
+    }
+    &__list {
+        min-height: 200px;
+        width: 100%;
+        @include display-flex (row, center, center);
+        margin-bottom: 110px;
+    }
+    &__item {
+        min-height: 200px;
+        @include display-flex (column, flex-start, center);
+        margin-right: 90px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            .achievements__item-title {
+                @include transition(0.4s);
+                color: $blue;
+            }
+            .achievements__icon-wrapper {
+                @include transition(0.4s);
+                border: 1px solid $blue;
+                background-color: $blue;
+                box-shadow: none;
+            }
+            .achievements__icon {
+                @include transition(0.4s);
+                color: $white;
+            }
+            .achievements__number {
+                @include transition(0.4s);
+                color: $white;
+            }
+        }
+    }
+    &__item-icon {
+        width: 130px;
+        height: 130px;
+        position: relative;
+        @include display-flex (row, center, center);
+        margin-bottom: 45px;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 46px;
+            height: 1px;
+            top: 50%;
+            left: -45px;
+            transform: translateY(-50%);
+            background-color: $lightGray
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            width: 46px;
+            height: 1px;
+            top: 50%;
+            right: -45px;
+            transform: translateY(-50%);
+            background-color: $lightGray
+        }
+    }
+    &__icon-wrapper {
+        width: 91px;
+        height: 91px;
+        position: absolute;
+        @include display-flex (column, center, center);
+        background-color: $white;
+        border: 1px solid $lightGray;
+        transform: rotateZ(45deg);
+        box-shadow: 4px 4px 0 0 $lightGray;
+        cursor: pointer;
+    }
+    &__icon-number {
+        @include display-flex (column, center, center);
+        transform: rotateZ(-45deg);
+        cursor: pointer;
+    }
+    &__icon {
+        margin-bottom: 10px;
+    }
+    &__number {
+        font: 400 28px/1 Varela, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: $black;
+    }
+    &__item-title {
+        font: 400 12px/1 Varela, sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        color: $black;
+        cursor: pointer;
+    }
+}

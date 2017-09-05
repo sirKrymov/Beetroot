@@ -1,0 +1,9 @@
+.introduction {
+    min-height: 570px;
+    background-color: $lightGray1;
+    &__container {
+        min-height: 570px;
+        position: relative;
+        @include display-flex (column, center, center);
+    }
+}
