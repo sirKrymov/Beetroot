@@ -5,6 +5,7 @@
 @import './base/_fonts.scss';
 @import './base/_mixins.scss';
 @import './base/_base.scss';
+@import './base/_animations.scss';
 
 /* SECTIONS */
 
@@ -19,3 +20,10 @@
 @import './sections/_reviews.scss';
 @import './sections/_team.scss';
 @import './sections/_onepage.scss';
+@import './sections/_history.scss';
+@import './sections/_works.scss';
+@import './sections/_impressed.scss';
+@import './sections/_clients.scss';
+@import './sections/_twitter.scss';
+@import './sections/_contact.scss';
+@import './sections/_footer.scss';

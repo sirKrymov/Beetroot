@@ -1,0 +1,20 @@
+@keyframes footer-btn-animate {
+    0% {
+        top: -7px;
+    }
+    100% {
+        top: -27px;
+    }
+}
+
+@keyframes anim-line {
+    0% {
+        margin-left: calc(100% - 520px);
+    }
+    50% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: calc(100% - 520px);
+    }
+}

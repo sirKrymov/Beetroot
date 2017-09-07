@@ -1,0 +1,47 @@
+.clients {
+    min-height: 415px;
+    background-color: $white;
+    &__container {
+        min-height: 415px;
+        @include display-flex (column, center, center);
+    }
+    &__title {
+        font: 300 30px/1 Open Sans, sans-serif;
+        letter-spacing: -0.03em;
+        color: black;
+    }
+    &__devider {
+        content: '';
+        width: 50px;
+        height: 1px;
+        margin: 30px 0 50px;
+        background-color: $lightGray3;
+    }
+    &__list {
+        width: 100%;
+        min-height: 70px;
+        @include display-flex (row, center, center);
+        margin-bottom: 70px;
+    }
+    &__item {
+        min-height: 70px;
+        flex: 1;
+        margin-right: 30px;
+        border: 1px solid $lightGray4;
+        background-color: $lightGray4;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:before {
+            margin-right: 0;
+        }
+        &:hover {
+            border: 1px solid $blue;
+        }
+    }
+    &__description {
+        max-width: 780px;
+        text-align: center;
+        font: 300 13px/1.5384 Open Sans, sans-serif;
+        color: $gray2;
+    }
+}

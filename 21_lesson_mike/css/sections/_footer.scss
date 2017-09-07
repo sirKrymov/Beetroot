@@ -1,0 +1,139 @@
+.footer {
+    min-height: 515px;
+    background-color: $white;
+    &__social-container {
+        min-height: 125px;
+        @include display-flex (row, center, center);
+        position: relative;
+        background-color: $blue;
+    }
+    &__anim-block {
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: 0;
+        background-color: $black;
+    }
+    &__anim-line {
+        width: 520px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        background-color: $white;
+        @include animation(anim-line);
+    }
+    &__social-list {
+        @include display-flex (row, center, center);
+    }
+    &__social-item {
+        width: 70px;
+        height: 70px;
+        @include display-flex (row, center, center);
+    }
+    &__item-wrapper {
+        width: 49px;
+        height: 49px;
+        @include display-flex (row, center, center);
+        border: 1px solid $blue3;
+        background-color: transparent;
+        color: $white;
+        transform: rotateZ(45deg);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            border: 1px solid $white;
+            background-color: $white;
+            color: $blue;
+        }
+    }
+    &__social-icon {
+        transform: rotateZ(-45deg);
+    }
+    &__nav-wrapper {
+        min-height: 170px;
+        @include display-flex (row, center, center);
+        border-bottom: 1px solid $lightGray3;
+    }
+    &__nav {
+        @include display-flex (row, center, center);
+    }
+    &__nav-item {
+        margin-left: 23px;
+        font: 600 13px/1 Open Sans, sans-serif;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: $gray;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:first-of-type {
+            margin-left: 0;
+        }
+        &:hover {
+            color: $blue;
+        }
+        @media (max-width: 960px) {
+            display: none;
+        }
+    }
+    &__nav-btn {
+        display: none;
+        border: none;
+        font-size: 24px;
+        color: $gray;
+        &:hover {
+            color: $blue;
+        }
+        @media (max-width: 960px) {
+            display: block;
+        }
+    }
+    &__copyright-wrapper {
+        min-height: 220px;
+        position: relative;
+        @include display-flex (row, center, center);
+    }
+    &__btn-wrapper {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        top: -21px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include display-flex (row, center, center);
+    }
+    &__btn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $black;
+        background-color: $black;
+        color: $white;
+        transform: rotateZ(45deg);
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            border: 1px solid $blue;
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    &__icon-wrapper {
+        position: relative;
+        transform: rotateZ(-45deg);
+    }
+    &__btn-icon {
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        @include transition(0.4s);
+        @include animation(footer-btn-animate);
+    }
+    &__copyright-text {
+        font: 400 13px/1 Open Sans, san-serif;
+        color: $black;
+        span {
+            text-transform: uppercase;
+        }
+    }
+}
