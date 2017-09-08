@@ -1,0 +1,51 @@
+.about {
+    min-height: 500px;
+    background: $black url('./../img/about-bg.png') center / cover no-repeat;
+    background-attachment: fixed;
+    &__container {
+        min-height: 500px;
+        @include display-flex(row,
+        space-between,
+        center);
+    }
+    &__data {
+        width: 50%;
+        min-height: 480px;
+        @include display-flex(column,
+        center,
+        flex-start);
+        background-color: transparent;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 20px;
+        font: 400 45px/1 Lato, sans-serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__description {
+        margin-bottom: 70px;
+        font: 100 22px/1.2727 Lato, sans-serif;
+        color: $white;
+    }
+    &__link {
+        font: 400 18px/1 Lato, sans-serif;
+        color: $white;
+        text-decoration: underline;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            color: $blue1;
+        }
+    }
+    &__image-wrapper {
+        min-height: 500px;
+        margin: 0 100px;
+        @include display-flex(column,
+        flex-end,
+        center);
+    }
+}
