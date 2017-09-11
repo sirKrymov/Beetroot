@@ -1,0 +1,109 @@
+.main-screen {
+    min-height: 100vh;
+    background: url('./../img/main-screen-bg.png') center / cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    &__container {
+        min-height: 100vh;
+        position: relative;
+        @include display-flex(column,
+        center,
+        center);
+    }
+    &__title {
+        margin-bottom: 30px;
+        font: 300 48px/1 Proxima Nova Light, sans-serif;
+        letter-spacing: 0.6em;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__subtitle {
+        font: 600 30px/1 Proxima Nova Semibold, sans-serif;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: $red;
+        &:hover {
+            color: $white;
+        }
+    }
+    &__arrow-slik {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        bottom: 40px;
+        left: 50%;
+        margin: -20px 0 0 -20px;
+        transform: rotate(45deg);
+        border-left: none;
+        border-top: none;
+        border-right: 2px $white solid;
+        border-bottom: 2px $white solid;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:hover {
+            border-right: 2px $red solid;
+            border-bottom: 2px $red solid;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin: -10px 0 0 -10px;
+            border-left: none;
+            border-top: none;
+            border-right: 2px $white solid;
+            border-bottom: 2px $white solid;
+            @include animation(arrow);
+        }
+    }
+}
+
+.header {
+    &__container {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        @include display-flex(row,
+        space-between,
+        center);
+        padding-top: 15px;
+        z-index: 2;
+    }
+    &__nav-item {
+        margin-left: 70px;
+        font: 600 18px/1 Proxima Nova Semibold, sans-serif;
+        letter-spacing: 0.350em;
+        text-transform: uppercase;
+        color: $white;
+        cursor: pointer;
+        @include transition(0.4s);
+        &--active,
+        &:hover {
+            color: $red;
+        }
+        @media (max-width: 1084px) {
+            margin-left: 50px;
+        }
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+    &__nav-btn {
+        display: none;
+        color: $white;
+        font-size: 20px;
+        border: none;
+        @include transition(0.4s);
+        &:hover {
+            color: $red;
+        }
+        @media (max-width: 1024px) {
+            display: block;
+        }
+    }
+}
