@@ -1,13 +1,104 @@
 .subscribe {
     min-height: 250px;
     background: $gray url('./../img/subscribe-bg.png') center / cover no-repeat;
-    background-attachment: fixed;
     position: relative;
+    z-index: 1;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba($black, 0.5);
+        z-index: 2;
+    }
     &__container {
         min-height: 250px;
         position: relative;
         @include display-flex(column,
         center,
+        flex-start);
+        z-index: 3;
+    }
+    &__title {
+        margin-bottom: 25px;
+        font: 300 18px/1 Open Sans, sans-serif;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__form {
+        width: 100%;
+        min-height: 50px;
+        @include display-flex(row,
+        space-between,
         center);
     }
+    &__input-block {
+        position: relative;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:hover {
+            // .subscribe__input {
+            //     border: 1px solid $red;
+            // }
+            .subscribe__input-icon {
+                color: $red;
+            }
+        }
+    }
+    &__input {
+        width: 770px;
+        height: 50px;
+        padding: 0 20px 0 80px;
+        border: 1px solid $white;
+        background-color: transparent;
+        font: 300 13px/1 Open Sans, sans-serif;
+        text-transform: uppercase;
+        color: $white;
+        @include transition(0.4s);
+        cursor: pointer;
+        // &:hover {
+        //     border: 1px solid $red;
+        //     .subscribe__input-icon {
+        //         color: $red;
+        //     }
+        // }
+        &:focus {
+            border: 1px solid $red;
+        }
+    }
+    &__input-icon {
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $white;
+        &:hover {
+            color: $red;
+        }
+    }
+    &__input-btn {
+        width: 270px;
+        height: 50px;
+        border: 1px solid $white;
+        background-color: transparent;
+        font: 700 18px/1 Open Sans, sans-serif;
+        text-transform: uppercase;
+        color: $white;
+        &:hover {
+            color: $red;
+            border: 1px solid $red;
+            background-color: $white;
+        }
+    }
+}
+
+.subscribe__input::-webkit-input-placeholder {
+    font: 300 13px/1 Open Sans, sans-serif;
+    text-transform: uppercase;
+    color: $white;
+    opacity: 1;
+    @include transition(0.4s);
+    text-overflow: ellipsis;
 }

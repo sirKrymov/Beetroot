@@ -10,4 +10,11 @@
         center,
         center);
     }
+    &__list-wrapper {
+        width: 100%;
+        margin-top: 60px;
+        @include display-flex(row,
+        space-between,
+        center);
+    }
 }
