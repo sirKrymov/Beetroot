@@ -1,0 +1,16 @@
+/* Basis */
+
+@import './base/_reset.scss';
+@import './base/_colors.scss';
+@import './base/_fonts.scss';
+@import './base/_mixins.scss';
+@import './base/_base.scss';
+
+/* Sections */
+
+@import './sections/_main-screen.scss';
+@import './sections/_products.scss';
+@import './sections/_trending-items.scss';
+@import './sections/_blog.scss';
+@import './sections/_subscribe.scss';
+@import './sections/_footer.scss';

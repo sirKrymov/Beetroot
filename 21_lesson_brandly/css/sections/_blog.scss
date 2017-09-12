@@ -1,0 +1,8 @@
+.blog {
+    min-height: 1040px;
+    background-color: $white;
+    &__container {
+        min-height: 1040px;
+        @include display-flex(column, center, center);
+    }
+}

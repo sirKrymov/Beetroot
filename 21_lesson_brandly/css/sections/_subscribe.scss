@@ -1,0 +1,13 @@
+.subscribe {
+    min-height: 250px;
+    background: $gray url('./../img/subscribe-bg.png') center / cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    &__container {
+        min-height: 250px;
+        position: relative;
+        @include display-flex(column,
+        center,
+        center);
+    }
+}

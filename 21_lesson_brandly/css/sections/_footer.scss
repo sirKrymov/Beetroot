@@ -1,0 +1,8 @@
+.footer {
+    min-height: 160px;
+    background-color: $white;
+    &__container {
+        min-height: 160px;
+        @include display-flex(row, space-between, center);
+    }
+}

@@ -1,0 +1,16 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,300i,400,700');
+@font-face {
+    font-family: 'bebas neuebook';
+    src: url('../fonts/bebasneue_book-webfont.woff2') format('woff2'), url('../fonts/bebasneue_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bebas neueregular';
+    src: url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'), url('../fonts/bebasneue_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
