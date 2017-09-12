@@ -1,96 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>form</title>
-  <link rel="stylesheet" href="./css/font-awesome.css">
-  <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-  <div class="main-container">
-    <h1>Forms:</h1>
-    <form class="form">
-      <div class="form-group">
-        <h3 class="form__label">Input type="text":</h3>
-        <input 
-          type="text" 
-          class="form-element form__input" 
-          placeholder="name" 
-          maxlength="10"
-          size="15"
-        />
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="checkbox":</h3>
-        <label class="checkbox__label">
+    <div class="main-container">
+        <h1>Forms:</h1>
+        <form class="form">
+            <div class="form-group">
+                <h3 class="form__label">Input type="text":</h3>
+                <input type="text" class="form-element form__input" placeholder="name" maxlength="10" size="15" />
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="checkbox":</h3>
+                <label class="checkbox__label">
           <input type="checkbox" class=" form-element form__checkbox checkbox__input" />
           <span class="checkbox__title">
             checkbox 
             <i class="fa fa-check-square-o" aria-hidden="true"></i>
           </span>
         </label>
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="radio":</h3>
-        <label class="radio__label">
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="radio":</h3>
+                <label class="radio__label">
           <input type="radio" name="samename" value="1" class="form__radio radio__input" />
           <span class="radio__title">radio button 1</span>
         </label>
-        <label class="radio__label">
+                <label class="radio__label">
           <input type="radio" name="samename" value="2" class="form__radio radio__input" />
           <span class="radio__title">radio button 2</span>
         </label>
-        <label class="radio__label">
+                <label class="radio__label">
           <input type="radio" name="samename" value="3" class="form__radio radio__input" checked />
           <span class="radio__title">radio button 3</span>
         </label>
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Select:</h3>
-       <select class=" form-element form__select" name="somename">
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Select:</h3>
+                <select class=" form-element form__select" name="somename">
         <option value="10" selected disabled >Select....</option>
         <option value="1">option1</option>
         <option value="2">option2</option>
         <option value="3">option3</option>
         <option value="4">option4</option>
        </select>
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Textarea:</h3>
-        <textarea class=" form-element form__textarea" name="textarea" placeholder="type text"></textarea>
-       </select>
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="date":</h3>
-        <input type="date" class=" form-element form__date" />
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="time":</h3>
-        <input type="time" class=" form-element form__time" />
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="file":</h3>
-        <input type="file" class=" form-element form__file" />
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="image":</h3>
-        <input type="image" class=" form-element form__image" />
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="submit":</h3>
-        <input type="submit" class=" form-element form__submit" value="title" />
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Button:</h3>
-        <button class="form-element form__button">Title</button>
-      </div>
-      <div class="form-group">
-        <h3 class="form__label">Input type="range":</h3>
-        <input type="range" class=" form-element form__range" />
-      </div>
-    </form>
-  </div>
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Textarea:</h3>
+                <textarea class=" form-element form__textarea" name="textarea" placeholder="type text"></textarea>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="date":</h3>
+                <input type="date" class=" form-element form__date" />
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="time":</h3>
+                <input type="time" class=" form-element form__time" />
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="file":</h3>
+                <input type="file" class=" form-element form__file" />
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="image":</h3>
+                <input type="image" class=" form-element form__image" />
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="submit":</h3>
+                <input type="submit" class=" form-element form__submit" value="title" />
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Button:</h3>
+                <button class="form-element form__button">Title</button>
+            </div>
+            <div class="form-group">
+                <h3 class="form__label">Input type="range":</h3>
+                <input type="range" class=" form-element form__range" />
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
