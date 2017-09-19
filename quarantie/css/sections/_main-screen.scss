@@ -1,0 +1,165 @@
+.main-screen {
+    min-height: 100vh;
+    position: relative;
+    @include display-flex (column, space-between, center);
+    padding: 30px 15px;
+    background: fixed $darkBlue url('./../img/main-screen-bg-1.png') 55% 100% / cover no-repeat;
+    @media (max-width: 900px) {
+        background-position-x: 60%;
+        padding: 15px 15px;
+    }
+    @media (max-width: 600px) {
+        background-position-x: 65%;
+        padding: 10px;
+    }
+    &__slider-wrapper {
+        width: 100%;
+        max-width: 1250px;
+        min-height: calc(100vh - 80px - 60px);
+        position: relative;
+        @include display-flex (column,
+        center,
+        flex-start);
+        @media (max-width: 600px) {
+            align-items: center;
+        }
+    }
+    &__slide {
+        @include display-flex (column,
+        center,
+        flex-end);
+    }
+    &__text-wrapper {
+        width: 100%;
+        max-width: 340px;
+        margin-left: 115px;
+        @include display-flex (column,
+        center,
+        flex-end);
+        @media (max-width: 600px) {
+            max-width: 240px;
+            margin-left: 0;
+        }
+    }
+    &__title {
+        span {
+            display: block;
+            margin-bottom: 6px;
+            font: 400 42px/1 Open Sans, san-serif;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: $darkBlue;
+            @media (max-width: 600px) {
+                font-size: 30px;
+            }
+            &:first-of-type {
+                margin-bottom: 0;
+                font: 300 69px/1 Open Sans, san-serif;
+                letter-spacing: -0.01em;
+                color: $white;
+                @media (max-width: 600px) {
+                    font-size: 42px;
+                }
+            }
+        }
+    }
+    &__description {
+        display: block;
+        font: 400 14px/1.2 Open Sans, san-serif;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: $lightBlue;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        @media (max-width: 600px) {
+            font-size: 12px;
+        }
+    }
+    &__btn {
+        width: 100px;
+        height: 32px;
+        margin-top: 30px;
+        border: none;
+        background-color: $lightBlue;
+        font: 400 14px/1.2 Open Sans, san-serif;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: $white;
+        &:hover {
+            background-color: $darkBlue;
+        }
+    }
+    &__slider-pagination {
+        position: absolute;
+        min-height: 4px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__pagination-item {
+        width: 62px;
+        height: 4px;
+        margin-right: 4px;
+        background-color: $white;
+        border: none;
+        &--active,
+        &:hover {
+            background-color: $lightBlue;
+        }
+    }
+    &__slider-controls {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__slider-btn {
+        width: 60px;
+        height: 60px;
+        @include display-flex(row,
+        center,
+        center);
+        border: 1px solid $white;
+        background-color: $lightGray1;
+        font-size: 30px;
+        color: $white;
+        cursor: pointer;
+        @include transition(0.4s);
+        &--left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 1px 3px 0 0;
+            &:hover {
+                background-color: transparent;
+                border: 1px solid $lightBlue;
+                color: $lightBlue;
+            }
+        }
+        &--right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: 1px 0 0 3px;
+            &:hover {
+                background-color: transparent;
+                border: 1px solid $lightBlue;
+                color: $lightBlue;
+            }
+        }
+        @media (max-width: 900px) {
+            width: 50px;
+            height: 50px;
+            font-size: 26px;
+        }
+        @media (max-width: 600px) {
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+        }
+    }
+}

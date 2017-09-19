@@ -1,0 +1,16 @@
+.footer {
+    min-height: 543px;
+    background-color: $darkBlue;
+    &__container {
+        border: 1px solid $black;
+        width: 100%;
+        min-height: 226px;
+        @include display-flex (row, space-between, center);
+    }
+    &__address-wrapper {
+        border: 1px solid $black;
+        width: 100%;
+        min-height: calc(543px - 226px);
+        @include display-flex (column, space-between, center);
+    }
+}
