@@ -11,6 +11,14 @@
         font: 700 35px/1 Raleway, sans-serif;
         text-transform: uppercase;
         color: $black;
+        @media (max-width: 800px) {
+            margin-bottom: 42px;
+            font-size: 30px;
+        }
+        @media (max-width: 600px) {
+            margin-bottom: 22px;
+            font-size: 26px;
+        }
     }
     &__devider {
         content: '';
@@ -18,11 +26,33 @@
         height: 1px;
         background-color: $black;
         margin-bottom: 80px;
+        @media (max-width: 800px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: 600px) {
+            margin-bottom: 30px;
+        }
     }
     &__list {
         width: 100%;
         @include display-flex(row, space-between, center);
         margin-bottom: 80px;
+        @media (max-width: 800px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: 600px) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        @media (max-width: 600px) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
     }
     &__item {
         width: 100%;
@@ -47,6 +77,20 @@
                 @include transition(0.4s);
             }
         }
+        @media (max-width: 800px) {
+            max-width: calc((100% - 30px)/2);
+            margin-bottom: 30px;
+            &:nth-of-type(2) {
+                margin-right: 0;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 600px) {
+            max-width: 100%;
+            margin-right: 0;
+        }
     }
     &__img {
         width: 100%;
@@ -54,7 +98,8 @@
         object-fit: cover;
     }
     &__btn {
-        width: 370px;
+        width: 100%;
+        max-width: 370px;
         height: 60px;
         border: 3px solid $black;
         font: 400 24px/1 Lato, sans-serif;
@@ -65,6 +110,9 @@
         &:hover {
             border: 3px solid $blue1;
             color: $blue1;
+        }
+        @media (max-width: 400px) {
+            width: 184px;
         }
     }
     &__item-overlay {
