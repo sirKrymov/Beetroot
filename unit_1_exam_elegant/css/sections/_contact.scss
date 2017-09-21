@@ -99,6 +99,7 @@
         @media (max-width: 600px) {
             width: 100%;
             margin-bottom: 50px;
+            margin-top: 0;
         }
     }
     &__input-placeholder {
@@ -147,6 +148,11 @@
         }
         &:focus~input {
             border-bottom: 1px solid $blue2;
+        }
+        &:not(:focus):valid~p {
+            top: -50%;
+            border-top: 1px solid $blue2;
+            justify-content: center;
         }
     }
     &__textarea-wrapper {
@@ -201,6 +207,11 @@
         }
         &:focus~input {
             border-bottom: 1px solid $blue2;
+        }
+        &:not(:focus):valid~p {
+            top: -50%;
+            border-top: 1px solid $blue2;
+            justify-content: center;
         }
     }
     &__btn {
