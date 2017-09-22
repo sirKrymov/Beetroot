@@ -10,7 +10,7 @@
     }
     @media (max-width: 600px) {
         background-position-x: 65%;
-        padding: 10px;
+        padding: 0 0 10px 0;
     }
     &__slider-wrapper {
         width: 100%;
@@ -96,8 +96,13 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        font-size: 0;
+        @include display-flex (row,
+        center,
+        center);
     }
     &__pagination-item {
+        display: block;
         width: 62px;
         height: 4px;
         margin-right: 4px;
@@ -106,6 +111,9 @@
         &--active,
         &:hover {
             background-color: $lightBlue;
+        }
+        &:last-of-type {
+            margin-right: 0;
         }
     }
     &__slider-controls {
@@ -138,6 +146,9 @@
                 border: 1px solid $lightBlue;
                 color: $lightBlue;
             }
+            @media (max-width: 600px) {
+                left: 10px;
+            }
         }
         &--right {
             position: absolute;
@@ -149,6 +160,9 @@
                 background-color: transparent;
                 border: 1px solid $lightBlue;
                 color: $lightBlue;
+            }
+            @media (max-width: 600px) {
+                right: 10px;
             }
         }
         @media (max-width: 900px) {

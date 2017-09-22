@@ -258,7 +258,7 @@
             width: 100%;
         }
         @media (max-width: 600px) {
-            @include display-flex (column, flex-start, flex-start);
+            @include display-flex (column, flex-start, center);
             padding-right: 0;
         }
     }
@@ -274,12 +274,20 @@
         &>ul {
             position: absolute;
             display: none;
+            @media (max-width: 600px) {
+                position: relative;
+                // display: block;
+            }
         }
         &:hover {
             .nav__item-name:before {
                 display: block;
+                @media (max-width: 600px) {
+                    display: none;
+                }
             }
             &>ul {
+                @include transition(0.4s);
                 display: block;
             }
         }
@@ -318,6 +326,9 @@
         &:hover {
             color: $lightBlue;
         }
+        @media (max-width: 600px) {
+            margin-bottom: 5px;
+        }
     }
     &__dropbox-menu {
         position: absolute;
@@ -326,10 +337,15 @@
         @media (max-width: 1200px) {
             top: 65px;
         }
+        @media (max-width: 600px) {
+            position: relative;
+            top: 0;
+            margin-bottom: 5px;
+        }
     }
     &__dropbox-item {
         width: 190px;
-        height: 50px;
+        min-height: 50px;
         @include display-flex (row, center, center);
         border: none;
         border-bottom: 1px solid $white;
@@ -338,6 +354,10 @@
         cursor: pointer;
         &:hover {
             background-color: $darkBlue;
+        }
+        @media (max-width: 600px) {
+            width: 170px;
+            min-height: 35px;
         }
     }
     &__dropbox-item-link {
