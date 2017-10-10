@@ -1,0 +1,92 @@
+.portfolio {
+    min-height: 400px;
+    background-color: $lightgray1;
+    &__container {
+        min-height: 400px;
+        @include display-flex(column, flex-start, center);
+        padding: 80px 15px;
+    }
+    &__title {
+        margin-bottom: 40px;
+        font: 400 40px/1 Source Sans Pro, sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $gray1;
+    }
+    &__subtitle {
+        max-width: 810px;
+        margin-bottom: 40px;
+        text-align: center;
+        font: 300 14px/1.7 Open Sans, sans-serif;
+        letter-spacing: 0.05em;
+        color: $gray;
+        text-align: center;
+    }
+    &__nav {
+        @include display-flex(row, space-between, center);
+        margin-bottom: 60px;
+    }
+    &__nav-item {
+        display: block;
+        position: relative;
+        margin-right: 35px;
+        font: 400 16px/1 Open Sans, sans-serif;
+        color: $gray1;
+        cursor: pointer;
+        z-index: 1;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:before {
+            display: none;
+            content: '';
+            position: absolute;
+            width: calc(100% - 10px);
+            height: 2px;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            background-color: $green;
+            z-index: 2;
+        }
+        &.active,
+        &:hover {
+            color: $green;
+            .portfolio__nav-item:before {
+                display: block;
+            }
+        }
+    }
+    &__grid {
+        width: 100%;
+        min-height: 200px;
+        border: 1px solid $green;
+    }
+    &__grid-sizer,
+    &__grid-item {
+        width: calc((100% - 30px)/4);
+        @media (max-width: 900px) {
+            width: calc((100% - 20px)/3);
+        }
+        @media (max-width: 600px) {
+            width: calc((100% - 10px)/2);
+        }
+        @media (max-width: 400px) {
+            width: 100%;
+        }
+    }
+    &__gutter-sizer {
+        width: 10px;
+        @media (max-width: 400px) {
+            width: 0;
+        }
+    }
+    &__grid-item {
+        height: auto;
+        display: flex;
+        background-color: $white;
+        margin-bottom: 10px;
+        // border: 1px solid $green;
+    }
+    &__image {}
+}

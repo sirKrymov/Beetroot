@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bouncy</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/ionicons.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <section id="hello" class="main-screen">
+
+        <header class="header">
+            <div class="header__container section__container">
+
+                <div class="header__logo-wrapper">
+                    <img class="header__logo" src="./img/main-logo.png" alt="main-logo">
+                    <img class="header__logo--dark" src="./img/main-logo-dark.png" alt="main-logo">
+                </div>
+
+                <button id="menu" class="nav__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="nav__item">
+                            <a class="nav__item-name nav__item-name--active" href="#hello">Hello</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-name" href="#about">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-name" href="#services">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-name" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-name" href="#team">Team</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__item-name" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <a href="#" class="scroll-down" address="true"></a>
+
+        <div id="main-screen__slider" class="main-screen__slider">
+            <div class="main-screen__slider-item">
+                <p class="main-screen__item-title">we are code cafe</p>
+                <p class="main-screen__item-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi at natus nostrum, facere suscipit iusto.</p>
+                <button class="main-screen__item-btn">see more now</button>
+            </div>
+            <div class="main-screen__slider-item">
+                <p class="main-screen__item-title">we are professionals</p>
+                <p class="main-screen__item-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi at natus nostrum, facere suscipit iusto.</p>
+                <button class="main-screen__item-btn">see more now</button>
+            </div>
+            <div class="main-screen__slider-item">
+                <p class="main-screen__item-title">we care about your business</p>
+                <p class="main-screen__item-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi at natus nostrum, facere suscipit iusto.</p>
+                <button class="main-screen__item-btn">see more now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about__container section__container">
+            <p class="about__title">about us</p>
+            <p class="about__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laudantium non quibusdam? Cumque eveniet debitis voluptatum.</p>
+            <div class="about__tab-wrapper">
+                <div class="about__tab-menu">
+                    <ul>
+                        <li data-tab-nav="data-tab-1" class="active">
+                            <p class="about__tab-icon fa fa-window-restore" aria-hidden="true"></p>
+                            <p class="about__tab-title">Responsive Design</p>
+                            <div class="about__tab-item-overlay">
+                                <p class="about__overlay-tab-icon fa fa-window-restore" aria-hidden="true"></p>
+                                <!-- <p class="about__overlay-tab-title">Responsive Design</p> -->
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-2">
+                            <p class="about__tab-icon fa fa-star-half-o" aria-hidden="true"></p>
+                            <p class="about__tab-title">Awesome Features</p>
+                            <div class="about__tab-item-overlay">
+                                <p class="about__overlay-tab-icon fa fa-star-half-o" aria-hidden="true"></p>
+                                <!-- <p class="about__overlay-tab-title">Awesome Features</p> -->
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-3">
+                            <p class="about__tab-icon fa fa-lock" aria-hidden="true"></p>
+                            <p class="about__tab-title">Powerfull Security</p>
+                            <div class="about__tab-item-overlay">
+                                <p class="about__overlay-tab-icon fa fa-lock" aria-hidden="true"></p>
+                                <!-- <p class="about__overlay-tab-title">Powerfull Security</p> -->
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-4">
+                            <p class="about__tab-icon fa fa-code" aria-hidden="true"></p>
+                            <p class="about__tab-title">Clean Design</p>
+                            <div class="about__tab-item-overlay">
+                                <p class="about__overlay-tab-icon fa fa-code" aria-hidden="true"></p>
+                                <!-- <p class="about__overlay-tab-title">Clean Design</p> -->
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-5">
+                            <p class="about__tab-icon fa fa-expand" aria-hidden="true"></p>
+                            <p class="about__tab-title">Retina Ready</p>
+                            <div class="about__tab-item-overlay">
+                                <p class="about__overlay-tab-icon fa fa-expand" aria-hidden="true"></p>
+                                <!-- <p class="about__overlay-tab-title">Retina Ready</p> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about__tab-content">
+                    <div class="tab tab-1 active" data-tab-1>
+                        <div class="tab__text-wrapper">
+                            <p class="tab__text-title">Responsive Design</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <button class="our-services__item-btn our-services__item-btn--about">learn more</button>
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image">
+                        </div>
+                    </div>
+                    <div class="tab tab-2" data-tab-2>
+                        <div class="tab__text-wrapper">
+                            <p class="tab__text-title">Awesome Features</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <button class="our-services__item-btn our-services__item-btn--about">learn more</button>
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image">
+                        </div>
+                    </div>
+                    <div class="tab tab-3" data-tab-3>
+                        <div class="tab__text-wrapper">
+                            <p class="tab__text-title">Powerfull Security</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <button class="our-services__item-btn our-services__item-btn--about">learn more</button>
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image">
+                        </div>
+                    </div>
+                    <div class="tab tab-4" data-tab-4>
+                        <div class="tab__text-wrapper">
+                            <p class="tab__text-title">Clean Design</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <button class="our-services__item-btn our-services__item-btn--about">learn more</button>
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image">
+                        </div>
+                    </div>
+                    <div class="tab tab-5" data-tab-5>
+                        <div class="tab__text-wrapper">
+                            <p class="tab__text-title">Retina Ready</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <p class="tab__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit magnam, numquam facilis rem similique, saepe tempore iure voluptatibus aut molestiae explicabo, laudantium commodi veniam!</p>
+                            <button class="our-services__item-btn our-services__item-btn--about">learn more</button>
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="our-services">
+        <div class="our-services__container section__container">
+            <p class="our-services__title">our service</p>
+            <p class="about__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laudantium non quibusdam? Cumque eveniet debitis voluptatum.</p>
+            <div class="our-services__list">
+                <div class="our-services__item">
+                    <div class="our-services__icon-wrapper">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                    </div>
+                    <p class="our-services__item-title">free supports &amp; updates</p>
+                    <p class="our-services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum animi excepturi omnis repellendus qui ex maxime.
+                    </p>
+                    <button class="our-services__item-btn">see more</button>
+                </div>
+                <div class="our-services__item">
+                    <div class="our-services__icon-wrapper">
+                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    </div>
+                    <p class="our-services__item-title">24 / 7 support</p>
+                    <p class="our-services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum animi excepturi omnis repellendus qui ex maxime.
+                    </p>
+                    <button class="our-services__item-btn">see more</button>
+                </div>
+                <div class="our-services__item">
+                    <div class="our-services__icon-wrapper">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                    </div>
+                    <p class="our-services__item-title">fully customizable</p>
+                    <p class="our-services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum animi excepturi omnis repellendus qui ex maxime.
+                    </p>
+                    <button class="our-services__item-btn">see more</button>
+                </div>
+                <div class="our-services__item">
+                    <div class="our-services__icon-wrapper">
+                        <i class="fa fa-plug" aria-hidden="true"></i>
+                    </div>
+                    <p class="our-services__item-title">12 theme websites</p>
+                    <p class="our-services__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum animi excepturi omnis repellendus qui ex maxime.
+                    </p>
+                    <button class="our-services__item-btn">see more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <div class="achievements__container">
+            <div class="achievements__data">
+                <div class="achievements__data-item">
+                    <div class="achievements__icon-wrapper">
+                        <img class="img-contain" src="./img/heart-arch.png" alt="logo">
+                    </div>
+                    <p class="achievements__data-number">10k+</p>
+                    <p class="achievements__data-title">love our team</p>
+                </div>
+                <div class="achievements__data-item">
+                    <div class="achievements__icon-wrapper">
+                        <img class="img-contain" src="./img/check-arch.png" alt="logo">
+                    </div>
+                    <p class="achievements__data-number">400+</p>
+                    <p class="achievements__data-title">check our</p>
+                </div>
+                <div class="achievements__data-item">
+                    <div class="achievements__icon-wrapper">
+                        <img class="img-contain" src="./img/repeat-arch.png" alt="logo">
+                    </div>
+                    <p class="achievements__data-number">312</p>
+                    <p class="achievements__data-title">repeat client</p>
+                </div>
+                <div class="achievements__data-item">
+                    <div class="achievements__icon-wrapper">
+                        <img class="img-contain" src="./img/beer-arch.png" alt="logo">
+                    </div>
+                    <p class="achievements__data-number">480</p>
+                    <p class="achievements__data-title">pizzas ordered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio__container section__container">
+            <p class="portfolio__title">portfolio</p>
+            <p class="portfolio__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laudantium non quibusdam? Cumque eveniet debitis voluptatum.</p>
+            <ul class="portfolio__nav">
+                <li class="portfolio__nav-item active" data-filter="all-works">All Works</li>
+                <li class="portfolio__nav-item" data-filter="print">Print</li>
+                <li class="portfolio__nav-item" data-filter="branding">Branding</li>
+                <li class="portfolio__nav-item" data-filter="web">Web</li>
+                <li class="portfolio__nav-item" data-filter="html">HTML</li>
+            </ul>
+
+            <!-- <div class="portfolio__nav">
+                <a class="portfolio__nav-item" href="#" data-filter="all-works">All Works</a>
+                <a class="portfolio__nav-item" href="#" data-filter="print">Print</a>
+                <a class="portfolio__nav-item" href="#" data-filter="branding">Branding</a>
+                <a class="portfolio__nav-item" href="#" data-filter="web">Web</a>
+                <a class="portfolio__nav-item" href="#" data-filter="html">HTML</a>
+            </div> -->
+
+            <div class="portfolio__grid">
+                <div class="portfolio__grid-sizer"></div>
+                <div class="portfolio__gutter-sizer"></div>
+                <div class="portfolio__grid-item" data-category="print">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-1.png" alt="portfolio-image-1">
+                </div>
+                <div class="portfolio__grid-item" data-category="print">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-2.png" alt="portfolio-image-2">
+                </div>
+                <div class="portfolio__grid-item" data-category="html">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-3.png" alt="portfolio-image-3">
+                </div>
+                <div class="portfolio__grid-item" data-category="print">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-4.png" alt="portfolio-image-4">
+                </div>
+                <div class="portfolio__grid-item" data-category="branding">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-6.png" alt="portfolio-image-6">
+                </div>
+                <div class="portfolio__grid-item" data-category="branding">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-7.png" alt="portfolio-image-7">
+                </div>
+                <div class="portfolio__grid-item" data-category="branding">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-5.png" alt="portfolio-image-5">
+                </div>
+                <div class="portfolio__grid-item" data-category="print">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-8.png" alt="portfolio-image-8">
+                </div>
+                <div class="portfolio__grid-item" data-category="branding">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-10.png" alt="portfolio-image-10">
+                </div>
+                <div class="portfolio__grid-item" data-category="web">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-12.png" alt="portfolio-image-12">
+                </div>
+                <div class="portfolio__grid-item" data-category="branding">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-11.png" alt="portfolio-image-11">
+                </div>
+                <div class="portfolio__grid-item" data-category="branding">
+                    <img class="portfolio__image img-cover" src="./img/portfolio-image-9.png" alt="portfolio-image-9">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="button-up" class="button-up">
+        <span class="ion-chevron-up"></span>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="./js/jquery-3.2.1.min.js"></script> -->
+    <script src="./js/slick.js"></script>
+    <script src="./js/imagesloaded.pkgd.js"></script>
+    <script src="./js/masonry.pkgd.js"></script>
+    <script src="./js/jquery.filterizr.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

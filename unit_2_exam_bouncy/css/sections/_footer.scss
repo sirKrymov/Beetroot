@@ -1,0 +1,115 @@
+.footer {
+    min-height: calc(226px + 44px);
+    background-color: $darkGray3;
+    &__container {
+        min-height: calc(226px + 44px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__up-block {
+        width: 100%;
+        min-height: 226px;
+        background-color: $darkGray3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__down-block {
+        width: 100%;
+        min-height: 44px;
+        background-color: $darkGray8;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__data {
+        // width: 1100px;
+        width: 100%;
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__icon-wrapper {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $darkGray8;
+        border: 1px solid $darkGray9;
+        color: $white1;
+        position: relative;
+        margin-bottom: 30px;
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__number {
+        font-size: 14px;
+        font-family: 'Muli';
+        font-weight: 500;
+        color: $white1;
+        letter-spacing: 0.04em;
+    }
+    &__social-list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__social-item {
+        color: $white1;
+        padding: 0 15px;
+        &:hover {
+            color: $yellow1;
+            transform: scale(1.1);
+        }
+    }
+    &__place {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__copyright {
+        display: inline-block;
+        font-size: 14px;
+        font-family: 'Muli';
+        font-weight: 500;
+        color: $white1;
+        letter-spacing: 0.04em;
+    }
+    &__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    &__link {
+        text-decoration: none;
+        color: $yellow1;
+        font-weight: 600;
+        cursor: pointer;
+        @include transition(0.4s);
+    }
+}
