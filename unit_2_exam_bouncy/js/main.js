@@ -90,16 +90,17 @@ $(document).ready(function() {
         $('[' + $(that).attr("data-tab-nav") + ']').addClass('active');
     });
 
-    // Masonry grid for section Portfolio
-    let $container = $('.portfolio__grid');
-    $container.imagesLoaded(function() {
-        $container.masonry({
-            itemSelector: '.portfolio__grid-item',
-            columnWidth: '.portfolio__grid-sizer',
-            percentPosition: true,
-            gutter: '.portfolio__gutter-sizer',
-        });
-    });
+    // // Masonry grid for section Portfolio
+    // let $container = $('.portfolio__grid');
+    // $container.imagesLoaded(function() {
+    //     $container.masonry({
+    //         itemSelector: '.portfolio__grid-item',
+    //         columnWidth: '.portfolio__grid-sizer',
+    //         percentPosition: true,
+    //         // gutter: '.portfolio__gutter-sizer',
+    //     });
+    // });
+
     $(function() {
         $('.portfolio__nav li').click(function() {
             $('.portfolio__nav li').removeClass('active');

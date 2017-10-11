@@ -24,69 +24,68 @@
     }
     &__nav {
         @include display-flex(row, space-between, center);
-        margin-bottom: 60px;
+        margin-bottom: 45px;
+        @media (max-width: 450px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
     }
     &__nav-item {
         display: block;
         position: relative;
         margin-right: 35px;
+        padding-bottom: 15px;
+        border: none;
+        border-bottom: 2px solid transparent;
         font: 400 16px/1 Open Sans, sans-serif;
         color: $gray1;
         cursor: pointer;
-        z-index: 1;
         &:last-of-type {
             margin-right: 0;
         }
-        &:before {
-            display: none;
-            content: '';
-            position: absolute;
-            width: calc(100% - 10px);
-            height: 2px;
-            left: 50%;
-            bottom: -10px;
-            transform: translateX(-50%);
-            background-color: $green;
-            z-index: 2;
-        }
+        // &:before {
+        //     display: none;
+        //     content: '';
+        //     position: absolute;
+        //     width: calc(100% - 10px);
+        //     height: 2px;
+        //     left: 50%;
+        //     bottom: -10px;
+        //     transform: translateX(-50%);
+        //     background-color: $green;
+        // }
         &.active,
         &:hover {
+            border-bottom: 2px solid $green;
             color: $green;
-            .portfolio__nav-item:before {
-                display: block;
-            }
+            // .portfolio__nav-item:before {
+            //     display: block;
+            // }
+        }
+        @media (max-width: 450px) {
+            margin-bottom: 10px;
         }
     }
     &__grid {
         width: 100%;
-        min-height: 200px;
-        border: 1px solid $green;
+        min-height: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-    &__grid-sizer,
     &__grid-item {
-        width: calc((100% - 30px)/4);
-        @media (max-width: 900px) {
-            width: calc((100% - 20px)/3);
+        width: calc(100%/4);
+        height: 340px;
+        padding: 5px;
+        @media (max-width: 1000px) {
+            width: calc(100%/3);
         }
-        @media (max-width: 600px) {
-            width: calc((100% - 10px)/2);
+        @media (max-width: 700px) {
+            width: calc(100%/2);
         }
-        @media (max-width: 400px) {
+        @media (max-width: 470px) {
             width: 100%;
         }
     }
-    &__gutter-sizer {
-        width: 10px;
-        @media (max-width: 400px) {
-            width: 0;
-        }
-    }
-    &__grid-item {
-        height: auto;
-        display: flex;
-        background-color: $white;
-        margin-bottom: 10px;
-        // border: 1px solid $green;
-    }
-    &__image {}
 }

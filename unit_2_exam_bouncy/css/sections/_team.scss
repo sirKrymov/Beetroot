@@ -1,0 +1,25 @@
+.team {
+    min-height: 770px;
+    background-color: $white;
+    &__container {
+        min-height: 770px;
+        @include display-flex(column, flex-start, center);
+        padding: 80px 15px;
+    }
+    &__title {
+        margin-bottom: 40px;
+        font: 400 40px/1 Source Sans Pro, sans-serif;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $gray1;
+    }
+    &__subtitle {
+        max-width: 810px;
+        margin-bottom: 40px;
+        text-align: center;
+        font: 300 14px/1.7 Open Sans, sans-serif;
+        letter-spacing: 0.05em;
+        color: $gray;
+        text-align: center;
+    }
+}
