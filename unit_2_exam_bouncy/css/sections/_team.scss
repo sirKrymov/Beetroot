@@ -15,11 +15,193 @@
     }
     &__subtitle {
         max-width: 810px;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         text-align: center;
         font: 300 14px/1.7 Open Sans, sans-serif;
         letter-spacing: 0.05em;
         color: $gray;
         text-align: center;
+    }
+    &__slider {
+        width: 100%;
+        min-height: 364px;
+        margin-bottom: 76px;
+    }
+    &__slider-item {
+        width: 100%;
+        min-height: 364px;
+        padding: 0 40px;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__image-wrapper {
+        width: 100%;
+        max-width: 285px;
+        min-height: 364px;
+        position: relative;
+        cursor: pointer;
+        @include transition(0.4s);
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $black;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+        &:hover {
+            &:after {
+                opacity: 0.7;
+            }
+            .team__image-overlay {
+                opacity: 1;
+                pointer-events: auto;
+                cursor: pointer;
+                @include transition(0.4s);
+            }
+        }
+    }
+    &__image-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include display-flex(column, center, center);
+        opacity: 0;
+        pointer-events: none;
+        @include transition(0.4s);
+        z-index: 2;
+        overflow: hidden;
+    }
+    &__social-list {
+        transform: translate(-185px, 0);
+    }
+    &__social-item {
+        width: 202px;
+        height: 60px;
+        margin: 5px;
+        padding: 10px;
+        @include display-flex(row, space-between, center);
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 0 30px 30px 0;
+        transition: all 1s;
+        &:hover {
+            transform: translate(90px, 0);
+            background-color: $green;
+            .team__item-title {
+                color: $white;
+            }
+            .team__item-icon-wrapper {
+                background-color: $white;
+                transform: rotate(360deg);
+                transition: all 1s;
+            }
+        }
+    }
+    &__item-title {
+        margin-left: 54px;
+        font: 300 18px/1 Source Sans Pro, san-serif;
+        letter-spacing: 0.05em;
+        color: $black;
+    }
+    &__item-icon-wrapper {
+        @include display-flex(row, center, center);
+        color: $black;
+        background-color: $green;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        transform: rotate(0deg);
+        &:hover {
+            color: $green;
+        }
+    }
+    &__text-wrapper {
+        width: 100%;
+        max-width: 430px;
+        height: 364px;
+        padding: 30px 0;
+    }
+    &__text-scroll {
+        width: 100%;
+        height: 304px;
+        @include display-flex(column, flex-start, flex-end);
+        padding-right: 50px;
+    }
+    &__text-title {
+        margin-bottom: 6px;
+        font: 400 24px/1 Open Sans, san-serif;
+        color: $gray2;
+    }
+    &__text-subtitle {
+        margin-bottom: 10px;
+        font: italic 300 14px/1.9 Source Sans Pro, san-serif;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $gray2;
+    }
+    &__item-text {
+        margin-bottom: 10px;
+        font: 400 14px/1.8 Open Sans, san-serif;
+        letter-spacing: 0.05em;
+        color: $gray;
+        text-align: end;
+    }
+    &__slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        outline: none;
+        font-size: 30px;
+        color: $green;
+        z-index: 9;
+        &:hover {
+            color: $gray1;
+        }
+        &--prev {
+            left: 0;
+        }
+        &--next {
+            right: 0;
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: -76px;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            width: 14px;
+            height: 14px;
+            background-color: $white;
+            border: 1px solid $green;
+            border-radius: 50%;
+            margin-right: 14px;
+            cursor: pointer;
+            button {
+                display: block;
+                border: none;
+                font-size: 0;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &.slick-active {
+                background-color: $green;
+            }
+        }
     }
 }

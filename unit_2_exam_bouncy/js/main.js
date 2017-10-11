@@ -149,4 +149,71 @@ $(document).ready(function() {
         $('.portfolio__grid').filterizr();
     });
 
+    // Slimscroll for section Team
+    $(function() {
+        $('#inner-content-div1').slimScroll({
+            width: '430px',
+            height: '304px',
+            size: '4px',
+            color: '#196fc0',
+            alwaysVisible: true,
+        });
+
+        $('#inner-content-div2').slimScroll({
+            width: '430px',
+            height: '304px',
+            size: '4px',
+            color: '#196fc0',
+            alwaysVisible: true,
+        });
+
+        $('#inner-content-div3').slimScroll({
+            width: '430px',
+            height: '304px',
+            size: '4px',
+            color: '#196fc0',
+            alwaysVisible: true,
+        });
+
+        $('#inner-content-div4').slimScroll({
+            width: '430px',
+            height: '304px',
+            size: '4px',
+            color: '#196fc0',
+            alwaysVisible: true,
+        });
+
+    });
+
+    // Slider team section
+    $('#team__slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 2000,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="team__slider-btn team__slider-btn--prev"><span class="ion-chevron-left"></span></button>',
+        nextArrow: '<button type="button" class="team__slider-btn team__slider-btn--next"><span class="ion-chevron-right"></span></button>',
+        autoplay: true,
+        autoplaySpeed: 4000,
+        // fade: true,
+    });
+
+    // Slider testimonials section
+    $('#testimonials__slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 2000,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        // prevArrow: '<button type="button" class="testimonials__slider-btn testimonials__slider-btn--prev"><span class="ion-chevron-left"></span></button>',
+        // nextArrow: '<button type="button" class="testimonials__slider-btn testimonials__slider-btn--next"><span class="ion-chevron-right"></span></button>',
+        prevArrow: false,
+        nextArrow: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        // fade: true,
+    });
+
+
 });
