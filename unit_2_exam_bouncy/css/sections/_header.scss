@@ -69,6 +69,9 @@
         @media (max-width: 600px) {
             flex-direction: column;
             margin-top: 10px;
+            background-color: $white;
+            // background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
         }
     }
 }
@@ -96,13 +99,24 @@
         }
         span {
             display: block;
-            width: 24px;
+            width: 22px;
             height: 2px;
             background-color: $white;
             margin: 0 auto 4px;
             @include transition(0.4s);
             &:last-of-type {
                 margin-bottom: 0;
+            }
+        }
+        &--fixed {
+            border: 1px solid $black;
+            span {
+                background-color: $black;
+            }
+            &:hover {
+                span {
+                    background-color: $green;
+                }
             }
         }
         &--animate {
@@ -163,6 +177,9 @@
         color: $white;
         &--active {
             color: $green !important;
+        }
+        @media (max-width: 600px) {
+            color: $gray1;
         }
     }
 }
