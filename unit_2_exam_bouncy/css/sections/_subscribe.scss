@@ -1,0 +1,61 @@
+.subscribe {
+    min-height: 200px;
+    background: url('./../img/subscribe-bg.png') center center no-repeat;
+    &__container {
+        min-height: 200px;
+        @include display-flex(row,
+        space-between,
+        center);
+    }
+    &__title {
+        font: 300 22px/1 Source Sans Pro, sans-serif;
+        letter-spacing: 0.1em;
+        color: $green;
+    }
+    &__input-wrapper {
+        position: relative;
+    }
+    &__input {
+        width: 420px;
+        height: 50px;
+        padding: 0 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: $lightgray1;
+        font: 400 16px/1 Open Sans, sans-serif;
+        letter-spacing: 0.04em;
+        color: $black;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:hover {
+            background-color: $white;
+        }
+        &:focus {
+            border: 1px solid $green;
+        }
+    }
+    &__input-btn {
+        position: absolute;
+        width: 60px;
+        height: 50px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border: 1px solid transparent;
+        border-radius: 0 4px 4px 0;
+        background-color: $green;
+        color: $white;
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+.subscribe__input::-webkit-input-placeholder {
+    font: 400 16px/1 Open Sans, sans-serif;
+    letter-spacing: 0.04em;
+    color: $black;
+    opacity: 1;
+    @include transition(0.4s);
+    text-overflow: ellipsis;
+}

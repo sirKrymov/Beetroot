@@ -1,115 +1,88 @@
 .footer {
-    min-height: calc(226px + 44px);
-    background-color: $darkGray3;
+    min-height: 260px;
+    background-color: $white;
+    border-top: 1px solid $lightgray3;
     &__container {
-        min-height: calc(226px + 44px);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    &__up-block {
         width: 100%;
-        min-height: 226px;
-        background-color: $darkGray3;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    &__down-block {
-        width: 100%;
-        min-height: 44px;
-        background-color: $darkGray8;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        min-height: 260px;
+        @include display-flex(column, center, center);
     }
     &__data {
-        // width: 1100px;
         width: 100%;
-        max-width: 1170px;
-        padding: 0 15px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         position: relative;
+        margin-bottom: 70px;
+        @include display-flex(row, space-between, center);
     }
-    &__phone {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    &__icon-wrapper {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: $darkGray8;
-        border: 1px solid $darkGray9;
-        color: $white1;
-        position: relative;
-        margin-bottom: 30px;
-    }
-    &__icon {
+    &__logo-wrapper {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    &__number {
-        font-size: 14px;
-        font-family: 'Muli';
-        font-weight: 500;
-        color: $white1;
-        letter-spacing: 0.04em;
-    }
-    &__social-list {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    &__social-item {
-        color: $white1;
-        padding: 0 15px;
-        &:hover {
-            color: $yellow1;
-            transform: scale(1.1);
-        }
-    }
-    &__place {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     &__copyright {
-        display: inline-block;
-        font-size: 14px;
-        font-family: 'Muli';
-        font-weight: 500;
-        color: $white1;
-        letter-spacing: 0.04em;
-    }
-    &__logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        font: 400 16px/1 Open Sans, sans-serif;
+        color: $gray1;
     }
     &__link {
+        font: 400 16px/1 Open Sans, sans-serif;
         text-decoration: none;
-        color: $yellow1;
-        font-weight: 600;
+        color: $green;
         cursor: pointer;
         @include transition(0.4s);
     }
+    &__social {
+        @include display-flex(row, center, center);
+        list-style: none;
+        >li {
+            display: inline;
+            margin-right: 20px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+    &__social-item {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: relative;
+        @include display-flex(row, center, center);
+        border-radius: 50%;
+        background-color: $gray;
+        font-size: 16px;
+        color: $white;
+        z-index: 1;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-sizing: content-box;
+        }
+    }
+}
+
+.icon-effect .icon {
+    transition: all .5s;
+    &:after {
+        top: -7px;
+        left: -7px;
+        padding: 7px;
+        box-shadow: 0 0 0 4px $green;
+        transition: all .5s;
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+.icon-effect-1a .icon:hover {
+    background-color: $green;
+    color: $white;
+}
+
+.icon-effect-1a .icon:hover:after {
+    transform: scale(1);
+    opacity: 1;
 }

@@ -45,7 +45,7 @@ $(document).ready(function() {
         $(this).addClass('nav__item-name--active');
     });
 
-    //Scroll down button 
+    //Scroll down button main screen 
     $(function() {
         $('.scroll-down').click(function() {
             $('html, body').animate({ scrollTop: $('section.about').offset().top }, 1000);
@@ -211,8 +211,16 @@ $(document).ready(function() {
         prevArrow: false,
         nextArrow: false,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 3000,
         // fade: true,
+    });
+
+    //Scroll down button to contact us
+    $(function() {
+        $('.already__item-btn').click(function() {
+            $('html, body').animate({ scrollTop: $('section.contact').offset().top }, 1000);
+            return false;
+        });
     });
 
 

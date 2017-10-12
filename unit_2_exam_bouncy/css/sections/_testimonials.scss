@@ -35,14 +35,12 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        // border: 1px solid $green;
         background-color: $white;
     }
     &__image-wrapper {
         width: 130px;
         height: 130px;
         border-radius: 50%;
-        // border: 1px solid $green;
         background-color: $gray;
     }
     &__data-wrapper {
@@ -50,7 +48,6 @@
         min-height: 150px;
         padding: 6px 0 0 70px;
         @include display-flex(column, flex-start, flex-start);
-        // border: 1px solid $green;
     }
     &__data-text {
         margin-bottom: 24px;

@@ -1,0 +1,32 @@
+.already {
+    min-height: 200px;
+    background: url('./../img/already-bg.png') center center no-repeat;
+    &__container {
+        min-height: 200px;
+        @include display-flex(column,
+        center,
+        center);
+    }
+    &__title {
+        margin-bottom: 30px;
+        font: 400 20px/1 Open Sans, san-serif;
+        letter-spacing: 0.04em;
+        color: $white;
+        text-align: center;
+        span {
+            color: $green;
+        }
+    }
+    &__item-btn {
+        width: 140px;
+        height: 40px;
+        border: 1px solid $white;
+        border-radius: 20px;
+        font: 400 16px/1 Open Sans, san-serif;
+        color: $white;
+        &:hover {
+            border: 1px solid $green;
+            color: $green;
+        }
+    }
+}
