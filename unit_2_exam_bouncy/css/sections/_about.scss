@@ -3,8 +3,6 @@
     background-color: $lightgray1;
     &__container {
         min-height: 780px;
-        // @include display-flex(column, center, center);
-        // padding: 70px 15px;
         @include display-flex(column, flex-end, center);
         padding: 80px 15px 0 15px;
     }
@@ -14,6 +12,7 @@
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: $gray1;
+        text-align: center;
     }
     &__subtitle {
         max-width: 810px;

@@ -1,0 +1,66 @@
+.locate {
+    min-height: 100px;
+    background-color: $lightgray1;
+    // background: $lightgray1 url('./../img/locate-bg.png') center / cover no-repeat;
+    overflow: hidden;
+    &__container {
+        width: 100%;
+        min-height: 100px;
+        @include display-flex(column, center, center);
+    }
+    &__btn-section {
+        width: 100%;
+        min-height: 100px;
+        @include display-flex(row, center, center);
+    }
+    &__btn {
+        position: relative;
+        width: 270px;
+        height: 60px;
+        border: none;
+        background-color: transparent;
+        font: 300 24px/1 Source Sans Pro, sans-serif;
+        color: $black;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:hover {
+            border: none;
+            color: $green;
+            .locate__icon {
+                color: $green;
+                @include transition(0.4s);
+            }
+        }
+    }
+    &__icon-wrapper {
+        position: absolute;
+        width: 40px;
+        height: 60px;
+        top: 54%;
+        right: 0;
+        transform: translateY(-50%);
+        overflow: hidden;
+    }
+    &__icon {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: $black;
+        @include transition(0.4s);
+        &:hover {
+            color: $green;
+        }
+    }
+    &__map-wrapper {
+        width: 100%;
+        height: 0;
+        @include transition(0.4s);
+        &--visible {
+            min-height: 500px;
+            background-color: $lightgray3;
+        }
+    }
+}

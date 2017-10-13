@@ -91,7 +91,7 @@
             border: 1px solid $green;
             background-color: transparent;
             span {
-                background-color: $white;
+                background-color: $green;
             }
         }
         @media (max-width: 600px) {
@@ -123,6 +123,7 @@
             position: relative;
             border: none;
             background-color: transparent;
+            border: 1px solid transparent;
             span {
                 position: absolute;
                 top: 50%;
@@ -140,7 +141,7 @@
                 }
             }
             &:hover {
-                border: 1px solid $white;
+                border: 1px solid $green;
                 background-color: transparent;
                 span {
                     background-color: $green;

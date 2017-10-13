@@ -35,7 +35,15 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="main-screen__slider-btn main-screen__slider-btn--next"><span class="ion-chevron-right"></span></button>',
         autoplay: true,
         autoplaySpeed: 4000,
-        // fade: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                prevArrow: false,
+                nextArrow: false,
+                autoplaySpeed: 3000,
+                fade: true,
+            }
+        }, ]
     });
 
     // Set active element in color
@@ -52,6 +60,22 @@ $(document).ready(function() {
             return false;
         });
     });
+
+    //Animated title to left 
+    $('.title__animate--bounceInLeft').addClass('hidden').viewportChecker({
+        classToAdd: 'visible animated bounceInLeft',
+        offset: 100,
+        repeat: true,
+    });
+
+    //Animated title to right 
+    $('.title__animate--bounceInRight').addClass('hidden').viewportChecker({
+        classToAdd: 'visible animated bounceInRight',
+        offset: 100,
+        repeat: true,
+    });
+
+
 
     //Back to top
     if ($('#button-up').length) {
@@ -95,6 +119,72 @@ $(document).ready(function() {
         $('[' + $(that).attr("data-tab-nav") + ']').addClass('active');
     });
 
+    // ViewportChecker to animated numbers for section Achievements
+    // $(function() {
+    //     $('.number1').addClass('hidden').viewportChecker({
+    //         classToAdd: 'visible number1-vis',
+    //         classToRemove: 'number1-vis',
+    //         offset: 100,
+    //         repeat: true,
+    //         callbackFunction: (function() {
+    //             $('.number1-vis').numerator({
+    //                 easing: 'linear',
+    //                 duration: 2000,
+    //                 delimiter: ',',
+    //                 rounding: 0,
+    //                 toValue: 10,
+    //             })
+    //         }),
+    //     });
+    //     $('.number2').addClass('hidden').viewportChecker({
+    //         classToAdd: 'visible number2-vis',
+    //         classToRemove: 'number2-vis',
+    //         offset: 100,
+    //         repeat: true,
+    //         callbackFunction: (function() {
+    //             $('.number2-vis').numerator({
+    //                 easing: 'linear',
+    //                 duration: 3000,
+    //                 delimiter: ',',
+    //                 rounding: 0,
+    //                 toValue: 10,
+    //             })
+    //         }),
+    //     });
+    //     $('.number3').addClass('hidden').viewportChecker({
+    //         classToAdd: 'visible number3-vis',
+    //         classToRemove: 'number3-vis',
+    //         offset: 100,
+    //         repeat: true,
+    //         callbackFunction: (function() {
+    //             $('.number3-vis').numerator({
+    //                 easing: 'linear',
+    //                 duration: 4000,
+    //                 delimiter: ',',
+    //                 rounding: 0,
+    //                 toValue: 10,
+    //             })
+    //         }),
+    //     });
+    //     $('.number4').addClass('hidden').viewportChecker({
+    //         classToAdd: 'visible number4-vis',
+    //         classToRemove: 'number4-vis',
+    //         offset: 100,
+    //         repeat: true,
+    //         callbackFunction: (function() {
+    //             $('.number4-vis').numerator({
+    //                 easing: 'linear',
+    //                 duration: 5000,
+    //                 delimiter: ',',
+    //                 rounding: 0,
+    //                 toValue: 10,
+    //             })
+    //         }),
+    //     });
+
+
+    // });
+
     // Animated numbers for section Achievements
     $(function() {
         $('.number1').numerator({
@@ -128,6 +218,7 @@ $(document).ready(function() {
             toValue: 480,
         })
     });
+
     // // Masonry grid for section Portfolio
     // let $container = $('.portfolio__grid');
     // $container.imagesLoaded(function() {
@@ -223,5 +314,9 @@ $(document).ready(function() {
         });
     });
 
+    //Locate button
+    $("#locate__btn").click(function() {
+        $(".locate__map-wrapper").toggleClass("locate__map-wrapper--visible");
+    });
 
 });
