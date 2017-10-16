@@ -13,6 +13,10 @@
         text-transform: uppercase;
         color: $gray1;
         text-align: center;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
     }
     &__subtitle {
         max-width: 810px;
@@ -22,12 +26,21 @@
         letter-spacing: 0.05em;
         color: $gray;
         text-align: center;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
     &__list {
         width: 100%;
         @include display-flex(row, space-between, center);
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     &__item {
+        width: 100%;
+        max-width: 175px;
         @include display-flex(row, center, center);
         cursor: pointer;
         @include transition(0.4s);
@@ -35,6 +48,12 @@
             .awesome-projects__item-title {
                 color: $green;
             }
+        }
+        @media (max-width: 1024px) {
+            margin: 10px 50px;
+        }
+        @media (max-width: 768px) {
+            justify-content: flex-start
         }
     }
     &__logo {

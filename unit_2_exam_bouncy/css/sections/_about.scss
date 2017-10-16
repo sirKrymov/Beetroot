@@ -13,6 +13,10 @@
         text-transform: uppercase;
         color: $gray1;
         text-align: center;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
     }
     &__subtitle {
         max-width: 810px;
@@ -22,15 +26,24 @@
         letter-spacing: 0.05em;
         color: $gray;
         text-align: center;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
     &__tab-wrapper {
         width: 100%;
     }
     &__tab-menu {
         width: 100%;
-        min-height: 150px;
+        min-height: 100px;
         margin-bottom: 50px;
         background-color: $white;
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 480px) {
+            margin-bottom: 15px;
+        }
         ul {
             @include display-flex (row, center, center);
         }
@@ -41,6 +54,7 @@
             position: relative;
             @include display-flex (column, center, center);
             flex-grow: 1;
+            padding: 15px;
             border: none;
             border-right: 1px solid $lightgray3;
             border-bottom: 3px solid $green;
@@ -61,6 +75,15 @@
                     @include transition(0.4s);
                 }
             }
+            @media (max-width: 768px) {
+                min-height: 70px;
+            }
+            @media (max-width: 480px) {
+                min-height: 150px;
+                padding: 5px;
+                flex-direction: column-reverse;
+                justify-content: flex-start;
+            }
         }
     }
     &__tab-icon {
@@ -68,15 +91,32 @@
         font-size: 40px;
         color: $gray1;
         @include transition(0.4s);
+        @media (max-width: 768px) {
+            margin-top: 0;
+        }
+        @media (max-width: 480px) {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
     }
     &__tab-title {
         display: block;
-        min-height: 40px;
+        min-height: 35px;
         margin-top: 20px;
         text-align: center;
         font: 500 16px/1 Open Sans, sans-serif;
-        // text-transform: uppercase;
         color: $gray1;
+        @media (max-width: 768px) {
+            min-height: 30px;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 40px;
+        }
+        @media (max-width: 480px) {
+            min-width: 35px;
+            margin-top: 0px;
+            transform: rotateZ(-90deg);
+        }
     }
     &__tab-item-overlay {
         position: absolute;
@@ -85,6 +125,7 @@
         background-color: $green;
         top: 0;
         left: 0;
+        padding-top: 3px;
         @include display-flex (column, center, center);
         opacity: 0;
         pointer-events: none;
@@ -103,10 +144,12 @@
         }
     }
     &__overlay-tab-icon {
-        // margin-top: 20px;
         font-size: 50px;
         color: $white;
         @include transition(0.4s);
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
     }
     &__overlay-tab-title {
         display: block;
@@ -125,17 +168,28 @@
             display: none;
             width: 100%;
             min-height: 370px;
-            // border: 1px solid $green;
+            align-items: center;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
             &.active {
-                // display: block;
                 display: flex;
             }
             &__text-wrapper {
                 width: 50%;
                 min-height: 370px;
                 @include display-flex (column, flex-start, flex-start);
-                padding: 30px 0;
-                // border: 1px solid $green;
+                padding: 30px 15px 30px 0;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    min-height: 300px;
+                }
+                @media (max-width: 480px) {
+                    padding: 15px;
+                    align-items: center;
+                }
             }
             &__text-title {
                 margin-bottom: 30px;
@@ -147,6 +201,7 @@
                 margin-bottom: 20px;
                 font: 300 14px/1.7 Open Sans, sans-serif;
                 color: $black;
+                text-align: justify;
             }
             &__text-link {
                 font: 400 14px/1 Source Sans Pro, sans-serif;
@@ -162,7 +217,9 @@
             &__image-wrapper {
                 width: 50%;
                 height: 370px;
-                // border: 1px solid $green;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
             }
         }
     }

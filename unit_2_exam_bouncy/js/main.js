@@ -22,6 +22,7 @@ $(document).ready(function() {
     $("#menu").click(function() {
         $(".header__nav").toggleClass("header__nav--open");
         $(".nav__btn").toggleClass("nav__btn--animate");
+        $(".main-screen__slider-item").toggleClass("main-screen__slider-item--adaptive-menu");
     });
 
     // Slider main section
@@ -35,15 +36,15 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="main-screen__slider-btn main-screen__slider-btn--next"><span class="ion-chevron-right"></span></button>',
         autoplay: true,
         autoplaySpeed: 4000,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                prevArrow: false,
-                nextArrow: false,
-                autoplaySpeed: 3000,
-                fade: true,
-            }
-        }, ]
+        // responsive: [{
+        //     breakpoint: 768,
+        //     settings: {
+        //         prevArrow: false,
+        //         nextArrow: false,
+        //         autoplaySpeed: 3000,
+        //         fade: true,
+        //     }
+        // }]
     });
 
     // Set active element in color
@@ -74,8 +75,6 @@ $(document).ready(function() {
         offset: 100,
         repeat: true,
     });
-
-
 
     //Back to top
     if ($('#button-up').length) {
@@ -120,70 +119,7 @@ $(document).ready(function() {
     });
 
     // ViewportChecker to animated numbers for section Achievements
-    // $(function() {
-    //     $('.number1').addClass('hidden').viewportChecker({
-    //         classToAdd: 'visible number1-vis',
-    //         classToRemove: 'number1-vis',
-    //         offset: 100,
-    //         repeat: true,
-    //         callbackFunction: (function() {
-    //             $('.number1-vis').numerator({
-    //                 easing: 'linear',
-    //                 duration: 2000,
-    //                 delimiter: ',',
-    //                 rounding: 0,
-    //                 toValue: 10,
-    //             })
-    //         }),
-    //     });
-    //     $('.number2').addClass('hidden').viewportChecker({
-    //         classToAdd: 'visible number2-vis',
-    //         classToRemove: 'number2-vis',
-    //         offset: 100,
-    //         repeat: true,
-    //         callbackFunction: (function() {
-    //             $('.number2-vis').numerator({
-    //                 easing: 'linear',
-    //                 duration: 3000,
-    //                 delimiter: ',',
-    //                 rounding: 0,
-    //                 toValue: 10,
-    //             })
-    //         }),
-    //     });
-    //     $('.number3').addClass('hidden').viewportChecker({
-    //         classToAdd: 'visible number3-vis',
-    //         classToRemove: 'number3-vis',
-    //         offset: 100,
-    //         repeat: true,
-    //         callbackFunction: (function() {
-    //             $('.number3-vis').numerator({
-    //                 easing: 'linear',
-    //                 duration: 4000,
-    //                 delimiter: ',',
-    //                 rounding: 0,
-    //                 toValue: 10,
-    //             })
-    //         }),
-    //     });
-    //     $('.number4').addClass('hidden').viewportChecker({
-    //         classToAdd: 'visible number4-vis',
-    //         classToRemove: 'number4-vis',
-    //         offset: 100,
-    //         repeat: true,
-    //         callbackFunction: (function() {
-    //             $('.number4-vis').numerator({
-    //                 easing: 'linear',
-    //                 duration: 5000,
-    //                 delimiter: ',',
-    //                 rounding: 0,
-    //                 toValue: 10,
-    //             })
-    //         }),
-    //     });
 
-
-    // });
 
     // Animated numbers for section Achievements
     $(function() {
@@ -218,17 +154,6 @@ $(document).ready(function() {
             toValue: 480,
         })
     });
-
-    // // Masonry grid for section Portfolio
-    // let $container = $('.portfolio__grid');
-    // $container.imagesLoaded(function() {
-    //     $container.masonry({
-    //         itemSelector: '.portfolio__grid-item',
-    //         columnWidth: '.portfolio__grid-sizer',
-    //         percentPosition: true,
-    //         // gutter: '.portfolio__gutter-sizer',
-    //     });
-    // });
 
     // Filterizr for section Portfolio
     $(function() {
@@ -297,8 +222,6 @@ $(document).ready(function() {
         speed: 2000,
         slidesToShow: 1,
         adaptiveHeight: true,
-        // prevArrow: '<button type="button" class="testimonials__slider-btn testimonials__slider-btn--prev"><span class="ion-chevron-left"></span></button>',
-        // nextArrow: '<button type="button" class="testimonials__slider-btn testimonials__slider-btn--next"><span class="ion-chevron-right"></span></button>',
         prevArrow: false,
         nextArrow: false,
         autoplay: true,

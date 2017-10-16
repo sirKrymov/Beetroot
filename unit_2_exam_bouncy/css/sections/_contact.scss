@@ -28,12 +28,10 @@
         max-width: 1000px;
         @include display-flex(column, flex-start, flex-start);
         padding: 0 15px;
-        // border: 1px solid $green;
     }
     &__inputs-wrapper {
         width: 100%;
         @include display-flex(row, space-between, center);
-        // border: 1px solid $green;
     }
     &__input {
         position: relative;
@@ -120,14 +118,9 @@
             width: 50%;
             height: 100%;
             border: 1px solid $lightgray3;
+            border-radius: 15px 0 0 15px;
             transition: transform 0.3s;
             border-right: none;
-            // &:nth-of-type(2) {
-            //     border: 1px solid $lightgray1;
-            // }
-            // &:nth-of-type(3) {
-            //     border: 1px solid $lightgray1;
-            // }
         }
         &:after {
             content: '';
@@ -136,12 +129,10 @@
             left: 50%;
             width: 50%;
             height: 100%;
-            border: 1px solid $lightgray1;
+            border: 1px solid $lightgray3;
+            border-radius: 0 15px 15px 0;
             border-left: none;
             transition: transform 0.3s;
-            // &:nth-of-type(3) {
-            //     border: 1px solid $lightgray3;
-            // }
         }
     }
     &__input-label-content {
@@ -173,7 +164,7 @@
     }
     &__textarea-field {
         width: 100%;
-        height: 200px;
+        height: 290px;
         position: relative;
         display: block;
         padding: 10px;
@@ -219,7 +210,7 @@
     &__textarea-label {
         display: inline-block;
         width: 100%;
-        height: 200px;
+        height: 290px;
         position: absolute;
         top: 0;
         left: 0;
@@ -235,7 +226,8 @@
             left: 0;
             width: 100%;
             height: 50%;
-            border: 1px solid $lightgray1;
+            border: 1px solid $lightgray3;
+            border-radius: 15px 15px 0 0;
             transition: transform 0.3s;
             border-bottom: none;
         }
@@ -247,6 +239,7 @@
             width: 100%;
             height: 50%;
             border: 1px solid $lightgray3;
+            border-radius: 0 0 15px 15px;
             border-top: none;
             transition: transform 0.3s;
         }
@@ -260,9 +253,10 @@
     }
     &__btn {
         width: 150px;
-        height: 60px;
+        height: 55px;
         background-color: transparent;
         border: 1px solid $lightgray3;
+        border-radius: 15px;
         font: 400 16px/1 Open Sans, sans-serif;
         text-transform: uppercase;
         color: $gray1;
