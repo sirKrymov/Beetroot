@@ -72,6 +72,10 @@
         letter-spacing: 0.05em;
         color: $gray;
         text-align: start;
+        @media (max-width: 768px) {
+            margin-top: 24px;
+            text-align: center;
+        }
     }
     &__text-title {
         margin-bottom: 8px;
@@ -79,12 +83,22 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $green;
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
     }
     &__text-subtitle {
         font: 400 14px/1 Open Sans, san-serif;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $gray2;
+        @media (max-width: 768px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
     }
     &__slider-btn {
         position: absolute;

@@ -1571,17 +1571,31 @@ main {
     letter-spacing: 0.05em;
     color: #5c6873;
     text-align: start; }
+    @media (max-width: 768px) {
+      .testimonials__data-text {
+        margin-top: 24px;
+        text-align: center; } }
   .testimonials__text-title {
     margin-bottom: 8px;
     font: 700 16px/1 Open Sans, san-serif;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #196fc0; }
+    @media (max-width: 768px) {
+      .testimonials__text-title {
+        display: block;
+        width: 100%;
+        text-align: center; } }
   .testimonials__text-subtitle {
     font: 400 14px/1 Open Sans, san-serif;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #464646; }
+    @media (max-width: 768px) {
+      .testimonials__text-subtitle {
+        display: block;
+        width: 100%;
+        text-align: center; } }
   .testimonials__slider-btn {
     position: absolute;
     top: 50%;
