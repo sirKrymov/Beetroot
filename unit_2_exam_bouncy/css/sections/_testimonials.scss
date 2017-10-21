@@ -61,6 +61,10 @@
         min-height: 150px;
         padding: 6px 0 0 70px;
         @include display-flex(column, flex-start, flex-start);
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 6px 0 0 0px;
+        }
     }
     &__data-text {
         margin-bottom: 24px;
