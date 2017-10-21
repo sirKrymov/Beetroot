@@ -13,6 +13,10 @@
         text-transform: uppercase;
         color: $gray1;
         text-align: center;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
     }
     &__subtitle {
         max-width: 810px;
@@ -22,6 +26,9 @@
         letter-spacing: 0.05em;
         color: $gray;
         text-align: center;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
     &__slider {
         width: 100%;

@@ -34,7 +34,7 @@
         width: 100%;
         max-width: 1170px;
         @include display-flex(row, space-between, center);
-        @media (max-width: 1024px) {
+        @media (max-width: 1005px) {
             flex-wrap: wrap;
             align-content: center;
             justify-content: center;
@@ -59,7 +59,7 @@
                 color: $green;
             }
         }
-        @media (max-width: 1024px) {
+        @media (max-width: 1005px) {
             width: 50%;
             max-width: 300px;
             margin-right: 30px;

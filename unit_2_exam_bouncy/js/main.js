@@ -36,15 +36,14 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="main-screen__slider-btn main-screen__slider-btn--next"><span class="ion-chevron-right"></span></button>',
         autoplay: true,
         autoplaySpeed: 4000,
-        // responsive: [{
-        //     breakpoint: 768,
-        //     settings: {
-        //         prevArrow: false,
-        //         nextArrow: false,
-        //         autoplaySpeed: 3000,
-        //         fade: true,
-        //     }
-        // }]
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                autoplaySpeed: 3000,
+                fade: true,
+            }
+        }]
     });
 
     // Set active element in color
@@ -117,9 +116,6 @@ $(document).ready(function() {
         $(tabs).removeClass('active');
         $('[' + $(that).attr("data-tab-nav") + ']').addClass('active');
     });
-
-    // ViewportChecker to animated numbers for section Achievements
-
 
     // Animated numbers for section Achievements
     $(function() {
@@ -229,7 +225,7 @@ $(document).ready(function() {
         // fade: true,
     });
 
-    //Scroll down button to contact us
+    //SCROLL DOWN BUTTOM TO SECTION CONTACT US
     $(function() {
         $('.already__item-btn').click(function() {
             $('html, body').animate({ scrollTop: $('section.contact').offset().top }, 1000);
@@ -237,9 +233,52 @@ $(document).ready(function() {
         });
     });
 
-    //Locate button
+    // LOCATE BUTTON
     $("#locate__btn").click(function() {
         $(".locate__map-wrapper").toggleClass("locate__map-wrapper--visible");
+    });
+
+    // INPUTS EVENTS
+    $(".contact__input-field").focus(function() {
+        $(this).parent(".contact__input").addClass("contact__input--filled");
+    });
+    $(".contact__input-field").blur(function() {
+        if ($(this).val() === "") {
+            $(this).parent(".contact__input").removeClass("contact__input--filled");
+        }
+    });
+
+    $("#contact__form").validate({
+
+        rules: {
+            form_name: {
+                required: true,
+                minlength: 2,
+
+            },
+            form_email: {
+                required: true,
+                email: true,
+
+            },
+            form_mobile: {
+                required: true,
+                digits: true,
+            },
+        },
+        messages: {
+            form_name: {
+                required: "Поле Имя обязательное для заполнения",
+                minlength: "Имя должно состоять из 2-х и более букв",
+            },
+            form_email: {
+                required: "Поле E-mail обязательное для заполнения",
+                email: "Введите пожалуйста корректный E-mail",
+            },
+        },
+        focusCleanup: true,
+        focusInvalid: false,
+        errorClass: "contact__input-field--invalid",
     });
 
 });

@@ -19,3 +19,63 @@
         transform: translateY(-5px);
     }
 }
+
+@keyframes anim-input {
+    50% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 1);
+    }
+    51% {
+        opacity: 0;
+        transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 3.7em, 0);
+    }
+}
+
+@keyframes anim-input2 {
+    50% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 1);
+    }
+    51% {
+        opacity: 0;
+        transform: translate3d(0, 3em, 0) scale3d(0.3, 0.3, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 3em, 0);
+    }
+}
+
+@keyframes anim-textarea {
+    50% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 1);
+    }
+    51% {
+        opacity: 0;
+        transform: translate3d(0, 18.8em, 0) scale3d(0.3, 0.3, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 18.8em, 0);
+    }
+}
+
+@keyframes anim-textarea2 {
+    50% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 1);
+    }
+    51% {
+        opacity: 0;
+        transform: translate3d(0, 18em, 0) scale3d(0.3, 0.3, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 18em, 0);
+    }
+}

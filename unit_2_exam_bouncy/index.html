@@ -567,35 +567,35 @@
         <div class="contact__container section__container">
             <p class="contact__title title__animate--bounceInLeft">contact us</p>
             <p class="contact__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laudantium non quibusdam? Cumque eveniet debitis voluptatum.</p>
-            <div class="contact__form">
+            <form id="contact__form" class="contact__form">
                 <div class="contact__inputs-wrapper">
                     <div class="contact__input">
-                        <input id="input-1" class="contact__input-field" type="text">
-                        <label class="contact__input-label" for="input-1">
+                        <input id="name" class="contact__input-field" name="form_name" type="text">
+                        <label class="contact__input-label" for="name">
                             <span class="contact__input-label-content">Your name</span>
                         </label>
                     </div>
                     <div class="contact__input">
-                        <input id="input-2" class="contact__input-field" type="text">
-                        <label class="contact__input-label" for="input-2">
+                        <input id="email" class="contact__input-field" name="form_email" type="email">
+                        <label class="contact__input-label" for="email">
                             <span class="contact__input-label-content">Your email</span>
                         </label>
                     </div>
                     <div class="contact__input">
-                        <input id="input-3" class="contact__input-field" type="text">
-                        <label class="contact__input-label" for="input-3">
-                            <span class="contact__input-label-content">Subject</span>
+                        <input id="mobile" class="contact__input-field" name="form_mobile" type="tel">
+                        <label class="contact__input-label" for="mobile">
+                            <span class="contact__input-label-content">Your mobile number</span>
                         </label>
                     </div>
                 </div>
                 <div class="contact__textarea">
-                    <textarea id="input-4" class="contact__textarea-field" type="text"></textarea>
-                    <label class="contact__textarea-label" for="input-4">
-                        <span class="contact__textarea-label-content">Your messege</span>
+                    <textarea id="message" class="contact__textarea-field" type="text"></textarea>
+                    <label class="contact__textarea-label" for="message">
+                        <span class="contact__textarea-label-content">Subject / Your message</span>
                     </label>
                 </div>
-                <button class="contact__btn">Send</button>
-            </div>
+                <button id="contact__btn" class="contact__btn">Send</button>
+            </form>
         </div>
     </section>
     <section class="locate">
@@ -616,19 +616,19 @@
     <footer id="footer" class="footer">
         <div class="footer__container section__container">
             <div class="footer__data">
-                <p class="footer__copyright">Copyright &copy; 2015 Company. All right reserved.</p>
                 <div class="footer__logo-wrapper">
                     <img class="footer__logo--dark" src="./img/main-logo-dark.png" alt="main-logo">
                 </div>
+                <p class="footer__copyright">Copyright &copy; 2015 Company. All right reserved.</p>
                 <p class="footer__copyright">Made with<a class="footer__link" href="#"> love </a>by Beetroot Academy
                 </p>
             </div>
             <ul class="footer__social icon-effect icon-effect-1a">
-                <li><a class="footer__social-item icon" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a class="footer__social-item icon" href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
-                <li><a class="footer__social-item icon" href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+                <li><a class="footer__social-item icon" href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a class="footer__social-item icon" href="https://twitter.com/?lang=ru"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a class="footer__social-item icon" href="https://vimeo.com"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
                 <li><a class="footer__social-item icon" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                <li><a class="footer__social-item icon" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a class="footer__social-item icon" href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a class="footer__social-item icon" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
                 <li><a class="footer__social-item icon" href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
             </ul>
@@ -643,6 +643,8 @@
     <script src="./js/jquery.filterizr.js"></script>
     <script src="./js/jquery-numerator.js"></script>
     <script src="./js/jquery.slimscroll.min.js"></script>
+    <script src="./js/jquery.classChanged.event.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
