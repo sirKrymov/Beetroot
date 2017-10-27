@@ -54,38 +54,112 @@
             font-size: 18px;
         }
     }
+    &__slider-nav-wrapper {
+        position: relative;
+        width: 100%;
+        min-height: 285px;
+        margin: 50px 0 25px 0;
+    }
     &__slider-nav {
         width: 100%;
-        min-height: 385px;
-        margin-bottom: 25px;
+        min-height: 285px;
     }
     &__item-nav {
         width: calc((100% - 40px)/3);
-        // max-width: 290px;
-        // height: 385px;
         height: auto;
         margin: 0 10px;
         color: $black;
     }
+    &__slider-for-wrapper {
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+    }
     &__slider-for {
         width: 100%;
-        min-height: 150px;
+        min-height: 100px;
     }
     &__item-for {
         width: 100%;
-        min-height: 150px;
-        border: 1px solid $black;
+        min-height: 100px;
         color: $black;
+        display: flex !important;
+    }
+    &__name-block {
+        width: calc((100% - 40px)/3);
+        min-height: 100px;
+        margin-right: 20px;
+        padding: 10px;
+        @include display-flex (column,
+        center,
+        center);
+    }
+    &__name {
+        margin-bottom: 6px;
+        font: 700 28px/1 'Montserrat', san-serif;
+        letter-spacing: 0.04em;
+        text-align: center;
+        color: $darkGray1;
+    }
+    &__spec {
+        font: 400 16px/1 'Muli', san-serif;
+        text-align: center;
+        color: $gray2;
+    }
+    &__data-block {
+        width: calc((100% - 40px)/3);
+        min-height: 100px;
+        margin-right: 20px;
+        padding: 10px;
+        @include display-flex (column,
+        center,
+        center);
+    }
+    &__description {
+        display: block;
+        width: 100%;
+        font: 300 14px/1.4 'Montserrat', san-serif;
+        text-align: justify;
+        color: $gray2;
+    }
+    &__social-block {
+        width: calc((100% - 40px)/3);
+        min-height: 100px;
+        padding: 10px;
+        @include display-flex(row,
+        center,
+        center);
+    }
+    &__social-item {
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+        @include display-flex(row,
+        center,
+        center);
+        border: 1px solid $yellow;
+        background-color: $yellow;
+        font-size: 22px;
+        color: $black;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:hover {
+            border: 1px solid $black;
+            background-color: $black;
+            color: $yellow;
+        }
     }
     &__slider-btn {
         position: absolute;
+        z-index: 10;
         z-index: 1;
-        width: 50px;
-        height: 50px;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        // top: 50%;
+        // transform: translateY(-50%);
+        top: -40px;
         border: 1px solid $black;
-        font-size: 24px;
+        font-size: 16px;
         color: $black;
         cursor: pointer;
         &:hover {
@@ -93,41 +167,72 @@
             color: $yellow;
         }
         &--prev {
-            left: 0;
+            // left: 0;
+            left: 50%;
+            transform: translateX(-50px)
         }
         &--next {
-            right: 0;
+            // right: 0;
+            right: 50%;
+            transform: translateX(50px)
+        }
+    }
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            width: 30px;
+            height: 5px;
+            margin-right: 4px;
+            background-color: $black;
+            border: none;
+            cursor: pointer;
+            button {
+                display: block;
+                border: none;
+                font-size: 0;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &.slick-active {
+                background-color: $yellow;
+            }
         }
     }
 }
 
-.slick-dots {
+.corner {
+    width: 30px;
+    height: 30px;
     position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    li {
-        width: 30px;
-        height: 5px;
-        margin-right: 4px;
-        // background-color: $lightGray;
-        background-color: $black;
-        border: none;
-        cursor: pointer;
-        button {
-            display: block;
-            border: none;
-            font-size: 0;
-        }
-        &:last-of-type {
-            margin-right: 0;
-        }
-        &.slick-active {
-            // background-color: $gray1;
-            background-color: $yellow;
-        }
+    &--top-left {
+        top: 0;
+        left: 0;
+        border-top: 1px solid $black;
+        border-left: 1px solid $black;
+    }
+    &--top-right {
+        top: 0;
+        right: 0;
+        border-top: 1px solid $black;
+        border-right: 1px solid $black;
+    }
+    &--bottom-left {
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid $black;
+        border-left: 1px solid $black;
+    }
+    &--bottom-right {
+        bottom: 0;
+        right: 0;
+        border-bottom: 1px solid $black;
+        border-right: 1px solid $black;
     }
 }

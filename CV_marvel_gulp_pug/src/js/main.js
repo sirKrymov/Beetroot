@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     //Scroll down button to section Contact from Main-screen
     $(function() {
-        $('#main-screen__btn-contact').click(function() {
+        $('.main-screen__btn--contact').click(function() {
             $('html, body').animate({ scrollTop: $('section.contact').offset().top }, 1000);
             return false;
         });
