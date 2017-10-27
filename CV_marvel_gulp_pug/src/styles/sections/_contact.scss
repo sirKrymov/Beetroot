@@ -1,6 +1,6 @@
 .contact {
     min-height: 680px;
-    // background-color: $darkWhite;
+    background-color: $darkWhite;
     background: url('./../img/contact-bg-1.png') center no-repeat;
     background-size: cover;
     &__container {
@@ -19,7 +19,7 @@
     &__title {
         position: relative;
         z-index: 2;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
         font: 700 34px/1 'Montserrat', san-serif;
         text-transform: uppercase;
         color: $gray1;
@@ -68,8 +68,9 @@
     &__inputs-wrapper {
         width: 100%;
         @include display-flex(row,
-        space-between,
+        center,
         center);
+        flex-wrap: wrap;
         @media (max-width: 1024px) {
             flex-wrap: wrap;
             justify-content: center;
@@ -77,21 +78,29 @@
     }
     &__input {
         position: relative;
-        width: calc(100% - 28px);
-        max-width: 290px;
-        margin-bottom: 60px;
+        width: calc((100% - 30px)/2);
+        // max-width: 290px;
+        margin-right: 30px;
+        margin-bottom: 40px;
+        &:nth-of-type(2) {
+            margin-right: 0;
+        }
+        &:nth-of-type(4) {
+            margin-right: 0;
+        }
         &--filled {
             .contact__input-field {
+                color: $black;
                 opacity: 1;
                 transition-delay: 0.3s;
             }
             .contact__input-label:before {
-                transform: translate3d(-10%, 0, 0);
+                transform: translateX(-10px);
                 border: 1px solid $black;
                 border-right: none;
             }
             .contact__input-label:after {
-                transform: translate3d(10%, 0, 0);
+                transform: translateX(10px);
                 border: 1px solid $black;
                 border-left: none;
             }
@@ -121,34 +130,45 @@
         display: block;
         padding: 10px;
         border: none;
-        border-radius: 0;
         background: transparent;
         font: 400 14px/1 'Muli', sans-serif;
         text-align: center;
-        color: $gray;
+        color: $gray2;
         opacity: 0;
         transition: opacity 0.3s;
         &:hover {
+            &+.contact__input-icon {
+                display: block;
+                color: $gray2;
+            }
             &+.contact__input-label:before {
                 border: 1px solid $gray2;
                 border-right: none;
+                // animation: swing 1s ease;
+                // animation-iteration-count: 1;
             }
             &+.contact__input-label:after {
                 border: 1px solid $gray2;
                 border-left: none;
+                // animation: swing 1s ease;
+                // animation-iteration-count: 1;
             }
         }
         &:focus {
+            color: $black;
             outline: none;
             opacity: 1;
             transition-delay: 0.3s;
+            &+.contact__input-icon {
+                display: none;
+            }
             &+.contact__input-label:before {
-                transform: translate3d(-10%, 0, 0);
+                transform: translateX(-10px);
                 border: 1px solid $black;
                 border-right: none;
             }
             &+.contact__input-label:after {
-                transform: translate3d(10%, 0, 0);
+                transform: translateX(10px);
                 border: 1px solid $black;
                 border-left: none;
             }
@@ -167,16 +187,25 @@
             opacity: 1;
             transition-delay: 0.3s;
             &+.contact__input-label:before {
-                transform: translate3d(-10%, 0, 0);
+                transform: translateX(-10px);
                 border: 1px solid $red;
                 border-right: none;
             }
             &+.contact__input-label:after {
-                transform: translate3d(10%, 0, 0);
+                transform: translateX(10px);
                 border: 1px solid $red;
                 border-left: none;
             }
         }
+    }
+    &__input-icon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        font-size: 30px;
+        @include transition(0.4s);
     }
     &__input-label {
         display: inline-block;
@@ -187,7 +216,7 @@
         left: 0;
         padding: 0 10px;
         font: 300 16px/1 'Muli', sans-serif;
-        color: $gray1;
+        color: $gray2;
         user-select: none;
         pointer-events: none;
         &:before {
@@ -197,8 +226,7 @@
             left: 0;
             width: 50%;
             height: 100%;
-            border: 1px solid $lightGray3;
-            border-radius: 15px 0 0 15px;
+            border: 1px solid $gray2;
             transition: transform 0.3s;
             border-right: none;
         }
@@ -209,8 +237,7 @@
             left: 50%;
             width: 50%;
             height: 100%;
-            border: 1px solid $lightGray3;
-            border-radius: 0 15px 15px 0;
+            border: 1px solid $gray2;
             border-left: none;
             transition: transform 0.3s;
         }
@@ -263,7 +290,7 @@
         display: block;
         padding: 10px;
         border: none;
-        border-radius: 0;
+        // border-radius: 0;
         background: transparent;
         font: 400 14px/1 'Muli', sans-serif;
         color: $gray;
@@ -275,11 +302,11 @@
         }
         &:hover {
             &+.contact__textarea-label:before {
-                border: 1px solid $gray2;
+                border: 1px solid $yellow;
                 border-bottom: none;
             }
             &+.contact__textarea-label:after {
-                border: 1px solid $gray2;
+                border: 1px solid $yellow;
                 border-top: none;
             }
         }
@@ -333,8 +360,9 @@
             left: 0;
             width: 100%;
             height: 50%;
-            border: 1px solid $lightGray3;
-            border-radius: 15px 15px 0 0;
+            // border: 1px solid $lightGray3;
+            border: 1px solid $gray2;
+            // border-radius: 15px 15px 0 0;
             transition: transform 0.3s;
             border-bottom: none;
         }
@@ -345,8 +373,9 @@
             left: 0;
             width: 100%;
             height: 50%;
-            border: 1px solid $lightGray3;
-            border-radius: 0 0 15px 15px;
+            // border: 1px solid $lightGray3;
+            border: 1px solid $gray2;
+            // border-radius: 0 0 15px 15px;
             border-top: none;
             transition: transform 0.3s;
         }
@@ -362,14 +391,13 @@
         text-align: center;
     }
     &__btn {
-        width: 150px;
-        height: 55px;
-        background-color: $yellow;
-        border: 1px solid $yellow;
-        border-radius: 15px;
-        font: 400 16px/1 'Muli', sans-serif;
-        text-transform: uppercase;
-        color: $black;
+        width: 170px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid $gray2;
+        font: 700 14px/1 'Montserrat', sans-serif;
+        letter-spacing: 0.04em;
+        color: $gray2;
         @include transition(0.4s);
         cursor: pointer;
         &:hover {

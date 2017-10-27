@@ -700,7 +700,7 @@
                             <p class="expert__spec">Junior Web Developer</p>
                         </div>
                         <div class="expert__data-block">
-                            <p class="expert__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis necessitatibus tempore corrupti commodi eius beatae natus reprehenderit repellendus sit pariatur.</p>
+                            <p class="expert__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis necessitatibus tempore corrupti commodi eius beatae natus reprehenderit.</p>
                         </div>
                         <div class="expert__social-block">
                             <a class="expert__social-item" href="#">
@@ -729,7 +729,7 @@
                             <p class="expert__spec">Senior Web Developer</p>
                         </div>
                         <div class="expert__data-block">
-                            <p class="expert__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis necessitatibus tempore corrupti commodi eius beatae natus reprehenderit repellendus sit pariatur.</p>
+                            <p class="expert__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex facilis iusto est impedit rerum, assumenda doloribus eveniet vero quidem, delectus quam quasi nam error commodi.</p>
                         </div>
                         <div class="expert__social-block">
                             <a class="expert__social-item" href="#">
@@ -859,32 +859,43 @@
     </section>
     <section id="contact" class="contact">
         <div class="contact__container section__container">
-            <p class="contact__title">send us message</p>
+            <p class="contact__title">send us <span>message</span></p>
             <form id="contact__form" class="contact__form">
                 <div class="contact__inputs-wrapper">
                     <div class="contact__input">
                         <input id="name" class="contact__input-field" name="form_name" type="text">
+                        <i class="contact__input-icon ion-person"></i>
                         <label class="contact__input-label" for="name">
                             <span class="contact__input-label-content">Your name</span>
                         </label>
                     </div>
                     <div class="contact__input">
                         <input id="email" class="contact__input-field" name="form_email" type="email">
+                        <i class="contact__input-icon ion-email"></i>
                         <label class="contact__input-label" for="email">
                             <span class="contact__input-label-content">Your email</span>
                         </label>
                     </div>
                     <div class="contact__input">
                         <input id="mobile" class="contact__input-field" name="form_mobile" type="tel">
+                        <i class="contact__input-icon ion-android-call"></i>
                         <label class="contact__input-label" for="mobile">
                             <span class="contact__input-label-content">Your mobile number</span>
                         </label>
                     </div>
+                    <div class="contact__input">
+                        <input id="subject" class="contact__input-field" name="form_subject" type="text">
+                        <i class="contact__input-icon ion-help"></i>
+                        <label class="contact__input-label" for="subject">
+                                <span class="contact__input-label-content">Subject</span>
+                            </label>
+                    </div>
                 </div>
                 <div class="contact__textarea">
                     <textarea id="message" class="contact__textarea-field" type="text"></textarea>
+                    <i class="contact__textarea-icon ion-edit"></i>
                     <label class="contact__textarea-label" for="message">
-                        <span class="contact__textarea-label-content">Subject / Your message</span>
+                        <span class="contact__textarea-label-content">Your message</span>
                     </label>
                 </div>
                 <button id="contact__btn" class="contact__btn">Send</button>
