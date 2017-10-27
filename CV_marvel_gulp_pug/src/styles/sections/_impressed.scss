@@ -1,0 +1,73 @@
+.impressed {
+    min-height: 380px;
+    background: url('./../img/impressed-bg.png') center no-repeat;
+    background-size: cover;
+    &__container {
+        min-height: 380px;
+        padding: 80px 15px;
+        @include display-flex(column,
+        center,
+        center);
+    }
+    &__title {
+        margin-bottom: 50px;
+        font: 700 34px/1 'Montserrat', san-serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-align: center;
+        color: $white;
+        span {
+            color: $yellow;
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+    }
+    &__description {
+        max-width: 750px;
+        margin-bottom: 50px;
+        font: 400 14px/1 'Muli', san-serif;
+        letter-spacing: 0.04em;
+        text-align: center;
+        color: $white;
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+    }
+    &__btn-block {
+        @include display-flex (row,
+        center,
+        center);
+        @media (max-width: 460px) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+    &__btn {
+        width: 170px;
+        height: 50px;
+        border: 1px solid $yellow;
+        background-color: transparent;
+        font: 700 14px/1 'Montserrat', san-serif;
+        letter-spacing: 0.04em;
+        color: $yellow;
+        @include transition(0.4s);
+        cursor: pointer;
+        &:first-of-type {
+            margin-right: 30px;
+        }
+        &:hover {
+            border: 1px solid $yellow;
+            background-color: $yellow;
+            color: $black;
+        }
+        @media (max-width: 460px) {
+            &:first-of-type {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

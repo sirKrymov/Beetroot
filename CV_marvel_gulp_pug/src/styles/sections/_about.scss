@@ -40,6 +40,9 @@
                 font-size: 40px;
             }
         }
+        span {
+            color: $yellow;
+        }
         @media (max-width: 768px) {
             font-size: 26px;
         }
@@ -74,11 +77,9 @@
         }
     }
     &__btn {
-        // width: 226px;
         width: calc((100% - 90px)/4);
         height: 60px;
         border: none;
-        // border: 1px solid $white;
         background-color: $yellow;
         font: 500 18px/1 'Montserrat', san-serif;
         letter-spacing: 0.04em;
@@ -90,7 +91,6 @@
         }
         &:hover {
             color: $yellow;
-            // border: 1px solid $black;
             background-color: $black;
         }
         @media (max-width: 1005px) {

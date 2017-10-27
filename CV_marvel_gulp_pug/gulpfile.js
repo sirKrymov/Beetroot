@@ -65,6 +65,9 @@ gulp.task('js', () => {
             './src/js/parts/adaptive_menu_anim_btn.js',
             './src/js/parts/scroll_down_button.js',
             './src/js/parts/sticky_menu.js',
+            './src/js/parts/back_to_top.js',
+            './src/js/parts/jquery.filterizr.js',
+            './src/js/parts/jquery.validate.min.js',
             './src/js/main.js'
         ])
         .pipe(concat('main.js'))

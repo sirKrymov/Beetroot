@@ -1,0 +1,133 @@
+.expert {
+    min-height: 800px;
+    background-color: $darkWhite;
+    background: url('./../img/team-bg.png') center no-repeat;
+    background-size: cover;
+    &__container {
+        min-height: 800px;
+        padding: 100px 15px;
+        @include display-flex (column,
+        flex-start,
+        center);
+        @media (min-width: 601px) and (max-width: 768px) {
+            padding-top: 130px;
+        }
+        @media (max-width: 460px) {
+            padding: 80px 15px;
+        }
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 70px;
+        font: 700 34px/1 'Montserrat', san-serif;
+        text-transform: uppercase;
+        color: $gray1;
+        &:before {
+            position: absolute;
+            z-index: -1;
+            content: 'expert';
+            top: -48px;
+            left: 50%;
+            transform: translateX(-50%);
+            font: 900 90px/1 'Montserrat', san-serif;
+            color: $lightGray3;
+            @media (max-width: 768px) {
+                top: -29px;
+                font-size: 60px;
+            }
+            @media (max-width: 460px) {
+                top: -19px;
+                font-size: 40px;
+            }
+        }
+        span {
+            color: $yellow;
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 80px;
+            font-size: 26px;
+            text-align: center;
+        }
+        @media (max-width: 460px) {
+            margin-bottom: 50px;
+            font-size: 18px;
+        }
+    }
+    &__slider-nav {
+        width: 100%;
+        min-height: 385px;
+        margin-bottom: 25px;
+    }
+    &__item-nav {
+        width: calc((100% - 40px)/3);
+        // max-width: 290px;
+        // height: 385px;
+        height: auto;
+        margin: 0 10px;
+        color: $black;
+    }
+    &__slider-for {
+        width: 100%;
+        min-height: 150px;
+    }
+    &__item-for {
+        width: 100%;
+        min-height: 150px;
+        border: 1px solid $black;
+        color: $black;
+    }
+    &__slider-btn {
+        position: absolute;
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid $black;
+        font-size: 24px;
+        color: $black;
+        cursor: pointer;
+        &:hover {
+            background-color: $black;
+            color: $yellow;
+        }
+        &--prev {
+            left: 0;
+        }
+        &--next {
+            right: 0;
+        }
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+        width: 30px;
+        height: 5px;
+        margin-right: 4px;
+        // background-color: $lightGray;
+        background-color: $black;
+        border: none;
+        cursor: pointer;
+        button {
+            display: block;
+            border: none;
+            font-size: 0;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &.slick-active {
+            // background-color: $gray1;
+            background-color: $yellow;
+        }
+    }
+}

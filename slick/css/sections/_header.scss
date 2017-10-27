@@ -1,0 +1,38 @@
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  padding: 30px;
+  &--fixed {
+    position: fixed;
+    background: $white;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+    .header__logo,
+    .header__nav-item {
+      color: $gray;
+    }
+  }
+  &__logo {
+    font-size: 36px;
+    color: $white;
+  }
+  &__nav-item {
+    margin-left: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:hover,
+    &--active {
+      color: $yellow !important;
+    }
+    
+  }
+}
