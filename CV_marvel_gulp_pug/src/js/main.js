@@ -7,6 +7,8 @@ $(document).ready(function() {
             top = $(id).offset().top;
 
         $('body,html').animate({ scrollTop: top }, 700);
+        $(".header__nav").removeClass("header__nav--open");
+        $(".nav__btn").removeClass("nav__btn--animate");
     });
 
     // Set active element in color
@@ -95,6 +97,23 @@ $(document).ready(function() {
         infinite: true,
         speed: 1000,
         centerPadding: '100px',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '#expert__slider-for',
+                dots: true,
+                focusOnSelect: true,
+                centerMode: true,
+                prevArrow: '<button type="button" class="expert__slider-btn expert__slider-btn--prev"><span class="ion-chevron-left"></span></button>',
+                nextArrow: '<button type="button" class="expert__slider-btn expert__slider-btn--next"><span class="ion-chevron-right"></span></button>',
+                autoplay: true,
+                autoplaySpeed: 2000,
+                infinite: true,
+                speed: 1000,
+            }
+        }, ]
     });
 
 
@@ -115,7 +134,6 @@ $(document).ready(function() {
             form_name: {
                 required: true,
                 minlength: 2,
-
             },
             form_email: {
                 required: true,
@@ -126,6 +144,10 @@ $(document).ready(function() {
                 required: true,
                 digits: true,
             },
+            form_subject: {
+                required: true,
+                minlength: 10,
+            },
         },
         messages: {
             form_name: {
@@ -135,6 +157,14 @@ $(document).ready(function() {
             form_email: {
                 required: "Поле E-mail обязательное для заполнения",
                 email: "Введите пожалуйста корректный E-mail",
+            },
+            form_mobile: {
+                required: "Поле Mobile обязательное для заполнения",
+                digits: "Введите пожалуйста цифры",
+            },
+            form_subject: {
+                required: "Поле Subject обязательное для заполнения",
+                minlength: "Тема должна состоять из 10-ти и более букв",
             },
         },
         focusCleanup: true,

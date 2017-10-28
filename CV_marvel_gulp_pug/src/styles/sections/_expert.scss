@@ -45,7 +45,7 @@
             color: $yellow;
         }
         @media (max-width: 768px) {
-            margin-bottom: 80px;
+            margin-bottom: 50px;
             font-size: 26px;
             text-align: center;
         }
@@ -63,12 +63,16 @@
     &__slider-nav {
         width: 100%;
         min-height: 285px;
+        @media (max-width: 768px) {}
     }
     &__item-nav {
         width: calc((100% - 40px)/3);
         height: auto;
         margin: 0 10px;
         color: $black;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
     &__slider-for-wrapper {
         position: relative;
@@ -84,6 +88,9 @@
         min-height: 100px;
         color: $black;
         display: flex !important;
+        @media (max-width: 960px) {
+            flex-direction: column;
+        }
     }
     &__name-block {
         width: calc((100% - 40px)/3);
@@ -93,6 +100,11 @@
         @include display-flex (column,
         center,
         center);
+        @media (max-width: 960px) {
+            width: 100%;
+            min-height: 60px;
+            margin-right: 0;
+        }
     }
     &__name {
         margin-bottom: 6px;
@@ -114,6 +126,11 @@
         @include display-flex (column,
         center,
         center);
+        @media (max-width: 960px) {
+            width: 100%;
+            min-height: 60px;
+            margin-right: 0;
+        }
     }
     &__description {
         display: block;
@@ -121,6 +138,9 @@
         font: 300 14px/1.4 'Montserrat', san-serif;
         text-align: justify;
         color: $gray2;
+        @media (max-width: 960px) {
+            text-align: center;
+        }
     }
     &__social-block {
         width: calc((100% - 40px)/3);
@@ -129,6 +149,10 @@
         @include display-flex(row,
         center,
         center);
+        @media (max-width: 960px) {
+            width: 100%;
+            min-height: 60px;
+        }
     }
     &__social-item {
         width: 50px;

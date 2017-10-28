@@ -35,21 +35,6 @@
     }
 }
 
-@keyframes anim-input2 {
-    50% {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 1);
-    }
-    51% {
-        opacity: 0;
-        transform: translate3d(0, 3em, 0) scale3d(0.3, 0.3, 1);
-    }
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 3em, 0);
-    }
-}
-
 @keyframes anim-textarea {
     50% {
         opacity: 0;
@@ -57,46 +42,10 @@
     }
     51% {
         opacity: 0;
-        transform: translate3d(0, 18.8em, 0) scale3d(0.3, 0.3, 1);
+        transform: translate3d(0, 282px, 0) scale3d(0.3, 0.3, 1);
     }
     100% {
         opacity: 1;
-        transform: translate3d(0, 18.8em, 0);
-    }
-}
-
-@keyframes anim-textarea2 {
-    50% {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 1);
-    }
-    51% {
-        opacity: 0;
-        transform: translate3d(0, 18em, 0) scale3d(0.3, 0.3, 1);
-    }
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 18em, 0);
-    }
-}
-
-@keyframes swing {
-    15% {
-        transform: translateX(5px);
-    }
-    30% {
-        transform: translateX(-5px);
-    }
-    50% {
-        transform: translateX(3px);
-    }
-    65% {
-        transform: translateX(-3px);
-    }
-    80% {
-        transform: translateX(2px);
-    }
-    100% {
-        transform: translateX(0);
+        transform: translate3d(0, 282px, 0);
     }
 }
