@@ -125,7 +125,7 @@
     }
     &__input-field {
         width: 100%;
-        height: 60px;
+        height: 50px;
         position: relative;
         display: block;
         padding: 10px;
@@ -138,20 +138,15 @@
         transition: opacity 0.3s;
         &:hover {
             &+.contact__input-icon {
-                display: block;
-                color: $gray2;
+                color: $black;
             }
             &+.contact__input-label:before {
                 border: 1px solid $gray2;
                 border-right: none;
-                // animation: swing 1s ease;
-                // animation-iteration-count: 1;
             }
             &+.contact__input-label:after {
                 border: 1px solid $gray2;
                 border-left: none;
-                // animation: swing 1s ease;
-                // animation-iteration-count: 1;
             }
         }
         &:focus {
@@ -199,22 +194,27 @@
         }
     }
     &__input-icon {
-        display: none;
+        // display: none;
+        display: block;
         position: absolute;
         top: 50%;
         left: 20px;
         transform: translateY(-50%);
-        font-size: 30px;
+        font-size: 26px;
         @include transition(0.4s);
+        color: $gray2;
     }
     &__input-label {
         display: inline-block;
         width: 100%;
-        height: 60px;
+        height: 50px;
         position: absolute;
         top: 0;
         left: 0;
         padding: 0 10px;
+        @include display-flex(row,
+        center,
+        center);
         font: 300 16px/1 'Muli', sans-serif;
         color: $gray2;
         user-select: none;
@@ -246,39 +246,44 @@
         position: relative;
         display: block;
         width: 100%;
-        padding: 20px 0;
+        padding: 10px 0;
         text-align: center;
     }
     &__textarea {
         position: relative;
         width: 100%;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         @media (max-width: 480px) {
-            width: calc(100% - 28px);
-            margin-bottom: 48px;
+            // width: calc(100% - 28px);
+            // margin-bottom: 48px;
         }
         &--filled {
             .contact__textarea-field {
+                color: $black;
                 opacity: 1;
                 transition-delay: 0.3s;
             }
             .contact__textarea-label:before {
-                transform: translate3d(0, -10%, 0);
+                transform: translateY(-10px);
+                border: 1px solid $black;
+                border-bottom: none;
                 @media (max-width: 480px) {
-                    transform: translate3d(0, -10%, 0) scaleX(1.1);
+                    // transform: translate3d(0, -10%, 0) scaleX(1.1);
                 }
             }
             .contact__textarea-label:after {
-                transform: translate3d(0, 10%, 0);
+                transform: translateY(10px);
+                border: 1px solid $black;
+                border-top: none;
                 @media (max-width: 480px) {
-                    transform: translate3d(0, 10%, 0) scaleX(1.1);
+                    // transform: translate3d(0, 10%, 0) scaleX(1.1);
                 }
             }
             .contact__textarea-label-content {
                 animation: anim-textarea 0.3s forwards;
                 color: $black;
                 @media (max-width: 768px) {
-                    animation: anim-textarea2 0.3s forwards;
+                    // animation: anim-textarea2 0.3s forwards;
                 }
             }
         }
@@ -290,10 +295,10 @@
         display: block;
         padding: 10px;
         border: none;
-        // border-radius: 0;
         background: transparent;
         font: 400 14px/1 'Muli', sans-serif;
-        color: $gray;
+        text-align: center;
+        color: $gray2;
         opacity: 0;
         transition: opacity 0.3s;
         resize: none;
@@ -301,21 +306,29 @@
             height: 286px;
         }
         &:hover {
+            // &+.contact__input-icon {
+            //     display: block;
+            //     color: $gray2;
+            // }
             &+.contact__textarea-label:before {
-                border: 1px solid $yellow;
+                border: 1px solid $gray2;
                 border-bottom: none;
             }
             &+.contact__textarea-label:after {
-                border: 1px solid $yellow;
+                border: 1px solid $gray2;
                 border-top: none;
             }
         }
         &:focus {
+            color: $black;
             outline: none;
             opacity: 1;
             transition-delay: 0.3s;
+            &+.contact__textarea-icon {
+                display: none;
+            }
             &+.contact__textarea-label:before {
-                transform: translate3d(0, -10%, 0);
+                transform: translateY(-10px);
                 border: 1px solid $black;
                 border-bottom: none;
                 @media (max-width: 480px) {
@@ -323,7 +336,7 @@
                 }
             }
             &+.contact__textarea-label:after {
-                transform: translate3d(0, 10%, 0);
+                transform: translateY(10px);
                 border: 1px solid $black;
                 border-top: none;
                 @media (max-width: 480px) {
@@ -335,12 +348,21 @@
                     animation: anim-textarea 0.3s forwards;
                     color: $black;
                     @media (max-width: 768px) {
-                        animation: anim-textarea2 0.3s forwards;
+                        // animation: anim-textarea2 0.3s forwards;
                     }
                 }
             }
         }
     }
+    // &__textarea-icon {
+    //     display: none;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 20px;
+    //     transform: translateY(-50%);
+    //     font-size: 26px;
+    //     @include transition(0.4s);
+    // }
     &__textarea-label {
         display: inline-block;
         width: 100%;
@@ -350,7 +372,7 @@
         left: 0;
         padding: 0 10px;
         font: 300 16px/1 'Muli', sans-serif;
-        color: $gray1;
+        color: $gray2;
         user-select: none;
         pointer-events: none;
         &:before {
@@ -360,9 +382,7 @@
             left: 0;
             width: 100%;
             height: 50%;
-            // border: 1px solid $lightGray3;
             border: 1px solid $gray2;
-            // border-radius: 15px 15px 0 0;
             transition: transform 0.3s;
             border-bottom: none;
         }
@@ -373,9 +393,7 @@
             left: 0;
             width: 100%;
             height: 50%;
-            // border: 1px solid $lightGray3;
             border: 1px solid $gray2;
-            // border-radius: 0 0 15px 15px;
             border-top: none;
             transition: transform 0.3s;
         }

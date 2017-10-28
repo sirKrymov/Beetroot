@@ -1,0 +1,25 @@
+{
+  "name": "gorbuz9kin",
+  "authors": "denis.gorobzeev@gmail.com",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.2",
+    "font-awesome": "latest",
+    "parallax": "latest",
+    "simple-line-icons": "latest",
+    "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "bxslider-4": "^4.2.12"
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filterizr Use Case</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="custom-simplefilter">
+            Simple filter controls:
+            <li class="active" data-filter="all">All</li>
+            <li data-filter="1">Cityscape</li>
+            <li data-filter="2">Landscape</li>
+            <li data-filter="3">Industrial</li>
+            <li data-filter="4">Daylight</li>
+            <li data-filter="5">Nightscape</li>
+        </ul>
+        <div id="filtr-container">
+            <div class="filtr-item height-1" data-category="1, 5">
+                <img class="img-responsive" src="img/city_1.jpg" alt="sample image">
+                <span class="item-desc">Busy Streets</span>
+            </div>
+            <div class="filtr-item height-3" data-category="2, 5">
+                <img class="img-responsive" src="img/nature_2.jpg" alt="sample image">
+                <span class="item-desc">Luminous night</span>
+            </div>
+            <div class="filtr-item height-2" data-category="1, 4">
+                <img class="img-responsive" src="img/city_3.jpg" alt="sample image">
+                <span class="item-desc">city wonders</span>
+            </div>
+            <div class="filtr-item height-2" data-category="3">
+                <img class="img-responsive" src="img/industrial_1.jpg" alt="sample image">
+                <span class="item-desc">in production</span>
+            </div>
+            <div class="filtr-item height-1" data-category="3, 4">
+                <img class="img-responsive" src="img/industrial_2.jpg" alt="sample image">
+                <span class="item-desc">industrial site</span>
+            </div>
+            <div class="filtr-item height-2" data-category="2, 4">
+                <img class="img-responsive" src="img/nature_1.jpg" alt="sample image">
+                <span class="item-desc">peaceful lake</span>
+            </div>
+            <div class="filtr-item height-2" data-category="1, 5">
+                <img class="img-responsive" src="img/city_2.jpg" alt="sample image">
+                <span class="item-desc">city lights</span>
+            </div>
+            <div class="filtr-item height-3" data-category="2, 4">
+                <img class="img-responsive" src="img/nature_3.jpg" alt="sample image">
+                <span class="item-desc">dreamhouse</span>
+            </div>
+            <div class="filtr-item height-1" data-category="3">
+                <img class="img-responsive" src="img/industrial_3.jpg" alt="sample image">
+                <span class="item-desc">restless machines</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include jQuery & Filterizr -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="filterizr/jquery.filterizr.min.js"></script>
+    <script src="js/controls.js"></script>
+
+    <!-- Kick off Filterizr -->
+    <script type="text/javascript">
+        $(function () {
+            //Initialize filterizr with default options
+            $('#filtr-container').filterizr();
+        });
+    </script>
+</body>
+
+</html>
