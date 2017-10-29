@@ -68,6 +68,8 @@ gulp.task('js', () => {
             './src/js/parts/back_to_top.js',
             './src/js/parts/jquery.filterizr.js',
             './src/js/parts/jquery.validate.min.js',
+            './src/js/parts/wow.min.js',
+            './src/js/parts/jquery.animsition.min.js',
             './src/js/main.js'
         ])
         .pipe(concat('main.js'))

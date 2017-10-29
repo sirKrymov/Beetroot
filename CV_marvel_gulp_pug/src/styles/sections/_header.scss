@@ -6,19 +6,16 @@
     top: 0;
     transform: translateX(-50%);
     background-color: $gray1;
+    padding: 10px 0 10px 0;
     &--fixed {
         position: fixed;
         background: $gray1;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 10;
     }
-    // @media (max-width: 768px) {
-    //     padding: 10px 0;
-    // }
     &__container {
-        min-height: 60px;
         @include display-flex(row, space-between, center);
-        @media (max-width: 768px) {
+        @media (max-width: 835px) {
             @include display-flex(column, center, center);
         }
         @media (max-width: 600px) {
@@ -38,7 +35,7 @@
     }
     &__nav {
         @include display-flex (row, space-between, center);
-        @media (max-width: 768px) {
+        @media (max-width: 835px) {
             width: 100%;
         }
         @media (max-width: 600px) {
@@ -50,7 +47,7 @@
     }
     &__nav-list {
         @include display-flex (row, space-between, center);
-        @media (max-width: 768px) {
+        @media (max-width: 835px) {
             width: 100%;
             justify-content: center;
             padding-top: 10px;
@@ -120,20 +117,16 @@
         }
     }
     &__item {
-        height: 34px;
-        margin-left: 30px;
+        // min-height: 34px;
+        margin-left: 20px;
         @include display-flex (column, center, center);
-        border-bottom: 3px solid transparent;
         list-style: none;
         @include transition(0.4s);
-        &:hover {
-            border-bottom: 3px solid $yellow;
-        }
-        @media (max-width: 860px) {
-            margin-left: 15px;
-            &:first-of-type {
-                margin-left: 0;
-            }
+        @media (max-width: 910px) {
+            margin-left: 10px;
+            // &:first-of-type {
+            //     margin-left: 0;
+            // }
         }
         @media (max-width: 600px) {
             margin-left: 0;
@@ -142,11 +135,15 @@
     }
     &__item-name {
         display: block;
-        position: relative;
+        padding: 8px;
+        border: 1px solid transparent;
         font: 300 14px/1 'Montserrat', san-serif;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $darkWhite;
+        &:hover {
+            border: 1px solid $yellow;
+        }
         &--active {
             color: $yellow !important;
         }

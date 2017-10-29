@@ -64,6 +64,9 @@
         @media (max-width: 768px) {
             align-items: center;
         }
+        @media (max-width: 460px) {
+            padding: 0;
+        }
     }
     &__inputs-wrapper {
         width: 100%;
@@ -84,9 +87,6 @@
             margin-right: 0;
         }
         &--filled {
-            .contact__input-icon {
-                display: none;
-            }
             .contact__input-field {
                 color: $black;
                 opacity: 1;
@@ -105,6 +105,9 @@
             .contact__input-label-content {
                 animation: anim-input 0.3s forwards;
                 color: $black;
+            }
+            .contact__input-icon {
+                display: none;
             }
         }
         @media (max-width: 768px) {
@@ -125,10 +128,8 @@
         color: $gray2;
         opacity: 0;
         transition: opacity 0.3s;
+        cursor: pointer;
         &:hover {
-            &+.contact__input-icon {
-                color: $black;
-            }
             &+.contact__input-label:before {
                 border: 1px solid $gray2;
                 border-right: none;
@@ -137,15 +138,17 @@
                 border: 1px solid $gray2;
                 border-left: none;
             }
+            &+.contact__input-label {
+                .contact__input-icon {
+                    color: $black;
+                }
+            }
         }
         &:focus {
             color: $black;
             outline: none;
             opacity: 1;
             transition-delay: 0.3s;
-            &+.contact__input-icon {
-                display: none;
-            }
             &+.contact__input-label:before {
                 transform: translateX(-10px);
                 border: 1px solid $black;
@@ -160,9 +163,9 @@
                 .contact__input-label-content {
                     animation: anim-input 0.3s forwards;
                     color: $black;
-                    @media (max-width: 768px) {
-                        animation: anim-input2 0.3s forwards;
-                    }
+                }
+                .contact__input-icon {
+                    display: none;
                 }
             }
         }
@@ -181,18 +184,12 @@
                 border-left: none;
             }
         }
-    }
-    &__input-icon {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-        font-size: 26px;
-        @include transition(0.4s);
-        color: $gray2;
+        @media (max-width: 460px) {
+            font-size: 12px;
+        }
     }
     &__input-label {
+        position: relative;
         display: inline-block;
         width: 100%;
         height: 50px;
@@ -229,6 +226,9 @@
             border-left: none;
             transition: transform 0.3s;
         }
+        @media (max-width: 460px) {
+            font-size: 14px;
+        }
     }
     &__input-label-content {
         position: relative;
@@ -237,9 +237,20 @@
         padding: 10px 0;
         text-align: center;
     }
+    &__input-icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        font-size: 24px;
+        @include transition(0.4s);
+        color: $gray2;
+    }
     &__textarea {
         position: relative;
         width: 100%;
+        margin-top: 10px;
         margin-bottom: 40px;
         @media (max-width: 480px) {}
         &--filled {
@@ -252,24 +263,18 @@
                 transform: translateY(-10px);
                 border: 1px solid $black;
                 border-bottom: none;
-                @media (max-width: 480px) {
-                    // transform: translate3d(0, -10%, 0) scaleX(1.1);
-                }
             }
             .contact__textarea-label:after {
                 transform: translateY(10px);
                 border: 1px solid $black;
                 border-top: none;
-                @media (max-width: 480px) {
-                    // transform: translate3d(0, 10%, 0) scaleX(1.1);
-                }
             }
             .contact__textarea-label-content {
                 animation: anim-textarea 0.3s forwards;
                 color: $black;
-                @media (max-width: 768px) {
-                    // animation: anim-textarea2 0.3s forwards;
-                }
+            }
+            .contact__textarea-icon {
+                display: none;
             }
         }
     }
@@ -287,14 +292,8 @@
         opacity: 0;
         transition: opacity 0.3s;
         resize: none;
-        // @media (max-width: 768px) {
-        //     height: 286px;
-        // }
+        cursor: pointer;
         &:hover {
-            // &+.contact__input-icon {
-            //     display: block;
-            //     color: $gray2;
-            // }
             &+.contact__textarea-label:before {
                 border: 1px solid $gray2;
                 border-bottom: none;
@@ -302,6 +301,11 @@
             &+.contact__textarea-label:after {
                 border: 1px solid $gray2;
                 border-top: none;
+            }
+            &+.contact__textarea-label {
+                .contact__textarea-icon {
+                    color: $black;
+                }
             }
         }
         &:focus {
@@ -327,19 +331,17 @@
                     animation: anim-textarea 0.3s forwards;
                     color: $black;
                 }
+                .contact__textarea-icon {
+                    display: none;
+                }
             }
         }
-    }
-    &__textarea-icon {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-        font-size: 26px;
-        @include transition(0.4s);
+        @media (max-width: 460px) {
+            font-size: 12px;
+        }
     }
     &__textarea-label {
+        position: relative;
         display: inline-block;
         width: 100%;
         height: 290px;
@@ -373,9 +375,9 @@
             border-top: none;
             transition: transform 0.3s;
         }
-        // @media (max-width: 768px) {
-        //     height: 286px;
-        // }
+        @media (max-width: 460px) {
+            font-size: 14px;
+        }
     }
     &__textarea-label-content {
         position: relative;
@@ -383,6 +385,14 @@
         width: 100%;
         padding: 20px 0;
         text-align: center;
+    }
+    &__textarea-icon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        color: $gray2;
+        @include transition(0.4s);
     }
     &__btn {
         width: 170px;
@@ -400,7 +410,7 @@
             color: $yellow;
         }
         @media (max-width: 480px) {
-            width: calc(100% - 28px);
+            width: 100%;
         }
         &--disabled {
             pointer-events: none;
@@ -412,7 +422,7 @@ label.contact__input-field--invalid {
     position: absolute;
     display: block;
     width: 100%;
-    top: -15px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     font: 300 12px/1 'Muli', sans-serif;

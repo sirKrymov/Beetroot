@@ -127,9 +127,19 @@ $(document).ready(function() {
         }
     });
 
+    //Textarea events
+    $(".contact__textarea-field").focus(function() {
+        $(this).parent(".contact__textarea").addClass("contact__textarea--filled");
+    });
+    $(".contact__textarea-field").blur(function() {
+        if ($(this).val() === "") {
+            $(this).parent(".contact__textarea").removeClass("contact__textarea--filled");
+        }
+    });
+
+
     // Contact form validate
     $("#contact__form").validate({
-
         rules: {
             form_name: {
                 required: true,
@@ -172,7 +182,49 @@ $(document).ready(function() {
         errorClass: "contact__input-field--invalid",
     });
 
+    wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 100,
+        mobile: true,
+        live: true
+    })
+    wow.init();
 
+    // //Animated title to left 
+    // $('.title__animate--bounceInLeft').addClass('hidden').viewportChecker({
+    //     classToAdd: 'visible animated bounceInLeft',
+    //     offset: 100,
+    //     repeat: true,
+    // });
+
+    // //Animated title to right 
+    // $('.title__animate--bounceInRight').addClass('hidden').viewportChecker({
+    //     classToAdd: 'visible animated bounceInRight',
+    //     offset: 100,
+    //     repeat: true,
+    // });
+
+
+    // INITIALIZE ANIMSITION
+    if ($(".animsition").length) {
+        $(".animsition").animsition({
+            inClass: 'fade-in-up-sm',
+            outClass: 'fade-out-up-sm',
+            inDuration: 1100,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            loading: true,
+            loadingParentElement: 'body',
+            unSupportCss: ['animation-duration',
+                '-webkit-animation-duration',
+                '-o-animation-duration'
+            ],
+            overlay: false,
+            overlayClass: 'animsition-overlay-slie',
+            overlayParentElement: 'body'
+        });
+    }
 
 
 });
