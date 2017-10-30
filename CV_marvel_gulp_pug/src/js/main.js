@@ -226,5 +226,9 @@ $(document).ready(function() {
         });
     }
 
+    // LOCATE BUTTON
+    $("#locate__btn").click(function() {
+        $(".locate__map-wrapper").toggleClass("locate__map-wrapper--visible");
+    });
 
 });
