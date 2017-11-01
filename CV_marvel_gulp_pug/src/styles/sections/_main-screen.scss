@@ -22,6 +22,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        outline: none !important;
         @media (max-width: 320px) {
             align-items: center;
         }
@@ -35,7 +36,7 @@
         @include display-flex (column,
         center,
         flex-start);
-        font: 900 60px/1 'Montserrat', san-serif;
+        font: 900 60px/1 Montserrat, san-serif;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $gray1;
@@ -73,7 +74,7 @@
     &__description {
         max-width: 620px;
         margin-bottom: 20px;
-        font: 300 14px/1.7 'Montserrat', san-serif;
+        font: 300 14px/1.7 Montserrat, san-serif;
         @media (max-width: 460px) {
             line-height: 1.5;
         }
@@ -86,8 +87,8 @@
         height: 54px;
         margin-bottom: 40px;
         border: 1px solid $gray1;
-        background-color: 'transparent';
-        font: 400 16px/1 'Montserrat', san-serif;
+        background-color: transparent;
+        font: 400 16px/1 Montserrat, san-serif;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $gray1;
@@ -97,25 +98,6 @@
             color: $white;
         }
     }
-    // &__slider-btn {
-    //     position: absolute;
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    //     border: none;
-    //     outline: none;
-    //     font-size: 30px;
-    //     color: $gray1;
-    //     z-index: 9;
-    //     &:hover {
-    //         color: $green;
-    //     }
-    //     &--prev {
-    //         left: 30px;
-    //     }
-    //     &--next {
-    //         right: 30px;
-    //     }
-    // }
     .slick-dots {
         position: absolute;
         left: 0;
@@ -127,8 +109,8 @@
             width: 30px;
             height: 5px;
             margin-right: 4px;
-            background-color: $lightGray;
             border: none;
+            background-color: $lightGray;
             cursor: pointer;
             button {
                 display: block;
@@ -147,28 +129,32 @@
             transform: translateX(-50%);
         }
     }
-}
-
-.scroll-down {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 32px;
-    height: 32px;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: -16px;
-    border: 1px solid $gray2;
-    border-radius: 50%;
-    background-size: 14px auto;
-    animation: bounce 2s infinite 2s;
-    @include transition(0.4s);
-    opacity: 1;
-    &__arrow {
-        display: block;
-        content: "";
+    &__scroll-down {
         position: absolute;
+        z-index: 2;
+        display: block;
+        width: 32px;
+        height: 32px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid $gray2;
+        border-radius: 50%;
+        animation: bounce 2s infinite 2s;
+        @include transition(0.4s);
+        opacity: 1;
+        &:hover {
+            border: 1px solid $black;
+            .main-screen__down-arrow {
+                border: 1px solid $black;
+                border-width: 0px 0 1px 1px;
+            }
+        }
+    }
+    &__down-arrow {
+        position: absolute;
+        content: "";
+        display: block;
         width: 12px;
         height: 12px;
         top: calc(50% - 8px);
@@ -178,12 +164,5 @@
         border-width: 0px 0 1px 1px;
         @include transition(0.4s);
         pointer-events: none;
-    }
-    &:hover {
-        border: 1px solid $gray1;
-        .scroll-down__arrow {
-            border: 1px solid $gray1;
-            border-width: 0px 0 1px 1px;
-        }
     }
 }

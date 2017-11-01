@@ -1,9 +1,9 @@
 .impressed {
-    min-height: 380px;
+    min-height: 350px;
     background: url('./../img/impressed-bg.png') center no-repeat;
     background-size: cover;
     &__container {
-        min-height: 380px;
+        min-height: 350px;
         padding: 80px 15px;
         @include display-flex(column,
         center,
@@ -11,7 +11,7 @@
     }
     &__title {
         margin-bottom: 50px;
-        font: 700 34px/1 'Montserrat', san-serif;
+        font: 700 34px/1 Montserrat, san-serif;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         text-align: center;
@@ -27,7 +27,7 @@
     &__description {
         max-width: 750px;
         margin-bottom: 50px;
-        font: 400 14px/1 'Muli', san-serif;
+        font: 400 14px/1 Muli, san-serif;
         letter-spacing: 0.04em;
         text-align: center;
         color: $white;
@@ -50,7 +50,7 @@
         height: 50px;
         border: 1px solid $yellow;
         background-color: transparent;
-        font: 700 14px/1 'Montserrat', san-serif;
+        font: 700 14px/1 Montserrat, san-serif;
         letter-spacing: 0.04em;
         color: $yellow;
         @include transition(0.4s);

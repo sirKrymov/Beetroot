@@ -96,12 +96,11 @@ $(document).ready(function() {
         autoplaySpeed: 2000,
         infinite: true,
         speed: 1000,
-        centerPadding: '100px',
+        // centerPadding: '100px',
         responsive: [{
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
                 asNavFor: '#expert__slider-for',
                 dots: true,
                 focusOnSelect: true,
@@ -112,10 +111,10 @@ $(document).ready(function() {
                 autoplaySpeed: 2000,
                 infinite: true,
                 speed: 1000,
+                adaptiveHeight: true,
             }
         }, ]
     });
-
 
     // Inputs events
     $(".contact__input-field").focus(function() {
@@ -136,7 +135,6 @@ $(document).ready(function() {
             $(this).parent(".contact__textarea").removeClass("contact__textarea--filled");
         }
     });
-
 
     // Contact form validate
     $("#contact__form").validate({
@@ -191,21 +189,6 @@ $(document).ready(function() {
     })
     wow.init();
 
-    // //Animated title to left 
-    // $('.title__animate--bounceInLeft').addClass('hidden').viewportChecker({
-    //     classToAdd: 'visible animated bounceInLeft',
-    //     offset: 100,
-    //     repeat: true,
-    // });
-
-    // //Animated title to right 
-    // $('.title__animate--bounceInRight').addClass('hidden').viewportChecker({
-    //     classToAdd: 'visible animated bounceInRight',
-    //     offset: 100,
-    //     repeat: true,
-    // });
-
-
     // INITIALIZE ANIMSITION
     if ($(".animsition").length) {
         $(".animsition").animsition({
@@ -226,9 +209,21 @@ $(document).ready(function() {
         });
     }
 
-    // LOCATE BUTTON
+    // Locate button
     $("#locate__btn").click(function() {
         $(".locate__map-wrapper").toggleClass("locate__map-wrapper--visible");
+        $(".locate__icon-wrapper").toggleClass("locate__icon-wrapper--visible");
+    });
+
+
+    // Tabs for section Service
+    $('[data-tab-nav]').on('click', function() {
+        let that = $(this),
+            tabs = $('.service__tab-content > div');
+        $('.service__tab-menu li').removeClass('active');
+        $(that).addClass('active');
+        $(tabs).removeClass('active');
+        $('[' + $(that).attr("data-tab-nav") + ']').addClass('active');
     });
 
 });

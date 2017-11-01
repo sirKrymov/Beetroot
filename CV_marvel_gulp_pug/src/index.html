@@ -16,11 +16,12 @@
 </head>
 
 <body class="animsition">
+
     <section id="home" class="main-screen">
         <header class="header">
             <div class="header__container section__container">
                 <div class="header__logo-wrapper">
-                    <img class="header__logo" src="./../img/logo.png" alt="logo">
+                    <img class="header__logo" src="./../img/logo.png" alt="company-logo">
                 </div>
                 <button id="menu" class="nav__btn nav__btn--fixed">
                     <span></span>
@@ -39,7 +40,7 @@
                             <a class="nav__item-name" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__item-name" href="#services">Services</a>
+                            <a class="nav__item-name" href="#service">Service</a>
                         </li>
                         <li class="nav__item">
                             <a class="nav__item-name" href="#team">Team</a>
@@ -54,6 +55,8 @@
                 </nav>
             </div>
         </header>
+
+        <!-- Main-screen slick slider -->
         <div class="main-screen__container section__container">
             <div id="main-screen__slider" class="main-screen__slider">
                 <div class="main-screen__slider-item">
@@ -88,11 +91,16 @@
                 </div>
             </div>
         </div>
-        <a class="scroll-down" href="#"><span class="scroll-down__arrow"></span></a>
+        <!-- Main-screen slick slider end-->
+        <a class="main-screen__scroll-down" href="#"><span class="main-screen__down-arrow"></span></a>
     </section>
+
     <section id="about" class="about">
         <div class="about__container section__container">
-            <p class="about__title wow fadeInUp">this is the <span>one</span> page polo</p>
+            <div class="section__big-title-block section__big-title-block--about  wow fadeInUp">
+                <p class="section__big-title">this is the <span>one</span> page polo</p>
+                <p class="section__big-title-shadow">about</p>
+            </div>
             <p class="about__description wow fadeInUp" data-wow-delay="0.15s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum et explicabo aut vero ipsam maiores odit ea consequatur hic cupiditate enim.</p>
             <div class="about__btn-block wow fadeInUp" data-wow-delay="0.2s">
                 <button id="about__btn-moreinfo" class="about__btn">More info</button>
@@ -193,7 +201,11 @@
     </section>
     <section class="features">
         <div class="features__container section__container">
-            <p class="features__title wow fadeInUp">we're <span>creative</span> crafting with <span>love</span></p>
+            <div class="section__big-title-block  wow fadeInUp">
+                <p class="section__big-title">we're <span>creative</span> crafting with <span>love</span></p>
+                <p class="section__big-title-shadow">features</p>
+            </div>
+            <!-- <p class="features__title wow fadeInUp">we're <span>creative</span> crafting with <span>love</span></p> -->
             <div class="features__list">
                 <div class="features__item wow fadeIn" data-wow-delay="0.5s">
                     <div class="features__icon-block">
@@ -299,7 +311,10 @@
     </section>
     <section id="portfolio" class="portfolio">
         <div class="portfolio__container">
-            <p class="portfolio__title wow fadeInUp">our portfolio</p>
+            <div class="section__big-title-block wow fadeInUp">
+                <p class="section__big-title section__big-title--black">our portfolio</p>
+                <p class="section__big-title-shadow section__big-title-shadow--black">work</p>
+            </div>
             <ul class="portfolio__nav wow fadeInUp" data-wow-delay="0.5s">
                 <li class="portfolio__nav-item active" data-filter="1">All works</li>
                 <li class="portfolio__nav-item" data-filter="2">Business</li>
@@ -551,9 +566,103 @@
             </div>
         </div>
     </section>
+    <section id="service" class="service">
+        <div class="service__container section__container">
+            <div class="section__big-title-block wow fadeInUp">
+                <p class="section__big-title section__big-title--white"><span class="yellow">clean</span> idea and <span class="yellow">unique</span> design</p>
+                <p class="section__big-title-shadow section__big-title-shadow--black05">service</p>
+            </div>
+            <div class="service__tab-wrapper">
+                <div class="service__tab-menu">
+                    <ul>
+                        <li data-tab-nav="data-tab-1" class="active">
+                            <span class="service__tab-icon ion-ios-gear-outline"></span>
+                            <div class="service__tab-data">
+                                <p class="service__tab-title">excellent features</p>
+                                <p class="service__tab-subtitle">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-2">
+                            <span class="service__tab-icon ion-ios-camera-outline"></span>
+                            <div class="service__tab-data">
+                                <p class="service__tab-title">simple & clean</p>
+                                <p class="service__tab-subtitle">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-3">
+                            <span class="service__tab-icon ion-ios-briefcase-outline"></span>
+                            <div class="service__tab-data">
+                                <p class="service__tab-title">parallax effect</p>
+                                <p class="service__tab-subtitle">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-4">
+                            <span class="service__tab-icon ion-ios-bell-outline"></span>
+                            <div class="service__tab-data">
+                                <p class="service__tab-title">24 / 7 support</p>
+                                <p class="service__tab-subtitle">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                        <li data-tab-nav="data-tab-4">
+                            <span class="service__tab-icon ion-ios-analytics-outline"></span>
+                            <div class="service__tab-data">
+                                <p class="service__tab-title">Branding & Development</p>
+                                <p class="service__tab-subtitle">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service__tab-content">
+                    <div class="tab tab-1 active" data-tab-1>
+                        <div class="tab__text-wrapper">
+
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <!-- <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image"> -->
+                        </div>
+                    </div>
+                    <div class="tab tab-2" data-tab-2>
+                        <div class="tab__text-wrapper">
+
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <!-- <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image"> -->
+                        </div>
+                    </div>
+                    <div class="tab tab-3" data-tab-3>
+                        <div class="tab__text-wrapper">
+
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <!-- <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image"> -->
+                        </div>
+                    </div>
+                    <div class="tab tab-4" data-tab-4>
+                        <div class="tab__text-wrapper">
+
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <!-- <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image"> -->
+                        </div>
+                    </div>
+                    <div class="tab tab-4" data-tab-5>
+                        <div class="tab__text-wrapper">
+
+                        </div>
+                        <div class="tab__image-wrapper">
+                            <!-- <img class="tab__image img-contain" src="./img/about-image.png" alt="about-image"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="pricing" class="pricing">
         <div class="pricing__container section__container">
-            <p class="pricing__title wow fadeInUp">choose your plan</p>
+            <div class="section__big-title-block wow fadeInUp">
+                <p class="section__big-title section__big-title--black">choose your plan</p>
+                <p class="section__big-title-shadow section__big-title-shadow--black">pricing</p>
+            </div>
             <div class="pricing__list">
                 <div class="pricing__item wow fadeInUp" data-wow-delay="0.1s">
                     <div class="pricing__item-header">
@@ -636,7 +745,10 @@
     </section>
     <section id="team" class="expert">
         <div class="expert__container section__container">
-            <p class="expert__title wow fadeInUp">meet our <span>team</span></p>
+            <div class="section__big-title-block wow fadeInUp">
+                <p class="section__big-title">meet our <span>team</span></p>
+                <p class="section__big-title-shadow">expert</p>
+            </div>
             <div class="expert__slider-nav-wrapper">
                 <div id="expert__slider-nav" class="expert__slider-nav wow fadeInUp" data-wow-delay="0.4s">
                     <div class="expert__item-nav">
@@ -849,18 +961,218 @@
     </section>
     <section class="impressed">
         <div class="impressed__container section__container">
-            <p class="impressed__title wow fadeInUpBig">Are You <span>Impressed</span> By Our <span>Work</span>?</p>
-            <p class="impressed__description wow fadeInUpBig" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <div class="impressed__btn-block wow fadeInUpBig" data-wow-delay="0.4s">
+            <p class="impressed__title wow fadeInUp">Are You <span>Impressed</span> By Our <span>Work</span>?</p>
+            <p class="impressed__description wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <div class="impressed__btn-block wow fadeInUp" data-wow-delay="0.4s">
                 <button id=" impressed__btnToPricing " class="impressed__btn ">Purchase now</button>
-                <button class="impressed__btn ">Get in touch</button>
+                <button class="impressed__btn">Get in touch</button>
             </div>
         </div>
     </section>
+    <section id="blog" class="blog">
+        <div class="blog__container section__container">
+            <div class="section__big-title-block wow fadeInUp">
+                <p class="section__big-title">recent <span>blog</span> post</p>
+                <p class="section__big-title-shadow">news</p>
+            </div>
+            <div class="blog__list">
+                <div class="blog__item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog__data-wrapper">
+                        <div class="blog__image-wrapper">
+                            <img class="img-cover" src="./img/blog-image-1.png" alt="blog-image-1">
+                        </div>
+                        <div class="blog__text-wrapper">
+                            <p class="blog__text-date">January 24, 2014</p>
+                            <p class="blog__text-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                            <p class="blog__text-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laboriosam doloremque ipsam dolore enim a odit aspernatur placeat tenetur? Sapiente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog__support-wrapper">
+                        <div class="blog__comments-wrapper">
+                            <a class="blog__comments-item" href="#">By Jackie Lord</a>
+                            <a class="blog__comments-item" href="#">20 comments</a>
+                            <a class="blog__comments-item" href="#">Read More</a>
+                        </div>
+                        <button class="blog__likes-wrapper">
+                            <i class="blog__likes-icon fa fa-heart" aria-hidden="true"></i>
+                            <span class="blog__likes-count">40</span>
+                        </button>
+                    </div>
+                    <div class="corner corner--top-left"></div>
+                    <div class="corner corner--top-right"></div>
+                    <div class="corner corner--bottom-left"></div>
+                    <div class="corner corner--bottom-right"></div>
+                </div>
+                <div class="blog__item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="blog__data-wrapper">
+                        <div class="blog__image-wrapper">
+                            <img class="img-cover" src="./img/blog-image-2.png" alt="blog-image-2">
+                        </div>
+                        <div class="blog__text-wrapper">
+                            <p class="blog__text-date">January 24, 2014</p>
+                            <p class="blog__text-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                            <p class="blog__text-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laboriosam doloremque ipsam dolore enim a odit aspernatur placeat tenetur? Sapiente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog__support-wrapper">
+                        <div class="blog__comments-wrapper">
+                            <a class="blog__comments-item" href="#">By Jackie Lord</a>
+                            <a class="blog__comments-item" href="#">20 comments</a>
+                            <a class="blog__comments-item" href="#">Read More</a>
+                        </div>
+                        <button class="blog__likes-wrapper">
+                            <i class="blog__likes-icon fa fa-heart" aria-hidden="true"></i>
+                            <span class="blog__likes-count">40</span>
+                        </button>
+                    </div>
+                    <div class="corner corner--top-left"></div>
+                    <div class="corner corner--top-right"></div>
+                    <div class="corner corner--bottom-left"></div>
+                    <div class="corner corner--bottom-right"></div>
+                </div>
+                <div class="blog__item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog__data-wrapper">
+                        <div class="blog__image-wrapper">
+                            <img class="img-cover" src="./img/blog-image-3.png" alt="blog-image-3">
+                        </div>
+                        <div class="blog__text-wrapper">
+                            <p class="blog__text-date">January 24, 2014</p>
+                            <p class="blog__text-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                            <p class="blog__text-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laboriosam doloremque ipsam dolore enim a odit aspernatur placeat tenetur? Sapiente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog__support-wrapper">
+                        <div class="blog__comments-wrapper">
+                            <a class="blog__comments-item" href="#">By Jackie Lord</a>
+                            <a class="blog__comments-item" href="#">20 comments</a>
+                            <a class="blog__comments-item" href="#">Read More</a>
+                        </div>
+                        <button class="blog__likes-wrapper">
+                            <i class="blog__likes-icon fa fa-heart" aria-hidden="true"></i>
+                            <span class="blog__likes-count">40</span>
+                            </button>
+                    </div>
+                    <div class="corner corner--top-left"></div>
+                    <div class="corner corner--top-right"></div>
+                    <div class="corner corner--bottom-left"></div>
+                    <div class="corner corner--bottom-right"></div>
+                </div>
+                <div class="blog__item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="blog__data-wrapper">
+                        <div class="blog__image-wrapper">
+                            <img class="img-cover" src="./img/blog-image-4.png" alt="blog-image-4">
+                        </div>
+                        <div class="blog__text-wrapper">
+                            <p class="blog__text-date">January 24, 2014</p>
+                            <p class="blog__text-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                            <p class="blog__text-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laboriosam doloremque ipsam dolore enim a odit aspernatur placeat tenetur? Sapiente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog__support-wrapper">
+                        <div class="blog__comments-wrapper">
+                            <a class="blog__comments-item" href="#">By Jackie Lord</a>
+                            <a class="blog__comments-item" href="#">20 comments</a>
+                            <a class="blog__comments-item" href="#">Read More</a>
+                        </div>
+                        <button class="blog__likes-wrapper">
+                            <i class="blog__likes-icon fa fa-heart" aria-hidden="true"></i>
+                            <span class="blog__likes-count">40</span>
+                        </button>
+                    </div>
+                    <div class="corner corner--top-left"></div>
+                    <div class="corner corner--top-right"></div>
+                    <div class="corner corner--bottom-left"></div>
+                    <div class="corner corner--bottom-right"></div>
+                </div>
+                <div class="blog__item wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog__data-wrapper">
+                        <div class="blog__image-wrapper">
+                            <img class="img-cover" src="./img/blog-image-5.png" alt="blog-image-5">
+                        </div>
+                        <div class="blog__text-wrapper">
+                            <p class="blog__text-date">January 24, 2014</p>
+                            <p class="blog__text-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                            <p class="blog__text-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laboriosam doloremque ipsam dolore enim a odit aspernatur placeat tenetur? Sapiente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog__support-wrapper">
+                        <div class="blog__comments-wrapper">
+                            <a class="blog__comments-item" href="#">By Jackie Lord</a>
+                            <a class="blog__comments-item" href="#">20 comments</a>
+                            <a class="blog__comments-item" href="#">Read More</a>
+                        </div>
+                        <button class="blog__likes-wrapper">
+                            <i class="blog__likes-icon fa fa-heart" aria-hidden="true"></i>
+                            <span class="blog__likes-count">40</span>
+                        </button>
+                    </div>
+                    <div class="corner corner--top-left"></div>
+                    <div class="corner corner--top-right"></div>
+                    <div class="corner corner--bottom-left"></div>
+                    <div class="corner corner--bottom-right"></div>
+                </div>
+                <div class="blog__item wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="blog__data-wrapper">
+                        <div class="blog__image-wrapper">
+                            <img class="img-cover" src="./img/blog-image-6.png" alt="blog-image-6">
+                        </div>
+                        <div class="blog__text-wrapper">
+                            <p class="blog__text-date">January 24, 2014</p>
+                            <p class="blog__text-title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                            </p>
+                            <p class="blog__text-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laboriosam doloremque ipsam dolore enim a odit aspernatur placeat tenetur? Sapiente.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="blog__support-wrapper">
+                        <div class="blog__comments-wrapper">
+                            <a class="blog__comments-item" href="#">By Jackie Lord</a>
+                            <a class="blog__comments-item" href="#">20 comments</a>
+                            <a class="blog__comments-item" href="#">Read More</a>
+                        </div>
+                        <button class="blog__likes-wrapper">
+                            <i class="blog__likes-icon fa fa-heart" aria-hidden="true"></i>
+                            <span class="blog__likes-count">40</span>
+                        </button>
+                    </div>
+                    <div class="corner corner--top-left"></div>
+                    <div class="corner corner--top-right"></div>
+                    <div class="corner corner--bottom-left"></div>
+                    <div class="corner corner--bottom-right"></div>
+                </div>
+            </div>
+            <a class="blog__link-more wow fadeInUp" data-wow-delay="0.8s" href="#">Learn More</a>
+        </div>
+    </section>
     <section class="clients ">
-        <div class="clients__container section__container ">
-            <p class="clients__title wow fadeInUpBig">Clients We've Worked <span>So Far</span></p>
-            <div class="clients__list  wow fadeInUpBig" data-wow-delay="0.2s">
+        <div class="clients__container section__container">
+            <div class="section__big-title-block wow fadeInUp">
+                <p class="section__big-title">Clients We've Worked <span>So Far</span></p>
+                <p class="section__big-title-shadow">experience</p>
+            </div>
+            <div class="clients__list wow fadeInUp" data-wow-delay="0.2s">
                 <div class="clients__item ">
                     <img class="clients__logo " src="./../img/clients-logo-1.png " alt="clients-logo-1 ">
                     <div class="clients__corner corner corner--top-left "></div>
@@ -897,7 +1209,7 @@
                     <div class="clients__corner corner corner--bottom-right "></div>
                 </div>
             </div>
-            <p class="clients__description wow fadeInUpBig" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sapiente corporis vel. Reiciendis sequi quos architecto expedita, assumenda nobis ipsum debitis at porro tempora. Delectus odio iste totam ullam ab.</p>
+            <p class="clients__description wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sapiente corporis vel. Reiciendis sequi quos architecto expedita, assumenda nobis ipsum debitis at porro tempora. Delectus odio iste totam ullam ab.</p>
         </div>
     </section>
     <section class="subscribe ">
@@ -911,33 +1223,36 @@
             </div>
         </div>
     </section>
-    <section id="contact " class="contact ">
+    <section id="contact" class="contact ">
         <div class="contact__container section__container ">
-            <p class="contact__title ">send us <span>message</span></p>
+            <div class="section__big-title-block wow fadeInUp">
+                <p class="section__big-title">send us <span>message</span></p>
+                <p class="section__big-title-shadow">contact</p>
+            </div>
             <form id="contact__form " class="contact__form ">
-                <div class="contact__inputs-wrapper ">
-                    <div class="contact__input ">
+                <div class="contact__inputs-wrapper">
+                    <div class="contact__input wow fadeInLeft" data-wow-delay="0.2s">
                         <input id="name " class="contact__input-field " name="form_name " type="text ">
                         <label class="contact__input-label " for="name ">
                             <span class="contact__input-label-content ">Your name</span>
                             <i class="contact__input-icon ion-person "></i>
                         </label>
                     </div>
-                    <div class="contact__input ">
+                    <div class="contact__input wow fadeInRight" data-wow-delay="0.2s">
                         <input id="email " class="contact__input-field " name="form_email " type="email ">
                         <label class="contact__input-label " for="email ">
                             <span class="contact__input-label-content ">Your email</span>
                             <i class="contact__input-icon ion-email "></i>
                         </label>
                     </div>
-                    <div class="contact__input ">
+                    <div class="contact__input wow fadeInLeft" data-wow-delay="0.4s">
                         <input id="mobile " class="contact__input-field " name="form_mobile " type="tel ">
                         <label class="contact__input-label " for="mobile ">
                             <span class="contact__input-label-content ">Your mobile number</span>
                             <i class="contact__input-icon ion-android-call "></i>
                         </label>
                     </div>
-                    <div class="contact__input ">
+                    <div class="contact__input wow fadeInRight" data-wow-delay="0.4s">
                         <input id="subject " class="contact__input-field " name="form_subject " type="text ">
                         <label class="contact__input-label " for="subject ">
                                 <span class="contact__input-label-content ">Subject</span>
@@ -945,7 +1260,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="contact__textarea ">
+                <div class="contact__textarea wow fadeInUp" data-wow-delay="0.6s">
                     <textarea id="message " class="contact__textarea-field " type="text "></textarea>
                     <label class="contact__textarea-label " for="message ">
                         <span class="contact__textarea-label-content ">Your message</span>
@@ -968,14 +1283,138 @@
             </div>
             <div id="locate__map-wrapper" class="locate__map-wrapper">
                 <div id="locateMap" class="locate__map"></div>
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5358.420696644947!2d35.16862356154768!3d47.81614109173859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc5e0f04b3c2cb%3A0x4e8475715b2be177!2z0LLRg9C70LjRhtGPINCo0LrRltC70YzQvdCwLCA1Niwg0JfQsNC_0L7RgNGW0LbQttGPLCDQl9Cw0L_QvtGA0ZbQt9GM0LrQsCDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDY5MDAw!5e0!3m2!1sru!2sru!4v1507828132628"
-                    width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe> -->
             </div>
         </div>
     </section>
-
-
-    <button id="button-up " class="button-up ">
+    <section class="social">
+        <div class="social__container section__container">
+            <div class="social__company">
+                <div class="data__title-block">
+                    <img class="header__logo" src="./../img/logo.png" alt="logo">
+                </div>
+                <p class="data__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.</p>
+                <div class="data__link-block">
+                    <a class="data__link-item" href="#">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="data__link-item" href="#">
+                        <i class="fa fa-google-plus-official fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="data__link-item" href="#">
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="data__link-item" href="#">
+                        <i class="fa fa-vimeo fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <a class="data__link-item" href="#">
+                        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="social__some-features">
+                <div class="data__title-block">
+                    <p class="data__title">Support</p>
+                </div>
+                <div class="data__somefeatures-block">
+                    <div class="data__somefeatures-item">
+                        <span class="data__somefeatures-icon ion-checkmark-round"></span>
+                        <a class="data__somefeatures-text" href="#">Help Center</a>
+                    </div>
+                    <div class="data__somefeatures-item">
+                        <span class="data__somefeatures-icon ion-checkmark-round"></span>
+                        <a class="data__somefeatures-text" href="#">Get Started</a>
+                    </div>
+                    <div class="data__somefeatures-item">
+                        <span class="data__somefeatures-icon ion-checkmark-round"></span>
+                        <a class="data__somefeatures-text" href="#">Contact Us</a>
+                    </div>
+                    <div class="data__somefeatures-item">
+                        <span class="data__somefeatures-icon ion-checkmark-round"></span>
+                        <a class="data__somefeatures-text" href="#">Terms of Use</a>
+                    </div>
+                    <div class="data__somefeatures-item">
+                        <span class="data__somefeatures-icon ion-checkmark-round"></span>
+                        <a class="data__somefeatures-text" href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social__tags">
+                <div class="data__title-block">
+                    <p class="data__title">Tags</p>
+                </div>
+                <div class="data__tags-block">
+                    <p class="data__tag-item">Corporate</p>
+                    <p class="data__tag-item">Agency</p>
+                    <p class="data__tag-item">Portfolio</p>
+                    <p class="data__tag-item">Blog</p>
+                    <p class="data__tag-item">Elegant</p>
+                    <p class="data__tag-item">Professional</p>
+                    <p class="data__tag-item">Business</p>
+                </div>
+            </div>
+            <div class="social__post">
+                <div class="data__title-block data__title-block--flicker">
+                    <p class="data__title">Flicker Posts</p>
+                </div>
+                <div class="data__flicker-block">
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker1.png" alt="flicker">
+                    </div>
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker2.png" alt="flicker">
+                    </div>
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker3.png" alt="flicker">
+                    </div>
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker4.png" alt="flicker">
+                    </div>
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker5.png" alt="flicker">
+                    </div>
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker6.png" alt="flicker">
+                    </div>
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker7.png" alt="flicker">
+                    </div>
+                    <div class="data__flicker-icon-wrapper">
+                        <img class="data__flicker-img" src="./img/flicker8.png" alt="flicker">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container section__container">
+            <p class="footer__copyright">&copy; 2017 MARVEL. All right reserved. <a class="footer__link" href="#">Krymov</a>
+            </p>
+            <div class="footer__social">
+                <a class="footer__social-item" href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a class="footer__social-item" href="#">
+                    <i class="fa fa-tumblr" aria-hidden="true"></i>
+                </a>
+                <a class="footer__social-item" href="#">
+                    <i class="fa fa-vimeo" aria-hidden="true"></i>
+                </a>
+                <a class="footer__social-item" href="#">
+                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                </a>
+                <a class="footer__social-item" href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="footer__social-item" href="#">
+                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                </a>
+                <a class="footer__social-item" href="#">
+                    <i class="fa fa-google-plus-official" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <button id="button-up" class="button-up ">
         <span class="ion-chevron-up "></span>
     </button>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA67BgHpMdvCfTQX7_FI7soYKYJiOJlZaM&callback=initMap"></script>

@@ -12,44 +12,6 @@
             padding: 80px 15px;
         }
     }
-    &__title {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 100px;
-        font: 700 34px/1 'Montserrat', san-serif;
-        text-transform: uppercase;
-        color: $gray1;
-        &:before {
-            position: absolute;
-            z-index: -1;
-            content: 'features';
-            top: -48px;
-            left: 50%;
-            transform: translateX(-50%);
-            font: 900 90px/1 'Montserrat', san-serif;
-            color: $lightGray3;
-            @media (max-width: 768px) {
-                top: -29px;
-                font-size: 60px;
-            }
-            @media (max-width: 460px) {
-                top: -19px;
-                font-size: 40px;
-            }
-        }
-        span {
-            color: $yellow;
-        }
-        @media (max-width: 768px) {
-            margin-bottom: 80px;
-            font-size: 26px;
-            text-align: center;
-        }
-        @media (max-width: 460px) {
-            margin-bottom: 50px;
-            font-size: 18px;
-        }
-    }
     &__list {
         width: 100%;
         display: flex;
@@ -97,7 +59,6 @@
     }
     &__icon-block {
         width: 25%;
-        height: 100%;
         @include display-flex (column, flex-start, flex-start);
     }
     &__icon-wrapper {
@@ -144,12 +105,12 @@
         width: 100%;
         min-height: 32px;
         margin-bottom: 20px;
-        font: 700 16px/1 'Montserrat', san-serif;
+        font: 700 16px/1 Montserrat, san-serif;
         text-transform: uppercase;
         color: $darkGray;
     }
     &__icon-description {
-        font: 400 13px/1.5 'Muli', san-serif;
+        font: 400 13px/1.5 Muli, san-serif;
         letter-spacing: 0.04em;
         color: $gray2;
     }

@@ -39,7 +39,7 @@
         ;
         border: 1px solid transparent;
         background-color: $darkWhite;
-        font: 400 14px/1 'Muli', sans-serif;
+        font: 400 14px/1 Muli, sans-serif;
         color: $gray2;
         @include transition(0.4s);
         cursor: pointer;
@@ -68,7 +68,7 @@
 }
 
 .subscribe__input::-webkit-input-placeholder {
-    font: 300 16px/1 'Muli', sans-serif;
+    font: 300 16px/1 Muli, sans-serif;
     letter-spacing: 0.04em;
     color: $gray2;
     opacity: 1;

@@ -1,0 +1,118 @@
+.service {
+    min-height: 700px;
+    background: $white url('./../img/photo.png') center no-repeat;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    &__container {
+        min-height: 700px;
+        padding: 100px 15px;
+        @include display-flex (column,
+        flex-start,
+        center);
+        @media (min-width: 601px) and (max-width: 768px) {
+            padding-top: 130px;
+        }
+        @media (max-width: 460px) {
+            padding: 80px 15px;
+        }
+    }
+    &__tab-wrapper {
+        width: 100%;
+        min-height: 390px;
+        @include display-flex (row,
+        space-between,
+        center);
+    }
+    &__tab-menu {
+        width: 30%;
+        // max-width: 300px;
+        min-height: 390px;
+        margin-right: 10px;
+        ul {
+            @include display-flex (column,
+            flex-start,
+            center);
+        }
+        li {
+            position: relative;
+            display: block;
+            width: 100%;
+            min-height: 100px;
+            @include display-flex (row,
+            flex-start,
+            center);
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            @include transition(0.4s);
+            cursor: pointer;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &:hover,
+            &.active {
+                background-color: rgba(255, 255, 255, 0.45);
+            }
+        }
+    }
+    &__tab-data {
+        @include display-flex (column,
+        center,
+        flex-start);
+    }
+    &__tab-icon {
+        margin: 0 25px 0 15px;
+        font-size: 50px;
+        color: $darkWhite;
+        @include transition(0.4s);
+    }
+    &__tab-title {
+        display: block;
+        margin-bottom: 10px;
+        font: 500 16px/1 Montserrat, sans-serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-align: start;
+        // color: $darkWhite;
+        color: $yellow;
+    }
+    &__tab-subtitle {
+        display: block;
+        font: 300 14px/1 Muli, sans-serif;
+        letter-spacing: 0.04em;
+        text-align: start;
+        color: $darkWhite;
+    }
+    &__tab-content {
+        width: 70%;
+        min-height: 390px;
+        @include display-flex (column,
+        flex-start,
+        center);
+        .tab {
+            display: none;
+            width: 100%;
+            min-height: 390px;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            &.active {
+                display: flex;
+            }
+            &__text-wrapper {
+                width: 100%;
+                min-height: 155px;
+                margin-bottom: 10px;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            &__text-title {}
+            &__text {}
+            &__text-link {}
+            &__image-wrapper {
+                width: 100%;
+                min-height: 375px;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}

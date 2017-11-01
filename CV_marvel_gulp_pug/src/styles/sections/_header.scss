@@ -16,7 +16,8 @@
     &__container {
         @include display-flex(row, space-between, center);
         @media (max-width: 835px) {
-            @include display-flex(column, center, center);
+            flex-direction: column;
+            justify-content: center;
         }
         @media (max-width: 600px) {
             flex-wrap: wrap;
@@ -49,12 +50,12 @@
         @include display-flex (row, space-between, center);
         @media (max-width: 835px) {
             width: 100%;
-            justify-content: center;
             padding-top: 10px;
+            justify-content: center;
         }
         @media (max-width: 600px) {
-            flex-direction: column;
             margin-top: 10px;
+            flex-direction: column;
         }
     }
 }
@@ -81,8 +82,8 @@
             display: block;
             width: 22px;
             height: 2px;
-            background-color: $white;
             margin: 0 auto 4px;
+            background-color: $white;
             @include transition(0.4s);
             &:last-of-type {
                 margin-bottom: 0;
@@ -117,16 +118,12 @@
         }
     }
     &__item {
-        // min-height: 34px;
         margin-left: 20px;
         @include display-flex (column, center, center);
         list-style: none;
         @include transition(0.4s);
         @media (max-width: 910px) {
             margin-left: 10px;
-            // &:first-of-type {
-            //     margin-left: 0;
-            // }
         }
         @media (max-width: 600px) {
             margin-left: 0;
@@ -137,7 +134,7 @@
         display: block;
         padding: 8px;
         border: 1px solid transparent;
-        font: 300 14px/1 'Montserrat', san-serif;
+        font: 300 14px/1 Montserrat, san-serif;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $darkWhite;

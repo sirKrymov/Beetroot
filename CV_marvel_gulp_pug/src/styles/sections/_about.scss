@@ -15,46 +15,11 @@
             padding: 80px 15px;
         }
     }
-    &__title {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 20px;
-        font: 700 34px/1 'Montserrat', san-serif;
-        text-transform: uppercase;
-        color: $gray1;
-        &:before {
-            position: absolute;
-            z-index: -1;
-            content: 'about';
-            top: -48px;
-            left: 50%;
-            transform: translateX(-50%);
-            font: 900 90px/1 'Montserrat', san-serif;
-            color: $lightGray3;
-            @media (max-width: 768px) {
-                top: -29px;
-                font-size: 60px;
-            }
-            @media (max-width: 460px) {
-                top: -19px;
-                font-size: 40px;
-            }
-        }
-        span {
-            color: $yellow;
-        }
-        @media (max-width: 768px) {
-            font-size: 26px;
-        }
-        @media (max-width: 460px) {
-            font-size: 18px;
-        }
-    }
     &__description {
         width: 100%;
         max-width: 940px;
         margin-bottom: 60px;
-        font: 300 16px/1.5 'Muli', san-serif;
+        font: 300 16px/1.5 Muli, san-serif;
         letter-spacing: 0.04em;
         text-align: center;
         color: $gray;
@@ -81,7 +46,7 @@
         height: 60px;
         border: none;
         background-color: $yellow;
-        font: 500 18px/1 'Montserrat', san-serif;
+        font: 500 18px/1 Montserrat, san-serif;
         letter-spacing: 0.04em;
         color: $black;
         @include transition(0.4s);
@@ -90,8 +55,8 @@
             margin-right: 30px;
         }
         &:hover {
-            color: $yellow;
             background-color: $black;
+            color: $yellow;
         }
         @media (max-width: 1005px) {
             width: 50%;
@@ -114,23 +79,22 @@
         center);
         @media (max-width: 1005px) {
             flex-wrap: wrap;
-            align-content: center;
             justify-content: center;
+            align-content: center;
         }
         @media (max-width: 676px) {
-            @include display-flex(column,
-            flex-start,
-            center);
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
     &__item {
         width: calc((100% - 90px)/4);
         min-height: 380px;
+        padding: 50px 15px;
+        background-color: $gray1;
         @include display-flex(column,
         flex-start,
         center);
-        padding: 50px 15px;
-        background-color: $gray1;
         cursor: pointer;
         @include transition(0.4s);
         &:hover {
@@ -190,7 +154,7 @@
         min-height: 40px;
         margin-bottom: 20px;
         text-align: center;
-        font: 500 20px/1 'Montserrat', sans-serif;
+        font: 500 20px/1 Montserrat, sans-serif;
         color: $darkWhite;
         @include transition(0.4s);
         @media (max-width: 660px) {
@@ -202,16 +166,15 @@
         width: 100%;
         max-width: 400px;
         margin-top: 25px;
-        text-align: center;
-        font: 300 14px/1.4 'Muli', sans-serif;
+        font: 300 14px/1.4 Muli, sans-serif;
         letter-spacing: 0.04em;
-        color: $darkWhite;
         text-align: center;
+        color: $darkWhite;
         @include transition(0.4s);
     }
     &__numbers-title {
         margin: 70px 0 50px 0;
-        font: 700 30px/1 'Open Sans', san-serif;
+        font: 700 30px/1 Open Sans, san-serif;
         text-transform: uppercase;
         text-align: center;
         color: $darkGray1;
@@ -230,9 +193,8 @@
             justify-content: center;
         }
         @media (max-width: 480px) {
-            @include display-flex(column,
-            flex-start,
-            center);
+            flex-direction: column;
+            justify-content: flex-start;
         }
     }
     &__numbers-item {
@@ -271,11 +233,11 @@
     }
     &__number {
         margin-bottom: 6px;
-        font: 700 42px/1 'Montserrat', san-serif;
+        font: 700 42px/1 Montserrat, san-serif;
         color: $darkGray1;
     }
     &__number-title {
-        font: 400 12px/1 'Muli', san-serif;
+        font: 400 12px/1 Muli, san-serif;
         color: $gray2;
     }
 }

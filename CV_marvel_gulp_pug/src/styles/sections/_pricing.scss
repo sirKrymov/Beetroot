@@ -15,42 +15,6 @@
             padding: 80px 15px;
         }
     }
-    &__title {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 70px;
-        font: 700 34px/1 'Montserrat', san-serif;
-        text-transform: uppercase;
-        color: $black;
-        &:before {
-            position: absolute;
-            z-index: -1;
-            content: 'pricing';
-            top: -48px;
-            left: 50%;
-            transform: translateX(-50%);
-            font: 900 90px/1 'Montserrat', san-serif;
-            color: $black;
-            opacity: 0.15;
-            @media (max-width: 768px) {
-                top: -29px;
-                font-size: 60px;
-            }
-            @media (max-width: 460px) {
-                top: -19px;
-                font-size: 40px;
-            }
-        }
-        @media (max-width: 768px) {
-            margin-bottom: 80px;
-            font-size: 26px;
-            text-align: center;
-        }
-        @media (max-width: 460px) {
-            margin-bottom: 50px;
-            font-size: 18px;
-        }
-    }
     &__list {
         @include display-flex (row,
         center,
@@ -67,10 +31,9 @@
         width: calc((100% - 30px)/3);
         min-height: 500px;
         margin: 42px 15px 70px 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        @include display-flex (column,
+        flex-start,
+        center);
         background-color: $darkWhite;
         &:last-of-type {
             margin-right: 0;
@@ -99,14 +62,13 @@
         top: -42px;
         left: 50%;
         transform: translateX(-50%);
-        // border: 1px solid $black;
         background-color: $darkWhite;
         @include display-flex (column,
         center,
         center);
-        font: 400 14px/1 'Muli', san-serif;
-        color: $gray2;
+        font: 400 14px/1 Muli, san-serif;
         text-align: center;
+        color: $gray2;
     }
     &__item-header {
         position: relative;
@@ -133,7 +95,8 @@
         transform: translateX(-50%);
         border: none;
         background-color: $darkWhite;
-        font: 600 14px/1 'Montserrat', san-serif;
+        font: 600 14px/1 Montserrat, san-serif;
+        text-transform: uppercase;
         color: $black;
         @include transition(0.4s);
         cursor: pointer;
@@ -156,7 +119,7 @@
         center,
         center);
         flex-grow: 1;
-        font: 300 13px/1 'Muli', san-serif;
+        font: 300 13px/1 Muli, san-serif;
         color: $gray2;
         &:first-of-type {
             border-bottom: none;
@@ -164,13 +127,16 @@
         &:last-of-type {
             border-bottom: none;
         }
+        i {
+            padding-right: 10px;
+        }
     }
 }
 
 .tariff {
     &__name {
         margin-bottom: 34px;
-        font: 600 15px/1 'Poppins', san-serif;
+        font: 600 15px/1 Poppins, san-serif;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         color: $white;
@@ -194,7 +160,7 @@
         top: 0;
         left: 0;
         padding-right: 6px;
-        font: 400 30px/1 'Muli', san-serif;
+        font: 400 30px/1 Muli, san-serif;
         color: $white;
         &--premium {
             padding-right: 0;
@@ -205,7 +171,7 @@
     }
     &__value {
         padding-right: 36px;
-        font: 600 60px/1 'Montserrat', san-serif;
+        font: 600 60px/1 Montserrat, san-serif;
         color: $white;
         &--premium {
             padding-right: 42px;
@@ -218,22 +184,16 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        font-family: 'Muli', sans-serif;
-        font-weight: 300;
-        font-size: 14px;
+        font: 300 14px/1 Muli, san-serif;
+        letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $white;
-        letter-spacing: 0.04em;
     }
     &__description {
         margin-top: 28px;
-        font: 400 14px/1 'Muli', san-serif;
+        font: 400 14px/1 Muli, san-serif;
         letter-spacing: 0.08em;
         color: $darkWhite;
         text-align: center;
     }
-}
-
-.pricing__advantages-item .fa-angle-right {
-    padding-right: 10px;
 }
