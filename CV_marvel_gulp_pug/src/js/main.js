@@ -1,5 +1,36 @@
 $(document).ready(function() {
 
+    // Initialyze anymsition
+    if ($(".animsition").length) {
+        $(".animsition").animsition({
+            inClass: 'fade-in-up-sm',
+            outClass: 'fade-out-up-sm',
+            inDuration: 1100,
+            outDuration: 800,
+            linkElement: '.animsition-link',
+            loading: true,
+            loadingParentElement: 'body',
+            unSupportCss: ['animation-duration',
+                '-webkit-animation-duration',
+                '-o-animation-duration'
+            ],
+            overlay: false,
+            overlayClass: 'animsition-overlay-slie',
+            overlayParentElement: 'body'
+        });
+    }
+
+    // WOW animate plugin
+    wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 100,
+        mobile: true,
+        live: true
+    })
+    wow.init();
+
+    // HEADER SECTION
     //Slow scroll from menu-item to current section
     $(".nav__item-name").on("click", function(event) {
         event.preventDefault();
@@ -17,7 +48,9 @@ $(document).ready(function() {
         $('.nav__item-name').removeClass('nav__item-name--active');
         $(this).addClass('nav__item-name--active');
     });
+    // END HEADER SECTION
 
+    // MAIN SCREEN SECTION
     // Slider main section
     $('#main-screen__slider').slick({
         dots: true,
@@ -26,8 +59,7 @@ $(document).ready(function() {
         slidesToShow: 1,
         adaptiveHeight: true,
         arrows: false,
-        // prevArrow: '<button type="button" class="main-screen__slider-btn main-screen__slider-btn--prev"><span class="ion-chevron-left"></span></button>',
-        // nextArrow: '<button type="button" class="main-screen__slider-btn main-screen__slider-btn--next"><span class="ion-chevron-right"></span></button>',
+
         autoplay: true,
         autoplaySpeed: 4000,
         fade: true,
@@ -40,7 +72,9 @@ $(document).ready(function() {
             return false;
         });
     });
+    // END MAIN SCREEN SECTION
 
+    // ABOUT SECTION
     //Scroll down button to section features from about
     $(function() {
         $('#about__btn-moreinfo').click(function() {
@@ -48,7 +82,9 @@ $(document).ready(function() {
             return false;
         });
     });
+    // END ABOUT SECTION
 
+    // RESPONSIVE SECTION
     //Scroll down button to section Pricing from Responsive
     $(function() {
         $('#responsive__btnToPricing').click(function() {
@@ -56,7 +92,9 @@ $(document).ready(function() {
             return false;
         });
     });
+    // END RESPONSIVE SECTION
 
+    // IMPRESSED SECTION
     //Scroll down button to section Pricing from Impressed
     $(function() {
         $('#impressed__btnToPricing').click(function() {
@@ -64,7 +102,9 @@ $(document).ready(function() {
             return false;
         });
     });
+    // END IMPRESSED SECTION
 
+    // PORTFOLIO SECTION
     // Filterizr for section Portfolio
     $(function() {
         $('.portfolio__nav li').click(function() {
@@ -74,7 +114,22 @@ $(document).ready(function() {
 
         $('.portfolio__grid').filterizr();
     });
+    // END PORTFOLIO SECTION
 
+    // SERVICE SECTION
+    // Tabs for section Service
+    $('[data-tab-nav]').on('click', function() {
+        let that = $(this),
+            tabs = $('.service__tab-content > div');
+        $('.service__tab-menu li').removeClass('active');
+        $(that).addClass('active');
+        $(tabs).removeClass('active');
+        $('[' + $(that).attr("data-tab-nav") + ']').addClass('active');
+    });
+    // END SERVICE SECTION
+
+    // EXPERT SECTION
+    // Slick expert slider
     $('#expert__slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -96,7 +151,6 @@ $(document).ready(function() {
         autoplaySpeed: 2000,
         infinite: true,
         speed: 1000,
-        // centerPadding: '100px',
         responsive: [{
             breakpoint: 768,
             settings: {
@@ -115,7 +169,9 @@ $(document).ready(function() {
             }
         }, ]
     });
+    // END EXPERT SECTION
 
+    // CONTACT SECTION
     // Inputs events
     $(".contact__input-field").focus(function() {
         $(this).parent(".contact__input").addClass("contact__input--filled");
@@ -125,7 +181,6 @@ $(document).ready(function() {
             $(this).parent(".contact__input").removeClass("contact__input--filled");
         }
     });
-
     //Textarea events
     $(".contact__textarea-field").focus(function() {
         $(this).parent(".contact__textarea").addClass("contact__textarea--filled");
@@ -135,7 +190,6 @@ $(document).ready(function() {
             $(this).parent(".contact__textarea").removeClass("contact__textarea--filled");
         }
     });
-
     // Contact form validate
     $("#contact__form").validate({
         rules: {
@@ -179,51 +233,14 @@ $(document).ready(function() {
         focusInvalid: false,
         errorClass: "contact__input-field--invalid",
     });
+    // END CONTACT SECTION
 
-    wow = new WOW({
-        boxClass: 'wow',
-        animateClass: 'animated',
-        offset: 100,
-        mobile: true,
-        live: true
-    })
-    wow.init();
-
-    // INITIALIZE ANIMSITION
-    if ($(".animsition").length) {
-        $(".animsition").animsition({
-            inClass: 'fade-in-up-sm',
-            outClass: 'fade-out-up-sm',
-            inDuration: 1100,
-            outDuration: 800,
-            linkElement: '.animsition-link',
-            loading: true,
-            loadingParentElement: 'body',
-            unSupportCss: ['animation-duration',
-                '-webkit-animation-duration',
-                '-o-animation-duration'
-            ],
-            overlay: false,
-            overlayClass: 'animsition-overlay-slie',
-            overlayParentElement: 'body'
-        });
-    }
-
+    // LOCATE SECTION
     // Locate button
     $("#locate__btn").click(function() {
         $(".locate__map-wrapper").toggleClass("locate__map-wrapper--visible");
         $(".locate__icon-wrapper").toggleClass("locate__icon-wrapper--visible");
     });
-
-
-    // Tabs for section Service
-    $('[data-tab-nav]').on('click', function() {
-        let that = $(this),
-            tabs = $('.service__tab-content > div');
-        $('.service__tab-menu li').removeClass('active');
-        $(that).addClass('active');
-        $(tabs).removeClass('active');
-        $('[' + $(that).attr("data-tab-nav") + ']').addClass('active');
-    });
+    // END LOCATE SECTION
 
 });

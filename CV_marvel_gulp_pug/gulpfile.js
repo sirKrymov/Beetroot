@@ -62,6 +62,7 @@ gulp.task('js', () => {
     gulp.src([
             './src/js/parts/jquery-3.2.1.min.js',
             './src/js/parts/slick.js',
+            './src/js/parts/parallax.js',
             './src/js/parts/adaptive_menu_anim_btn.js',
             './src/js/parts/scroll_down_button.js',
             './src/js/parts/sticky_menu.js',

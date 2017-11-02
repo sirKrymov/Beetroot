@@ -37,7 +37,7 @@
             position: relative;
             display: block;
             width: 100%;
-            min-height: 100px;
+            min-height: 110px;
             @include display-flex (row,
             flex-start,
             center);
@@ -101,17 +101,54 @@
             }
             &__text-wrapper {
                 width: 100%;
-                min-height: 155px;
+                min-height: 170px;
                 margin-bottom: 10px;
+                padding: 15px;
                 background-color: rgba(255, 255, 255, 0.2);
+                @include display-flex (column,
+                center,
+                center);
             }
-            &__text-title {}
-            &__text {}
-            &__text-link {}
+            &__text-title {
+                margin-bottom: 15px;
+                font: 700 26px/1 Montserrat, sans-serif;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                text-align: center;
+                color: $darkWhite;
+                color: $yellow;
+            }
+            &__text {
+                font: 300 14px/1.2 Muli, sans-serif;
+                letter-spacing: 0.04em;
+                text-align: center;
+                color: $darkWhite;
+                margin-bottom: 10px;
+            }
+            &__text-link {
+                width: 100px;
+                min-height: 20px;
+                padding: 2px;
+                border: 1px solid $darkWhite;
+                @include display-flex (column,
+                center,
+                center);
+                font: 300 14px/1.4 Muli, sans-serif;
+                color: $darkWhite;
+                @include transition(0.4s);
+                &:hover {
+                    border: 1px solid $yellow;
+                    color: $yellow;
+                }
+            }
             &__image-wrapper {
                 width: 100%;
-                min-height: 375px;
+                height: 410px;
+                padding: 10px;
                 background-color: rgba(255, 255, 255, 0.2);
+            }
+            &__image {
+                margin: 0 auto;
             }
         }
     }

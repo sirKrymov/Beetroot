@@ -1,7 +1,8 @@
 .who-we-are {
-    min-height: 600px;
+    min-height: 500px;
     background: url('./../img/who-we-are-bg.png') center no-repeat;
     background-size: cover;
+    // background: transparent;
     @media (max-width: 768px) {
         min-height: 600px;
     }
@@ -9,7 +10,7 @@
         min-height: 500px;
     }
     &__container {
-        min-height: 600px;
+        min-height: 500px;
         padding: 100px 15px;
         @include display-flex (column,
         center,
