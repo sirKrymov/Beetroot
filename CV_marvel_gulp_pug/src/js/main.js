@@ -383,11 +383,11 @@ $(document).ready(function() {
   });
 
   //E-mail Ajax Send
-  $("#form").submit(function() { //Change class or id form
+  $("#contact__form").submit(function() { //Change class or id form
     const form = $(this);
     $.ajax({
       type: "POST",
-      url: "./php/mail.php", //Change way to file mail.php
+      url: "http://marvelkrymov.zzz.com.ua/php/mail.php", //Change way to file mail.php
       data: form.serialize()
     }).done(function() {
       alert("Thank you!");
