@@ -1,0 +1,5 @@
+.idea/
+build/
+lsyncd.conf.lua
+node_modules/
+.DS_Store

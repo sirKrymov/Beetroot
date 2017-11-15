@@ -1,0 +1,110 @@
+.main-screen {
+    position: relative;
+    min-height: 100vh;
+    background: $white url('./../img/main-screen-bg.png') right bottom no-repeat;
+    background-attachment: fixed;
+    &__slider-wrapper {
+        min-height: calc(100vh - 80px);
+        @include display-flex (column,
+        center,
+        flex-start);
+        @media (max-width: 600px) {}
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 70px;
+        font: 900 60px/1 'Montserrat', san-serif;
+        text-transform: uppercase;
+        color: $gray1;
+        &:before {
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: -35px;
+            transform: translateY(-50%);
+            width: 190px;
+            height: 190px;
+            content: '';
+            border-radius: 50%;
+            background-color: $yellow;
+        }
+        span {
+            display: block;
+        }
+    }
+    &__description {
+        max-width: 770px;
+        margin-bottom: 20px;
+        line-height: 1.7;
+    }
+    &__btn {
+        width: 176px;
+        height: 54px;
+        margin-bottom: 20px;
+        border: 1px solid $gray1;
+        background-color: 'transparent';
+        font: 400 16px/1 'Montserrat', san-serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $gray1;
+        &:hover {
+            background-color: $gray1;
+            color: $white;
+        }
+    }
+    // dfhdh
+    &__container {
+        min-height: 100vh;
+        @include display-flex (column,
+        center,
+        center);
+    }
+    &__item-title {
+        margin-bottom: 16px;
+        font: 700 72px/1 'proxima_nova_rgbold', san-serif;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+    }
+    &__item-subtitle {
+        width: 100%;
+        max-width: 670px;
+        font: italic 400 30px/1.4 PT Sans, san-serif;
+        color: $white;
+        text-align: center;
+        @media (max-width: 600px) {}
+    }
+}
+
+.scroll-down {
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    background-size: 14px auto;
+    opacity: 1;
+    z-index: 2;
+    animation: bounce 2s infinite 2s;
+    transition: all 0.2s ease-in;
+    &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: calc(50% - 8px);
+        left: calc(50% - 6px);
+        transform: rotate(-45deg);
+        border: 1px solid $white;
+        border-width: 0px 0 1px 1px;
+    }
+    &:hover {
+        border: 1px solid $darkGray;
+    }
+}

@@ -1,0 +1,41 @@
+section.slider
+  ul
+    -
+      const list = [
+        {
+          title: 'title1',
+          description: 'wbflhwelfw',
+          modificator: 'red',
+        },
+        {
+          title: 'title1',
+          description: 'wbflhwelfw',
+          modificator: 'blue',
+        },
+        {
+          title: 'title1',
+          description: 'wbflhwelfw',
+          modificator: 'green',
+        },
+        {
+          title: 'title1',
+          description: 'wbflhwelfw',
+          modificator: 'lyuboy',
+        },
+        {
+          title: 'title1',
+          description: 'wbflhwelfw',
+          modificator: 'lyuboy',
+        },
+        {
+          title: 'title1',
+          description: 'wbflhwelfw',
+          modificator: 'lyuboy',
+        },
+        ]
+    each item in list
+      div
+        p.title(class=`${item.modificator}`)= item.title
+        a(href='#').desc= item.description
+        .wrapper
+          img(src='' alt=`${item.title}`)

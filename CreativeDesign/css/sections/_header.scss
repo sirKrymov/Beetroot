@@ -1,0 +1,158 @@
+.header {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    padding: 15px 0;
+    @include transition(0.4s);
+    z-index: 2;
+    &--fixed {
+        position: fixed;
+        background: $violetGray;
+        top: 0;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        @include transition(0.4s);
+        z-index: 10;
+    }
+    @media (max-width: 768px) {
+        padding: 10px 0;
+    }
+    &__container {
+        @include display-flex(row, space-between, center);
+        @media (max-width: 768px) {
+            @include display-flex(column, center, center);
+        }
+        @media (max-width: 600px) {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__logo {
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+    &__nav {
+        @include display-flex (row, space-between, center);
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            display: none;
+            &.header__nav--open {
+                display: block;
+            }
+        }
+    }
+    &__nav-list {
+        @include display-flex (row, space-between, center);
+        @media (max-width: 768px) {
+            width: 100%;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        @media (max-width: 600px) {
+            flex-direction: column;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+    }
+}
+
+.nav {
+    &__btn {
+        display: none;
+        width: 36px;
+        height: 36px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        @include transition(0.4s);
+        &:hover {
+            span {
+                background-color: $darkGray;
+            }
+        }
+        @media (max-width: 600px) {
+            display: block;
+        }
+        span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: $white;
+            margin: 0 auto 4px;
+            @include transition(0.4s);
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &--animate {
+            position: relative;
+            border: none;
+            background-color: transparent;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                &:first-of-type {
+                    transform: translate(-50%, -50%) rotate(225deg);
+                }
+                &:nth-of-type(2) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                &:last-of-type {
+                    transform: translate(-50%, -50%) rotate(-225deg);
+                }
+            }
+            &:hover {
+                background-color: transparent;
+                span {
+                    background-color: $darkGray;
+                }
+            }
+        }
+    }
+    &__item {
+        height: 34px;
+        margin-left: 30px;
+        @include display-flex (column, center, center);
+        border-bottom: 2px solid transparent;
+        list-style: none;
+        @include transition(0.4s);
+        &:hover {
+            border-bottom: 2px solid $darkGray;
+        }
+        @media (max-width: 860px) {
+            margin-left: 15px;
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 600px) {
+            margin-left: 0;
+            margin-bottom: 5px;
+        }
+    }
+    &__item-name {
+        display: block;
+        position: relative;
+        font: 300 18px/1 'proxima_novalight', san-serif;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $white;
+        &--active {
+            color: $darkGray !important;
+        }
+        @media (max-width: 600px) {
+            color: $darkGray;
+        }
+    }
+}

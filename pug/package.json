@@ -1,0 +1,39 @@
+{
+  "name": "gorbuz9kin",
+  "version": "1.0.0",
+  "description": "Template for slicing html+PostCSS+js",
+  "scripts": {},
+  "author": "gorbuz9kin",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorbuz9kin"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-debug": "^2.1.2",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-newer": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-pug": "^3.1.0",
+    "gulp-remember": "^0.3.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-style-inject": "0.0.3",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10",
+    "imagemin-pngquant": "^5.0.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-inline-comment": "^3.0.0",
+    "postcss-scss": "^0.3.0",
+    "postcss-short": "^1.4.0",
+    "postcss-strip-inline-comments": "^0.1.5",
+    "precss": "^1.4.0"
+  },
+  "dependencies": {}
+}

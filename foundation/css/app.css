@@ -1,0 +1,19 @@
+p {
+  margin: 0;
+  line-height: 1;
+}
+
+.title {
+  padding: 65px 0 30px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #60606e;
+}
+
+.description {
+  margin-bottom: 125px;
+}
+
+.choose-row {
+  height: 50%;
+}
