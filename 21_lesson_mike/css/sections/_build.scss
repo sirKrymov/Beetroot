@@ -1,45 +1,45 @@
 .build {
+  min-height: 560px;
+  background: fixed $black url('./../img/build-bg.png') 0 0 / cover no-repeat;
+  &__container {
     min-height: 560px;
-    background: fixed $black url('./../img/build-bg.png') 0 0 / cover no-repeat;
-    &__container {
-        min-height: 560px;
-        position: relative;
-        @include display-flex (column,
-        center,
-        center);
+    position: relative;
+    @include display-flex (column,
+    center,
+    center);
+  }
+  &__title {
+    margin-bottom: 24px;
+    font: 400 16px/1 Varela, sans-serif;
+    text-transform: uppercase;
+    color: $white;
+  }
+  &__subtitle {
+    max-width: 900px;
+    position: relative;
+    margin-bottom: 86px;
+    font: 300 36px/1.194 Open Sans, sans-serif;
+    letter-spacing: -0.06em;
+    color: $white;
+    text-align: center;
+    span {
+      color: $blue;
     }
-    &__title {
-        margin-bottom: 24px;
-        font: 400 16px/1 Varela, sans-serif;
-        text-transform: uppercase;
-        color: $white;
+  }
+  &__btn {
+    width: 200px;
+    height: 52px;
+    border: 1px solid $blue;
+    background-color: transparent;
+    font: 400 13px/1 Varela, sans-serif;
+    text-transform: uppercase;
+    color: $blue;
+    cursor: pointer;
+    @include transition(0.4s);
+    &:hover {
+      background-color: $blue;
+      border: 1px solid $blue;
+      color: $white;
     }
-    &__subtitle {
-        max-width: 900px;
-        position: relative;
-        margin-bottom: 86px;
-        font: 300 36px/1.194 Open Sans, sans-serif;
-        letter-spacing: -0.06em;
-        color: $white;
-        text-align: center;
-        span {
-            color: $blue;
-        }
-    }
-    &__btn {
-        width: 200px;
-        height: 52px;
-        border: 1px solid $blue;
-        background-color: transparent;
-        font: 400 13px/1 Varela, sans-serif;
-        text-transform: uppercase;
-        color: $blue;
-        cursor: pointer;
-        @include transition(0.4s);
-        &:hover {
-            background-color: $blue;
-            border: 1px solid $blue;
-            color: $white;
-        }
-    }
+  }
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://js.cx/babel-core/browser.min.js"></script>
+    <script type="text/babel">
+      const str = "саша петя саша петя вася петя женя";
+
+      function findString(str, number) {
+        const arr = str.split(" ");
+        let result = [];
+        arr.map(itemArr => {
+          let filtered = arr.filter(itemMap => itemMap === itemArr);
+          if (filtered.length == number) {
+            result.push(itemArr);
+          }
+        });
+        console.log(result);
+      }
+      
+      findString(str, 2);
+    </script>
+</body>
+</html>

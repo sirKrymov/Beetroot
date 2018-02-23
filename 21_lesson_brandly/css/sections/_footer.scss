@@ -1,38 +1,38 @@
 .footer {
+  min-height: 160px;
+  background-color: $white;
+  &__container {
     min-height: 160px;
-    background-color: $white;
-    &__container {
-        min-height: 160px;
-        position: relative;
-        @include display-flex(row, space-between, center);
+    position: relative;
+    @include display-flex(row, space-between, center);
+  }
+  &__copyright {
+    font: 400 18px/1 Open Sans, sans-serif;
+    color: $darkGray;
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__link {
+    text-decoration: none;
+    color: $red;
+    font-weight: 400;
+    cursor: pointer;
+    @include transition(0.4s);
+  }
+  &__social {
+    @include display-flex(row, center, center);
+    margin-bottom: 6px;
+  }
+  &__social-item {
+    font-size: 24px;
+    color: $darkGray;
+    padding-left: 26px;
+    &:hover {
+      color: $red;
     }
-    &__copyright {
-        font: 400 18px/1 Open Sans, sans-serif;
-        color: $darkGray;
-    }
-    &__logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    &__link {
-        text-decoration: none;
-        color: $red;
-        font-weight: 400;
-        cursor: pointer;
-        @include transition(0.4s);
-    }
-    &__social {
-        @include display-flex(row, center, center);
-        margin-bottom: 6px;
-    }
-    &__social-item {
-        font-size: 24px;
-        color: $darkGray;
-        padding-left: 26px;
-        &:hover {
-            color: $red;
-        }
-    }
+  }
 }
